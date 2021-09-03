@@ -87,6 +87,12 @@
      <layout class="QVBoxLayout" name="verticalLayout_buttons">
       <item alignment="Qt::AlignHCenter">
        <widget class="QPushButton" name="pushButton_ok">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>Ok</string>
         </property>
@@ -94,6 +100,12 @@
       </item>
       <item alignment="Qt::AlignHCenter">
        <widget class="QPushButton" name="pushButton_close">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>Close</string>
         </property>
