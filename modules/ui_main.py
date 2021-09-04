@@ -1487,6 +1487,574 @@ class Ui_MainWindow(object):
         self.gridLayout_home.setRowMinimumHeight(8, 30)
         self.gridLayout_home.setRowMinimumHeight(9, 30)
         self.stackedWidget.addWidget(self.home)
+        self.setting = QWidget()
+        self.setting.setObjectName(u"setting")
+        self.gridLayout_setting = QGridLayout(self.setting)
+        self.gridLayout_setting.setObjectName(u"gridLayout_setting")
+        self.gridLayout_setting.setHorizontalSpacing(20)
+        self.horizontalLayout_17 = QHBoxLayout()
+        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
+        self.label_vScale = QLabel(self.setting)
+        self.label_vScale.setObjectName(u"label_vScale")
+        sizePolicy5.setHeightForWidth(self.label_vScale.sizePolicy().hasHeightForWidth())
+        self.label_vScale.setSizePolicy(sizePolicy5)
+        font5 = QFont()
+        font5.setPointSize(10)
+        font5.setBold(False)
+        font5.setItalic(False)
+        font5.setUnderline(False)
+        self.label_vScale.setFont(font5)
+
+        self.horizontalLayout_17.addWidget(self.label_vScale, 0, Qt.AlignHCenter)
+
+        self.label_iScale = QLabel(self.setting)
+        self.label_iScale.setObjectName(u"label_iScale")
+        sizePolicy5.setHeightForWidth(self.label_iScale.sizePolicy().hasHeightForWidth())
+        self.label_iScale.setSizePolicy(sizePolicy5)
+
+        self.horizontalLayout_17.addWidget(self.label_iScale, 0, Qt.AlignHCenter)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_17, 0, 2, 1, 2)
+
+        self.horizontalLayout_ch3iScale = QHBoxLayout()
+        self.horizontalLayout_ch3iScale.setSpacing(10)
+        self.horizontalLayout_ch3iScale.setObjectName(u"horizontalLayout_ch3iScale")
+        self.lineEdit_ch3iLow = QLineEdit(self.setting)
+        self.lineEdit_ch3iLow.setObjectName(u"lineEdit_ch3iLow")
+        sizePolicy6 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch3iLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3iLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch3iScale.addWidget(self.lineEdit_ch3iLow)
+
+        self.label_ch3iScaleDash = QLabel(self.setting)
+        self.label_ch3iScaleDash.setObjectName(u"label_ch3iScaleDash")
+
+        self.horizontalLayout_ch3iScale.addWidget(self.label_ch3iScaleDash)
+
+        self.lineEdit_ch3iHigh = QLineEdit(self.setting)
+        self.lineEdit_ch3iHigh.setObjectName(u"lineEdit_ch3iHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch3iHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3iHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch3iScale.addWidget(self.lineEdit_ch3iHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch3iScale, 3, 3, 1, 1)
+
+        self.horizontalLayout_ch6vScale = QHBoxLayout()
+        self.horizontalLayout_ch6vScale.setSpacing(10)
+        self.horizontalLayout_ch6vScale.setObjectName(u"horizontalLayout_ch6vScale")
+        self.lineEdit_ch6vLow = QLineEdit(self.setting)
+        self.lineEdit_ch6vLow.setObjectName(u"lineEdit_ch6vLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch6vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch6vLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch6vScale.addWidget(self.lineEdit_ch6vLow)
+
+        self.label_ch6vScaleDash = QLabel(self.setting)
+        self.label_ch6vScaleDash.setObjectName(u"label_ch6vScaleDash")
+
+        self.horizontalLayout_ch6vScale.addWidget(self.label_ch6vScaleDash)
+
+        self.lineEdit_ch6vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch6vHigh.setObjectName(u"lineEdit_ch6vHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch6vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch6vHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch6vScale.addWidget(self.lineEdit_ch6vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch6vScale, 6, 2, 1, 1)
+
+        self.horizontalLayout_timeout = QHBoxLayout()
+        self.horizontalLayout_timeout.setObjectName(u"horizontalLayout_timeout")
+        self.label_timeout = QLabel(self.setting)
+        self.label_timeout.setObjectName(u"label_timeout")
+
+        self.horizontalLayout_timeout.addWidget(self.label_timeout)
+
+        self.lineEdit_timeout = QLineEdit(self.setting)
+        self.lineEdit_timeout.setObjectName(u"lineEdit_timeout")
+        sizePolicy5.setHeightForWidth(self.lineEdit_timeout.sizePolicy().hasHeightForWidth())
+        self.lineEdit_timeout.setSizePolicy(sizePolicy5)
+
+        self.horizontalLayout_timeout.addWidget(self.lineEdit_timeout)
+
+        self.horizontalLayout_timeout.setStretch(0, 1)
+        self.horizontalLayout_timeout.setStretch(1, 3)
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_timeout, 5, 0, 1, 1)
+
+        self.horizontalLayout_ch8iScale = QHBoxLayout()
+        self.horizontalLayout_ch8iScale.setSpacing(10)
+        self.horizontalLayout_ch8iScale.setObjectName(u"horizontalLayout_ch8iScale")
+        self.lineEdit_ch8iLow = QLineEdit(self.setting)
+        self.lineEdit_ch8iLow.setObjectName(u"lineEdit_ch8iLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch8iLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8iLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch8iScale.addWidget(self.lineEdit_ch8iLow)
+
+        self.label_ch8iScaleDash = QLabel(self.setting)
+        self.label_ch8iScaleDash.setObjectName(u"label_ch8iScaleDash")
+
+        self.horizontalLayout_ch8iScale.addWidget(self.label_ch8iScaleDash)
+
+        self.lineEdit_ch8iHigh = QLineEdit(self.setting)
+        self.lineEdit_ch8iHigh.setObjectName(u"lineEdit_ch8iHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch8iHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8iHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch8iScale.addWidget(self.lineEdit_ch8iHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch8iScale, 8, 3, 1, 1)
+
+        self.horizontalLayout_ch2vScale = QHBoxLayout()
+        self.horizontalLayout_ch2vScale.setSpacing(10)
+        self.horizontalLayout_ch2vScale.setObjectName(u"horizontalLayout_ch2vScale")
+        self.lineEdit_ch2vLow = QLineEdit(self.setting)
+        self.lineEdit_ch2vLow.setObjectName(u"lineEdit_ch2vLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch2vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2vLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch2vScale.addWidget(self.lineEdit_ch2vLow)
+
+        self.label_ch2vScaleDash = QLabel(self.setting)
+        self.label_ch2vScaleDash.setObjectName(u"label_ch2vScaleDash")
+
+        self.horizontalLayout_ch2vScale.addWidget(self.label_ch2vScaleDash)
+
+        self.lineEdit_ch2vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch2vHigh.setObjectName(u"lineEdit_ch2vHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch2vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2vHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch2vScale.addWidget(self.lineEdit_ch2vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch2vScale, 2, 2, 1, 1)
+
+        self.horizontalLayout_ch3vScale = QHBoxLayout()
+        self.horizontalLayout_ch3vScale.setSpacing(10)
+        self.horizontalLayout_ch3vScale.setObjectName(u"horizontalLayout_ch3vScale")
+        self.lineEdit_ch3vLow = QLineEdit(self.setting)
+        self.lineEdit_ch3vLow.setObjectName(u"lineEdit_ch3vLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch3vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3vLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch3vScale.addWidget(self.lineEdit_ch3vLow)
+
+        self.label_ch3vScaleDash = QLabel(self.setting)
+        self.label_ch3vScaleDash.setObjectName(u"label_ch3vScaleDash")
+
+        self.horizontalLayout_ch3vScale.addWidget(self.label_ch3vScaleDash)
+
+        self.lineEdit_ch3vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch3vHigh.setObjectName(u"lineEdit_ch3vHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch3vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3vHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch3vScale.addWidget(self.lineEdit_ch3vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch3vScale, 3, 2, 1, 1)
+
+        self.horizontalLayout_ch4vScale = QHBoxLayout()
+        self.horizontalLayout_ch4vScale.setSpacing(10)
+        self.horizontalLayout_ch4vScale.setObjectName(u"horizontalLayout_ch4vScale")
+        self.lineEdit_ch4vLow = QLineEdit(self.setting)
+        self.lineEdit_ch4vLow.setObjectName(u"lineEdit_ch4vLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch4vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4vLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch4vScale.addWidget(self.lineEdit_ch4vLow)
+
+        self.label_ch4vScaleDash = QLabel(self.setting)
+        self.label_ch4vScaleDash.setObjectName(u"label_ch4vScaleDash")
+
+        self.horizontalLayout_ch4vScale.addWidget(self.label_ch4vScaleDash)
+
+        self.lineEdit_ch4vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch4vHigh.setObjectName(u"lineEdit_ch4vHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch4vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4vHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch4vScale.addWidget(self.lineEdit_ch4vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch4vScale, 4, 2, 1, 1)
+
+        self.horizontalLayout_baudRate = QHBoxLayout()
+        self.horizontalLayout_baudRate.setObjectName(u"horizontalLayout_baudRate")
+        self.label_baudRate = QLabel(self.setting)
+        self.label_baudRate.setObjectName(u"label_baudRate")
+
+        self.horizontalLayout_baudRate.addWidget(self.label_baudRate)
+
+        self.lineEdit_baudRate = QLineEdit(self.setting)
+        self.lineEdit_baudRate.setObjectName(u"lineEdit_baudRate")
+        sizePolicy5.setHeightForWidth(self.lineEdit_baudRate.sizePolicy().hasHeightForWidth())
+        self.lineEdit_baudRate.setSizePolicy(sizePolicy5)
+
+        self.horizontalLayout_baudRate.addWidget(self.lineEdit_baudRate)
+
+        self.horizontalLayout_baudRate.setStretch(0, 1)
+        self.horizontalLayout_baudRate.setStretch(1, 3)
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_baudRate, 4, 0, 1, 1)
+
+        self.horizontalLayout_baseTime = QHBoxLayout()
+        self.horizontalLayout_baseTime.setObjectName(u"horizontalLayout_baseTime")
+        self.label_baseTime = QLabel(self.setting)
+        self.label_baseTime.setObjectName(u"label_baseTime")
+
+        self.horizontalLayout_baseTime.addWidget(self.label_baseTime)
+
+        self.lineEdit_baseTime = QLineEdit(self.setting)
+        self.lineEdit_baseTime.setObjectName(u"lineEdit_baseTime")
+        sizePolicy5.setHeightForWidth(self.lineEdit_baseTime.sizePolicy().hasHeightForWidth())
+        self.lineEdit_baseTime.setSizePolicy(sizePolicy5)
+
+        self.horizontalLayout_baseTime.addWidget(self.lineEdit_baseTime)
+
+        self.horizontalLayout_baseTime.setStretch(0, 1)
+        self.horizontalLayout_baseTime.setStretch(1, 3)
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_baseTime, 6, 0, 1, 1)
+
+        self.horizontalLayout_ch7iScale = QHBoxLayout()
+        self.horizontalLayout_ch7iScale.setSpacing(10)
+        self.horizontalLayout_ch7iScale.setObjectName(u"horizontalLayout_ch7iScale")
+        self.lineEdit_ch7iLow = QLineEdit(self.setting)
+        self.lineEdit_ch7iLow.setObjectName(u"lineEdit_ch7iLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch7iLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7iLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch7iScale.addWidget(self.lineEdit_ch7iLow)
+
+        self.label_ch7iScaleDash = QLabel(self.setting)
+        self.label_ch7iScaleDash.setObjectName(u"label_ch7iScaleDash")
+
+        self.horizontalLayout_ch7iScale.addWidget(self.label_ch7iScaleDash)
+
+        self.lineEdit_ch7iHigh = QLineEdit(self.setting)
+        self.lineEdit_ch7iHigh.setObjectName(u"lineEdit_ch7iHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch7iHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7iHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch7iScale.addWidget(self.lineEdit_ch7iHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch7iScale, 7, 3, 1, 1)
+
+        self.horizontalLayout_ch2iScale = QHBoxLayout()
+        self.horizontalLayout_ch2iScale.setSpacing(10)
+        self.horizontalLayout_ch2iScale.setObjectName(u"horizontalLayout_ch2iScale")
+        self.lineEdit_ch2iLow = QLineEdit(self.setting)
+        self.lineEdit_ch2iLow.setObjectName(u"lineEdit_ch2iLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch2iLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2iLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch2iScale.addWidget(self.lineEdit_ch2iLow)
+
+        self.label_ch2iScaleDash = QLabel(self.setting)
+        self.label_ch2iScaleDash.setObjectName(u"label_ch2iScaleDash")
+
+        self.horizontalLayout_ch2iScale.addWidget(self.label_ch2iScaleDash)
+
+        self.lineEdit_ch2iHigh = QLineEdit(self.setting)
+        self.lineEdit_ch2iHigh.setObjectName(u"lineEdit_ch2iHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch2iHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2iHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch2iScale.addWidget(self.lineEdit_ch2iHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch2iScale, 2, 3, 1, 1)
+
+        self.horizontalLayout_unitID = QHBoxLayout()
+        self.horizontalLayout_unitID.setObjectName(u"horizontalLayout_unitID")
+        self.label_unitID = QLabel(self.setting)
+        self.label_unitID.setObjectName(u"label_unitID")
+
+        self.horizontalLayout_unitID.addWidget(self.label_unitID)
+
+        self.lineEdit_unitID = QLineEdit(self.setting)
+        self.lineEdit_unitID.setObjectName(u"lineEdit_unitID")
+        sizePolicy5.setHeightForWidth(self.lineEdit_unitID.sizePolicy().hasHeightForWidth())
+        self.lineEdit_unitID.setSizePolicy(sizePolicy5)
+
+        self.horizontalLayout_unitID.addWidget(self.lineEdit_unitID)
+
+        self.horizontalLayout_unitID.setStretch(0, 1)
+        self.horizontalLayout_unitID.setStretch(1, 3)
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_unitID, 3, 0, 1, 1)
+
+        self.horizontalLayout_ch4iScale = QHBoxLayout()
+        self.horizontalLayout_ch4iScale.setSpacing(10)
+        self.horizontalLayout_ch4iScale.setObjectName(u"horizontalLayout_ch4iScale")
+        self.lineEdit_ch4iLow = QLineEdit(self.setting)
+        self.lineEdit_ch4iLow.setObjectName(u"lineEdit_ch4iLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch4iLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4iLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch4iScale.addWidget(self.lineEdit_ch4iLow)
+
+        self.label_ch4iScaleDash = QLabel(self.setting)
+        self.label_ch4iScaleDash.setObjectName(u"label_ch4iScaleDash")
+
+        self.horizontalLayout_ch4iScale.addWidget(self.label_ch4iScaleDash)
+
+        self.lineEdit_ch4iHigh = QLineEdit(self.setting)
+        self.lineEdit_ch4iHigh.setObjectName(u"lineEdit_ch4iHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch4iHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4iHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch4iScale.addWidget(self.lineEdit_ch4iHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch4iScale, 4, 3, 1, 1)
+
+        self.horizontalLayout_ch1vScale = QHBoxLayout()
+        self.horizontalLayout_ch1vScale.setSpacing(10)
+        self.horizontalLayout_ch1vScale.setObjectName(u"horizontalLayout_ch1vScale")
+        self.lineEdit_ch1vLow = QLineEdit(self.setting)
+        self.lineEdit_ch1vLow.setObjectName(u"lineEdit_ch1vLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch1vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch1vLow.setSizePolicy(sizePolicy6)
+        self.lineEdit_ch1vLow.setFont(font1)
+
+        self.horizontalLayout_ch1vScale.addWidget(self.lineEdit_ch1vLow)
+
+        self.label_ch1vScaleDash = QLabel(self.setting)
+        self.label_ch1vScaleDash.setObjectName(u"label_ch1vScaleDash")
+
+        self.horizontalLayout_ch1vScale.addWidget(self.label_ch1vScaleDash)
+
+        self.lineEdit_ch1vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch1vHigh.setObjectName(u"lineEdit_ch1vHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch1vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch1vHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch1vScale.addWidget(self.lineEdit_ch1vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch1vScale, 1, 2, 1, 1)
+
+        self.horizontalLayout_ch5vScale = QHBoxLayout()
+        self.horizontalLayout_ch5vScale.setSpacing(10)
+        self.horizontalLayout_ch5vScale.setObjectName(u"horizontalLayout_ch5vScale")
+        self.lineEdit_ch5vLow = QLineEdit(self.setting)
+        self.lineEdit_ch5vLow.setObjectName(u"lineEdit_ch5vLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch5vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5vLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch5vScale.addWidget(self.lineEdit_ch5vLow)
+
+        self.label_ch5vScaleDash = QLabel(self.setting)
+        self.label_ch5vScaleDash.setObjectName(u"label_ch5vScaleDash")
+
+        self.horizontalLayout_ch5vScale.addWidget(self.label_ch5vScaleDash)
+
+        self.lineEdit_ch5vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch5vHigh.setObjectName(u"lineEdit_ch5vHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch5vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5vHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch5vScale.addWidget(self.lineEdit_ch5vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch5vScale, 5, 2, 1, 1)
+
+        self.horizontalLayout_ch6iScale = QHBoxLayout()
+        self.horizontalLayout_ch6iScale.setSpacing(10)
+        self.horizontalLayout_ch6iScale.setObjectName(u"horizontalLayout_ch6iScale")
+        self.lineEdit_ch6iLow = QLineEdit(self.setting)
+        self.lineEdit_ch6iLow.setObjectName(u"lineEdit_ch6iLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch6iLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch6iLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch6iScale.addWidget(self.lineEdit_ch6iLow)
+
+        self.label_ch6iScaleDash = QLabel(self.setting)
+        self.label_ch6iScaleDash.setObjectName(u"label_ch6iScaleDash")
+
+        self.horizontalLayout_ch6iScale.addWidget(self.label_ch6iScaleDash)
+
+        self.lineEdit_ch6iHigh = QLineEdit(self.setting)
+        self.lineEdit_ch6iHigh.setObjectName(u"lineEdit_ch6iHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch6iHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch6iHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch6iScale.addWidget(self.lineEdit_ch6iHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch6iScale, 6, 3, 1, 1)
+
+        self.horizontalLayout_ch5iScale = QHBoxLayout()
+        self.horizontalLayout_ch5iScale.setSpacing(10)
+        self.horizontalLayout_ch5iScale.setObjectName(u"horizontalLayout_ch5iScale")
+        self.lineEdit_ch5iLow = QLineEdit(self.setting)
+        self.lineEdit_ch5iLow.setObjectName(u"lineEdit_ch5iLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch5iLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5iLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch5iScale.addWidget(self.lineEdit_ch5iLow)
+
+        self.label_ch5iScaleDash = QLabel(self.setting)
+        self.label_ch5iScaleDash.setObjectName(u"label_ch5iScaleDash")
+
+        self.horizontalLayout_ch5iScale.addWidget(self.label_ch5iScaleDash)
+
+        self.lineEdit_ch5iHigh = QLineEdit(self.setting)
+        self.lineEdit_ch5iHigh.setObjectName(u"lineEdit_ch5iHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch5iHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5iHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch5iScale.addWidget(self.lineEdit_ch5iHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch5iScale, 5, 3, 1, 1)
+
+        self.horizontalLayout_ch7vScale = QHBoxLayout()
+        self.horizontalLayout_ch7vScale.setObjectName(u"horizontalLayout_ch7vScale")
+        self.lineEdit_ch7vLow = QLineEdit(self.setting)
+        self.lineEdit_ch7vLow.setObjectName(u"lineEdit_ch7vLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch7vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7vLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch7vScale.addWidget(self.lineEdit_ch7vLow)
+
+        self.label_ch7vScaleDash = QLabel(self.setting)
+        self.label_ch7vScaleDash.setObjectName(u"label_ch7vScaleDash")
+
+        self.horizontalLayout_ch7vScale.addWidget(self.label_ch7vScaleDash)
+
+        self.lineEdit_ch7vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch7vHigh.setObjectName(u"lineEdit_ch7vHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch7vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7vHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch7vScale.addWidget(self.lineEdit_ch7vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch7vScale, 7, 2, 1, 1)
+
+        self.horizontalLayout_ch8vScale = QHBoxLayout()
+        self.horizontalLayout_ch8vScale.setSpacing(10)
+        self.horizontalLayout_ch8vScale.setObjectName(u"horizontalLayout_ch8vScale")
+        self.lineEdit_ch8vLow = QLineEdit(self.setting)
+        self.lineEdit_ch8vLow.setObjectName(u"lineEdit_ch8vLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch8vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8vLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch8vScale.addWidget(self.lineEdit_ch8vLow)
+
+        self.label_ch8vScaleDash = QLabel(self.setting)
+        self.label_ch8vScaleDash.setObjectName(u"label_ch8vScaleDash")
+
+        self.horizontalLayout_ch8vScale.addWidget(self.label_ch8vScaleDash)
+
+        self.lineEdit_ch8vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch8vHigh.setObjectName(u"lineEdit_ch8vHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch8vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8vHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch8vScale.addWidget(self.lineEdit_ch8vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch8vScale, 8, 2, 1, 1)
+
+        self.horizontalLayout_ch1iScale = QHBoxLayout()
+        self.horizontalLayout_ch1iScale.setSpacing(10)
+        self.horizontalLayout_ch1iScale.setObjectName(u"horizontalLayout_ch1iScale")
+        self.lineEdit_ch1iLow = QLineEdit(self.setting)
+        self.lineEdit_ch1iLow.setObjectName(u"lineEdit_ch1iLow")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch1iLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch1iLow.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch1iScale.addWidget(self.lineEdit_ch1iLow)
+
+        self.label_ch1iScaleDash = QLabel(self.setting)
+        self.label_ch1iScaleDash.setObjectName(u"label_ch1iScaleDash")
+
+        self.horizontalLayout_ch1iScale.addWidget(self.label_ch1iScaleDash)
+
+        self.lineEdit_ch1iHigh = QLineEdit(self.setting)
+        self.lineEdit_ch1iHigh.setObjectName(u"lineEdit_ch1iHigh")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ch1iHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch1iHigh.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_ch1iScale.addWidget(self.lineEdit_ch1iHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch1iScale, 1, 3, 1, 1)
+
+        self.label_ch1Setting = QLabel(self.setting)
+        self.label_ch1Setting.setObjectName(u"label_ch1Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch1Setting, 1, 1, 1, 1, Qt.AlignRight)
+
+        self.label_ch2Setting = QLabel(self.setting)
+        self.label_ch2Setting.setObjectName(u"label_ch2Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch2Setting, 2, 1, 1, 1, Qt.AlignRight)
+
+        self.label_ch3Setting = QLabel(self.setting)
+        self.label_ch3Setting.setObjectName(u"label_ch3Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch3Setting, 3, 1, 1, 1, Qt.AlignRight)
+
+        self.label_ch4Setting = QLabel(self.setting)
+        self.label_ch4Setting.setObjectName(u"label_ch4Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch4Setting, 4, 1, 1, 1, Qt.AlignRight)
+
+        self.label_ch5Setting = QLabel(self.setting)
+        self.label_ch5Setting.setObjectName(u"label_ch5Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch5Setting, 5, 1, 1, 1, Qt.AlignRight)
+
+        self.label_ch6Setting = QLabel(self.setting)
+        self.label_ch6Setting.setObjectName(u"label_ch6Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch6Setting, 6, 1, 1, 1, Qt.AlignRight)
+
+        self.label_ch7Setting = QLabel(self.setting)
+        self.label_ch7Setting.setObjectName(u"label_ch7Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch7Setting, 7, 1, 1, 1, Qt.AlignRight)
+
+        self.label_ch8Setting = QLabel(self.setting)
+        self.label_ch8Setting.setObjectName(u"label_ch8Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch8Setting, 8, 1, 1, 1, Qt.AlignRight)
+
+        self.label_deviceModelSetting = QLabel(self.setting)
+        self.label_deviceModelSetting.setObjectName(u"label_deviceModelSetting")
+
+        self.gridLayout_setting.addWidget(self.label_deviceModelSetting, 0, 0, 1, 2, Qt.AlignHCenter)
+
+        self.gridLayout_setting.setRowStretch(0, 1)
+        self.gridLayout_setting.setRowStretch(1, 1)
+        self.gridLayout_setting.setRowStretch(2, 1)
+        self.gridLayout_setting.setRowStretch(3, 1)
+        self.gridLayout_setting.setRowStretch(4, 1)
+        self.gridLayout_setting.setRowStretch(5, 1)
+        self.gridLayout_setting.setRowStretch(6, 1)
+        self.gridLayout_setting.setRowStretch(7, 1)
+        self.gridLayout_setting.setRowStretch(8, 1)
+        self.gridLayout_setting.setColumnStretch(0, 2)
+        self.gridLayout_setting.setColumnStretch(1, 1)
+        self.gridLayout_setting.setColumnStretch(2, 1)
+        self.gridLayout_setting.setColumnStretch(3, 1)
+        self.stackedWidget.addWidget(self.setting)
         self.widgets = QWidget()
         self.widgets.setObjectName(u"widgets")
         self.widgets.setStyleSheet(u"b")
@@ -1717,9 +2285,9 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         if (self.tableWidget.rowCount() < 16):
             self.tableWidget.setRowCount(16)
-        font5 = QFont()
+        font6 = QFont()
         __qtablewidgetitem4 = QTableWidgetItem()
-        __qtablewidgetitem4.setFont(font5);
+        __qtablewidgetitem4.setFont(font6);
         self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem5)
@@ -1760,11 +2328,11 @@ class Ui_MainWindow(object):
         __qtablewidgetitem23 = QTableWidgetItem()
         self.tableWidget.setItem(0, 3, __qtablewidgetitem23)
         self.tableWidget.setObjectName(u"tableWidget")
-        sizePolicy6 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy6.setHorizontalStretch(0)
-        sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
-        self.tableWidget.setSizePolicy(sizePolicy6)
+        sizePolicy7 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
+        self.tableWidget.setSizePolicy(sizePolicy7)
         palette = QPalette()
         brush = QBrush(QColor(221, 221, 221, 255))
         brush.setStyle(Qt.SolidPattern)
@@ -1828,17 +2396,6 @@ class Ui_MainWindow(object):
         self.verticalLayout.addWidget(self.row_3)
 
         self.stackedWidget.addWidget(self.widgets)
-        self.new_page = QWidget()
-        self.new_page.setObjectName(u"new_page")
-        self.verticalLayout_20 = QVBoxLayout(self.new_page)
-        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.label = QLabel(self.new_page)
-        self.label.setObjectName(u"label")
-        self.label.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_20.addWidget(self.label)
-
-        self.stackedWidget.addWidget(self.new_page)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
 
@@ -1940,10 +2497,10 @@ class Ui_MainWindow(object):
         self.creditsLabel = QLabel(self.bottomBar)
         self.creditsLabel.setObjectName(u"creditsLabel")
         self.creditsLabel.setMaximumSize(QSize(16777215, 16))
-        font6 = QFont()
-        font6.setBold(False)
-        font6.setItalic(False)
-        self.creditsLabel.setFont(font6)
+        font7 = QFont()
+        font7.setBold(False)
+        font7.setItalic(False)
+        self.creditsLabel.setFont(font7)
         self.creditsLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_5.addWidget(self.creditsLabel)
@@ -1979,7 +2536,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2062,9 +2619,40 @@ class Ui_MainWindow(object):
         self.pushButton_connect.setText(QCoreApplication.translate("MainWindow", u"Connect", None))
         self.pushButton_disconnect.setText(QCoreApplication.translate("MainWindow", u"Disconnect", None))
         self.label_model.setText(QCoreApplication.translate("MainWindow", u"Model:", None))
-        self.label_deviceModel.setText("")
+        self.label_deviceModel.setText(QCoreApplication.translate("MainWindow", u"Model", None))
         self.label_vol.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
         self.label_cur.setText(QCoreApplication.translate("MainWindow", u"Current", None))
+        self.label_vScale.setText(QCoreApplication.translate("MainWindow", u"Voltage Scales", None))
+        self.label_iScale.setText(QCoreApplication.translate("MainWindow", u"Current Scales", None))
+        self.label_ch3iScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch6vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_timeout.setText(QCoreApplication.translate("MainWindow", u"Timeout:", None))
+        self.label_ch8iScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch2vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch3vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch4vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_baudRate.setText(QCoreApplication.translate("MainWindow", u"Baud Rate:", None))
+        self.label_baseTime.setText(QCoreApplication.translate("MainWindow", u"Base Time:", None))
+        self.label_ch7iScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch2iScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_unitID.setText(QCoreApplication.translate("MainWindow", u"Unit ID:", None))
+        self.label_ch4iScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch1vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch5vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch6iScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch5iScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch7vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch8vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch1iScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch1Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 1:", None))
+        self.label_ch2Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 2:", None))
+        self.label_ch3Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 3:", None))
+        self.label_ch4Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 4:", None))
+        self.label_ch5Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 5:", None))
+        self.label_ch6Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 6:", None))
+        self.label_ch7Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 7:", None))
+        self.label_ch8Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 8:", None))
+        self.label_deviceModelSetting.setText(QCoreApplication.translate("MainWindow", u"Model", None))
         self.labelBoxBlenderInstalation.setText(QCoreApplication.translate("MainWindow", u"FILE BOX", None))
         self.lineEdit.setText("")
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
@@ -2131,7 +2719,6 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Line", None));
         self.tableWidget.setSortingEnabled(__sortingEnabled)
 
-        self.label.setText(QCoreApplication.translate("MainWindow", u"NEW PAGE TEST", None))
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))

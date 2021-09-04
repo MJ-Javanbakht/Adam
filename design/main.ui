@@ -1856,7 +1856,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>0</number>
+                      <number>1</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
@@ -2353,7 +2353,7 @@ p, li { white-space: pre-wrap; }
                          <item alignment="Qt::AlignHCenter">
                           <widget class="QLabel" name="label_deviceModel">
                            <property name="text">
-                            <string/>
+                            <string>Model</string>
                            </property>
                           </widget>
                          </item>
@@ -2391,6 +2391,746 @@ p, li { white-space: pre-wrap; }
                           </widget>
                          </item>
                         </layout>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="setting">
+                      <layout class="QGridLayout" name="gridLayout_setting" rowstretch="1,1,1,1,1,1,1,1,1" columnstretch="2,1,1,1">
+                       <property name="horizontalSpacing">
+                        <number>20</number>
+                       </property>
+                       <item row="0" column="2" colspan="2">
+                        <layout class="QHBoxLayout" name="horizontalLayout_17">
+                         <item alignment="Qt::AlignHCenter">
+                          <widget class="QLabel" name="label_vScale">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>10</pointsize>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                             <underline>false</underline>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Voltage Scales</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item alignment="Qt::AlignHCenter">
+                          <widget class="QLabel" name="label_iScale">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="text">
+                            <string>Current Scales</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="3" column="3">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch3iScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch3iLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch3iScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch3iHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="6" column="2">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch6vScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch6vLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch6vScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch6vHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="5" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_timeout" stretch="1,3">
+                         <item>
+                          <widget class="QLabel" name="label_timeout">
+                           <property name="text">
+                            <string>Timeout:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_timeout">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="8" column="3">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch8iScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch8iLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch8iScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch8iHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="2" column="2">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch2vScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch2vLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch2vScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch2vHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="3" column="2">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch3vScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch3vLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch3vScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch3vHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="4" column="2">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch4vScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch4vLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch4vScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch4vHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="4" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_baudRate" stretch="1,3">
+                         <item>
+                          <widget class="QLabel" name="label_baudRate">
+                           <property name="text">
+                            <string>Baud Rate:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_baudRate">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="6" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_baseTime" stretch="1,3">
+                         <item>
+                          <widget class="QLabel" name="label_baseTime">
+                           <property name="text">
+                            <string>Base Time:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_baseTime">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="7" column="3">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch7iScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch7iLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch7iScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch7iHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="2" column="3">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch2iScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch2iLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch2iScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch2iHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="3" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_unitID" stretch="1,3">
+                         <item>
+                          <widget class="QLabel" name="label_unitID">
+                           <property name="text">
+                            <string>Unit ID:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_unitID">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="4" column="3">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch4iScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch4iLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch4iScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch4iHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="1" column="2">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch1vScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch1vLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>10</pointsize>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch1vScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch1vHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="5" column="2">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch5vScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch5vLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch5vScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch5vHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="6" column="3">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch6iScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch6iLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch6iScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch6iHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="5" column="3">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch5iScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch5iLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch5iScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch5iHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="7" column="2">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch7vScale">
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch7vLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch7vScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch7vHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="8" column="2">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch8vScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch8vLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch8vScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch8vHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="1" column="3">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch1iScale">
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch1iLow">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_ch1iScaleDash">
+                           <property name="text">
+                            <string>-</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch1iHigh">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="1" column="1" alignment="Qt::AlignRight">
+                        <widget class="QLabel" name="label_ch1Setting">
+                         <property name="text">
+                          <string>Channel 1:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1" alignment="Qt::AlignRight">
+                        <widget class="QLabel" name="label_ch2Setting">
+                         <property name="text">
+                          <string>Channel 2:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="1" alignment="Qt::AlignRight">
+                        <widget class="QLabel" name="label_ch3Setting">
+                         <property name="text">
+                          <string>Channel 3:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="1" alignment="Qt::AlignRight">
+                        <widget class="QLabel" name="label_ch4Setting">
+                         <property name="text">
+                          <string>Channel 4:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="5" column="1" alignment="Qt::AlignRight">
+                        <widget class="QLabel" name="label_ch5Setting">
+                         <property name="text">
+                          <string>Channel 5:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="6" column="1" alignment="Qt::AlignRight">
+                        <widget class="QLabel" name="label_ch6Setting">
+                         <property name="text">
+                          <string>Channel 6:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="7" column="1" alignment="Qt::AlignRight">
+                        <widget class="QLabel" name="label_ch7Setting">
+                         <property name="text">
+                          <string>Channel 7:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="8" column="1" alignment="Qt::AlignRight">
+                        <widget class="QLabel" name="label_ch8Setting">
+                         <property name="text">
+                          <string>Channel 8:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0" colspan="2" alignment="Qt::AlignHCenter">
+                        <widget class="QLabel" name="label_deviceModelSetting">
+                         <property name="text">
+                          <string>Model</string>
+                         </property>
+                        </widget>
                        </item>
                       </layout>
                      </widget>
@@ -3225,20 +3965,6 @@ p, li { white-space: pre-wrap; }
                            </widget>
                           </item>
                          </layout>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                     <widget class="QWidget" name="new_page">
-                      <layout class="QVBoxLayout" name="verticalLayout_20">
-                       <item>
-                        <widget class="QLabel" name="label">
-                         <property name="text">
-                          <string>NEW PAGE TEST</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignCenter</set>
-                         </property>
                         </widget>
                        </item>
                       </layout>
