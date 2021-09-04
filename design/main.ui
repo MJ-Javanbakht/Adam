@@ -17,13 +17,17 @@
     <height>560</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="styleSheet">
    <property name="font">
     <font>
-     <family>Segoe UI</family>
      <pointsize>10</pointsize>
      <italic>false</italic>
      <bold>false</bold>
@@ -675,7 +679,6 @@ Button */
              </property>
              <property name="font">
               <font>
-               <family>Segoe UI Semibold</family>
                <pointsize>12</pointsize>
                <italic>false</italic>
                <bold>false</bold>
@@ -705,7 +708,6 @@ Button */
              </property>
              <property name="font">
               <font>
-               <family>Segoe UI</family>
                <pointsize>8</pointsize>
                <italic>false</italic>
                <bold>false</bold>
@@ -790,7 +792,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -853,7 +854,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -889,7 +889,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -925,7 +924,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -961,7 +959,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -997,7 +994,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1060,7 +1056,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1314,7 +1309,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1350,7 +1344,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1386,7 +1379,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1576,7 +1568,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1709,7 +1700,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1855,18 +1845,554 @@ p, li { white-space: pre-wrap; }
                    </property>
                    <item>
                     <widget class="QStackedWidget" name="stackedWidget">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
                      <property name="styleSheet">
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>2</number>
+                      <number>0</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
-                       <string notr="true">background-image: url(:/images/images/images/PyDracula_vertical.png);
-background-position: center;
-background-repeat: no-repeat;</string>
+                       <string notr="true"/>
                       </property>
+                      <layout class="QGridLayout" name="gridLayout_home" rowstretch="2,2,2,2,2,2,2,2,2,2" rowminimumheight="30,30,30,30,30,30,30,30,30,30">
+                       <property name="verticalSpacing">
+                        <number>5</number>
+                       </property>
+                       <item row="6" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch6" stretch="1,3,2">
+                         <property name="spacing">
+                          <number>5</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_ch6">
+                           <property name="text">
+                            <string>Channel 6:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch6"/>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_ch6check">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="frame_ch6">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_14">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch6v">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch6i">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="8" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch8" stretch="1,3,2">
+                         <property name="spacing">
+                          <number>5</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_ch8">
+                           <property name="text">
+                            <string>Channel 8:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch8"/>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_ch8check">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="frame_ch8">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_16">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch8v">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch8i">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="7" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch7" stretch="1,3,2">
+                         <property name="spacing">
+                          <number>5</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_ch7">
+                           <property name="text">
+                            <string>Channel 7:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch7"/>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_ch7check">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="frame_ch7">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_15">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch7v">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch7i">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="5" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch5" stretch="1,3,2">
+                         <property name="spacing">
+                          <number>5</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_ch5">
+                           <property name="text">
+                            <string>Channel 5:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch5"/>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_ch5check">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="frame_ch5">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_13">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch5v">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch5i">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="2" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch2" stretch="1,3,2">
+                         <property name="spacing">
+                          <number>5</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_ch2">
+                           <property name="text">
+                            <string>Channel 2:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch2"/>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_ch2check" stretch="0">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="frame_ch2">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_7">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch2v">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch2i">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="3" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch3" stretch="1,3,2">
+                         <property name="spacing">
+                          <number>5</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_ch3">
+                           <property name="text">
+                            <string>Channel 3:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch3"/>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_ch3check">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="frame_ch3">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_8">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch3v">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch3i">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="1" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch1" stretch="1,3,2">
+                         <property name="spacing">
+                          <number>5</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_ch1">
+                           <property name="text">
+                            <string>Channel 1:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch1">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_ch1check" stretch="0">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="frame_ch1">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_6">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch1v">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch1i">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="4" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_ch4" stretch="1,3,2">
+                         <property name="spacing">
+                          <number>5</number>
+                         </property>
+                         <item>
+                          <widget class="QLabel" name="label_ch4">
+                           <property name="text">
+                            <string>Channel 4:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="lineEdit_ch4"/>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_ch4check">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="frame_ch4">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_10">
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch4v">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QRadioButton" name="radioButton_ch4i">
+                                <property name="text">
+                                 <string/>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="9" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_connection" stretch="1,2,2,1">
+                         <property name="spacing">
+                          <number>50</number>
+                         </property>
+                         <item>
+                          <spacer name="horizontalSpacer_2">
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="sizeType">
+                            <enum>QSizePolicy::Preferred</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>40</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                          </spacer>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="pushButton_connect">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="text">
+                            <string>Connect</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="pushButton_disconnect">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="text">
+                            <string>Disconnect</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <spacer name="horizontalSpacer_3">
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="sizeType">
+                            <enum>QSizePolicy::Preferred</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>40</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                          </spacer>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="0" column="0">
+                        <layout class="QHBoxLayout" name="horizontalLayout_vi" stretch="1,3,1,1">
+                         <property name="spacing">
+                          <number>0</number>
+                         </property>
+                         <item alignment="Qt::AlignHCenter">
+                          <widget class="QLabel" name="label_model">
+                           <property name="text">
+                            <string>Model:</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item alignment="Qt::AlignHCenter">
+                          <widget class="QLabel" name="label_deviceModel">
+                           <property name="text">
+                            <string/>
+                           </property>
+                          </widget>
+                         </item>
+                         <item alignment="Qt::AlignHCenter">
+                          <widget class="QLabel" name="label_vol">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>10</pointsize>
+                             <italic>false</italic>
+                             <bold>false</bold>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Voltage</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item alignment="Qt::AlignHCenter">
+                          <widget class="QLabel" name="label_cur">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="text">
+                            <string>Current</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
                      </widget>
                      <widget class="QWidget" name="widgets">
                       <property name="styleSheet">
@@ -1967,7 +2493,6 @@ background-repeat: no-repeat;</string>
                                  <widget class="QLabel" name="labelBoxBlenderInstalation">
                                   <property name="font">
                                    <font>
-                                    <family>Segoe UI</family>
                                     <pointsize>10</pointsize>
                                     <italic>false</italic>
                                     <bold>false</bold>
@@ -2027,7 +2552,6 @@ background-repeat: no-repeat;</string>
                                     </property>
                                     <property name="font">
                                      <font>
-                                      <family>Segoe UI</family>
                                       <pointsize>10</pointsize>
                                       <italic>false</italic>
                                       <bold>false</bold>
@@ -2198,7 +2722,6 @@ background-repeat: no-repeat;</string>
                              <widget class="QComboBox" name="comboBox">
                               <property name="font">
                                <font>
-                                <family>Segoe UI</family>
                                 <pointsize>10</pointsize>
                                 <italic>false</italic>
                                 <bold>false</bold>
@@ -2581,9 +3104,7 @@ background-repeat: no-repeat;</string>
                               <string>New Row</string>
                              </property>
                              <property name="font">
-                              <font>
-                               <family>Segoe UI</family>
-                              </font>
+                              <font/>
                              </property>
                             </row>
                             <row>
@@ -2843,7 +3364,6 @@ background-repeat: no-repeat;</string>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2879,7 +3399,6 @@ background-repeat: no-repeat;</string>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2915,7 +3434,6 @@ background-repeat: no-repeat;</string>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2993,7 +3511,6 @@ background-repeat: no-repeat;</string>
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
