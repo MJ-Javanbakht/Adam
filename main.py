@@ -147,6 +147,8 @@ class SetupDialog(QMainWindow):
 
         self.ui = Ui_Setup()
         self.ui.setupUi(self)
+        title = "Setup"
+        self.setWindowTitle(title)
         self.show()
 
         self.ui.pushButton_ok.clicked.connect(self.buttonClick)
