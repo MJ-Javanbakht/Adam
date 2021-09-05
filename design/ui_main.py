@@ -663,29 +663,53 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_8.addWidget(self.btn_home)
 
-        self.btn_widgets = QPushButton(self.topMenu)
-        self.btn_widgets.setObjectName(u"btn_widgets")
-        sizePolicy.setHeightForWidth(self.btn_widgets.sizePolicy().hasHeightForWidth())
-        self.btn_widgets.setSizePolicy(sizePolicy)
-        self.btn_widgets.setMinimumSize(QSize(0, 45))
-        self.btn_widgets.setFont(font1)
-        self.btn_widgets.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_widgets.setLayoutDirection(Qt.LeftToRight)
-        self.btn_widgets.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-gamepad.png);")
+        self.btn_setting = QPushButton(self.topMenu)
+        self.btn_setting.setObjectName(u"btn_setting")
+        sizePolicy.setHeightForWidth(self.btn_setting.sizePolicy().hasHeightForWidth())
+        self.btn_setting.setSizePolicy(sizePolicy)
+        self.btn_setting.setMinimumSize(QSize(0, 45))
+        self.btn_setting.setFont(font1)
+        self.btn_setting.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_setting.setLayoutDirection(Qt.LeftToRight)
+        self.btn_setting.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-settings.png);")
 
-        self.verticalLayout_8.addWidget(self.btn_widgets)
+        self.verticalLayout_8.addWidget(self.btn_setting)
 
-        self.btn_new = QPushButton(self.topMenu)
-        self.btn_new.setObjectName(u"btn_new")
-        sizePolicy.setHeightForWidth(self.btn_new.sizePolicy().hasHeightForWidth())
-        self.btn_new.setSizePolicy(sizePolicy)
-        self.btn_new.setMinimumSize(QSize(0, 45))
-        self.btn_new.setFont(font1)
-        self.btn_new.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_new.setLayoutDirection(Qt.LeftToRight)
-        self.btn_new.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-file.png);")
+        self.btn_calibration = QPushButton(self.topMenu)
+        self.btn_calibration.setObjectName(u"btn_calibration")
+        sizePolicy.setHeightForWidth(self.btn_calibration.sizePolicy().hasHeightForWidth())
+        self.btn_calibration.setSizePolicy(sizePolicy)
+        self.btn_calibration.setMinimumSize(QSize(0, 45))
+        self.btn_calibration.setFont(font1)
+        self.btn_calibration.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_calibration.setLayoutDirection(Qt.LeftToRight)
+        self.btn_calibration.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-options-horizontal.png);")
 
-        self.verticalLayout_8.addWidget(self.btn_new)
+        self.verticalLayout_8.addWidget(self.btn_calibration)
+
+        self.btn_log = QPushButton(self.topMenu)
+        self.btn_log.setObjectName(u"btn_log")
+        sizePolicy.setHeightForWidth(self.btn_log.sizePolicy().hasHeightForWidth())
+        self.btn_log.setSizePolicy(sizePolicy)
+        self.btn_log.setMinimumSize(QSize(0, 45))
+        self.btn_log.setFont(font1)
+        self.btn_log.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_log.setLayoutDirection(Qt.LeftToRight)
+        self.btn_log.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-bell.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_log)
+
+        self.btn_trend = QPushButton(self.topMenu)
+        self.btn_trend.setObjectName(u"btn_trend")
+        sizePolicy.setHeightForWidth(self.btn_trend.sizePolicy().hasHeightForWidth())
+        self.btn_trend.setSizePolicy(sizePolicy)
+        self.btn_trend.setMinimumSize(QSize(0, 45))
+        self.btn_trend.setFont(font1)
+        self.btn_trend.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_trend.setLayoutDirection(Qt.LeftToRight)
+        self.btn_trend.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-chart-line.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_trend)
 
         self.btn_save = QPushButton(self.topMenu)
         self.btn_save.setObjectName(u"btn_save")
@@ -2055,6 +2079,12 @@ class Ui_MainWindow(object):
         self.gridLayout_setting.setColumnStretch(2, 1)
         self.gridLayout_setting.setColumnStretch(3, 1)
         self.stackedWidget.addWidget(self.setting)
+        self.calibration = QWidget()
+        self.calibration.setObjectName(u"calibration")
+        self.stackedWidget.addWidget(self.calibration)
+        self.log = QWidget()
+        self.log.setObjectName(u"log")
+        self.stackedWidget.addWidget(self.log)
         self.widgets = QWidget()
         self.widgets.setObjectName(u"widgets")
         self.widgets.setStyleSheet(u"b")
@@ -2196,7 +2226,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 218, 218))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 274, 218))
         self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
 "	border: none;\n"
 "    background: rgb(52, 59, 72);\n"
@@ -2536,7 +2566,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2548,8 +2578,10 @@ class Ui_MainWindow(object):
         self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Modern GUI / Flat Style", None))
         self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"Hide", None))
         self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        self.btn_widgets.setText(QCoreApplication.translate("MainWindow", u"Widgets", None))
-        self.btn_new.setText(QCoreApplication.translate("MainWindow", u"New", None))
+        self.btn_setting.setText(QCoreApplication.translate("MainWindow", u"Setting", None))
+        self.btn_calibration.setText(QCoreApplication.translate("MainWindow", u"Calibration", None))
+        self.btn_log.setText(QCoreApplication.translate("MainWindow", u"Log", None))
+        self.btn_trend.setText(QCoreApplication.translate("MainWindow", u"Trend", None))
         self.btn_save.setText(QCoreApplication.translate("MainWindow", u"Save", None))
         self.btn_exit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
         self.toggleLeftBox.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
@@ -2575,7 +2607,7 @@ class Ui_MainWindow(object):
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">Convert QRC</span></p>\n"
 "<p align=\"center\" "
                         "style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-rcc resources.qrc -o resources_rc.py</span></p></body></html>", None))
-        self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"PyDracula APP - Theme with colors based on Dracula for Python.", None))
+        self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"Adam Connection Setup (Based on ModBus)", None))
 #if QT_CONFIG(tooltip)
         self.settingsTopBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Settings", None))
 #endif // QT_CONFIG(tooltip)
