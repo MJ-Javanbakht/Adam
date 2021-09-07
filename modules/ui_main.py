@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main.ui'
+## Form generated from reading UI file 'mainOxgLDg.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.2
 ##
@@ -2081,6 +2081,591 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.setting)
         self.calibration = QWidget()
         self.calibration.setObjectName(u"calibration")
+        self.gridLayout_3 = QGridLayout(self.calibration)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.groupBox_calibration = QGroupBox(self.calibration)
+        self.groupBox_calibration.setObjectName(u"groupBox_calibration")
+        self.gridLayout_4 = QGridLayout(self.groupBox_calibration)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.horizontalLayout_ch1calibration = QHBoxLayout()
+        self.horizontalLayout_ch1calibration.setSpacing(10)
+        self.horizontalLayout_ch1calibration.setObjectName(u"horizontalLayout_ch1calibration")
+        self.label_ch1calibration = QLabel(self.groupBox_calibration)
+        self.label_ch1calibration.setObjectName(u"label_ch1calibration")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.label_ch1calibration)
+
+        self.lineEdit_ch1point1 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch1point1.setObjectName(u"lineEdit_ch1point1")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.lineEdit_ch1point1)
+
+        self.pushButton_ch1point1 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch1point1.setObjectName(u"pushButton_ch1point1")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.pushButton_ch1point1)
+
+        self.lineEdit_ch1point2 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch1point2.setObjectName(u"lineEdit_ch1point2")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.lineEdit_ch1point2)
+
+        self.pushButton_ch1point2 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch1point2.setObjectName(u"pushButton_ch1point2")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.pushButton_ch1point2)
+
+        self.lineEdit_ch1point3 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch1point3.setObjectName(u"lineEdit_ch1point3")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.lineEdit_ch1point3)
+
+        self.pushButton_ch1point3 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch1point3.setObjectName(u"pushButton_ch1point3")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.pushButton_ch1point3)
+
+        self.lineEdit_ch1point4 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch1point4.setObjectName(u"lineEdit_ch1point4")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.lineEdit_ch1point4)
+
+        self.pushButton_ch1point4 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch1point4.setObjectName(u"pushButton_ch1point4")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.pushButton_ch1point4)
+
+        self.lineEdit_ch1point5 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch1point5.setObjectName(u"lineEdit_ch1point5")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.lineEdit_ch1point5)
+
+        self.pushButton_ch1point5 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch1point5.setObjectName(u"pushButton_ch1point5")
+
+        self.horizontalLayout_ch1calibration.addWidget(self.pushButton_ch1point5)
+
+        self.horizontalLayout_ch1calibration.setStretch(0, 1)
+        self.horizontalLayout_ch1calibration.setStretch(1, 1)
+        self.horizontalLayout_ch1calibration.setStretch(2, 1)
+        self.horizontalLayout_ch1calibration.setStretch(3, 1)
+        self.horizontalLayout_ch1calibration.setStretch(4, 1)
+        self.horizontalLayout_ch1calibration.setStretch(5, 1)
+        self.horizontalLayout_ch1calibration.setStretch(6, 1)
+        self.horizontalLayout_ch1calibration.setStretch(7, 1)
+        self.horizontalLayout_ch1calibration.setStretch(8, 1)
+        self.horizontalLayout_ch1calibration.setStretch(9, 1)
+        self.horizontalLayout_ch1calibration.setStretch(10, 1)
+
+        self.gridLayout_4.addLayout(self.horizontalLayout_ch1calibration, 0, 0, 1, 1)
+
+        self.horizontalLayout_ch8calibration = QHBoxLayout()
+        self.horizontalLayout_ch8calibration.setSpacing(10)
+        self.horizontalLayout_ch8calibration.setObjectName(u"horizontalLayout_ch8calibration")
+        self.label_ch8calibration = QLabel(self.groupBox_calibration)
+        self.label_ch8calibration.setObjectName(u"label_ch8calibration")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.label_ch8calibration)
+
+        self.lineEdit_ch8point1 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch8point1.setObjectName(u"lineEdit_ch8point1")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.lineEdit_ch8point1)
+
+        self.pushButton_ch8point1 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch8point1.setObjectName(u"pushButton_ch8point1")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.pushButton_ch8point1)
+
+        self.lineEdit_ch8point2 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch8point2.setObjectName(u"lineEdit_ch8point2")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.lineEdit_ch8point2)
+
+        self.pushButton_ch8point2 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch8point2.setObjectName(u"pushButton_ch8point2")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.pushButton_ch8point2)
+
+        self.lineEdit_ch8point3 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch8point3.setObjectName(u"lineEdit_ch8point3")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.lineEdit_ch8point3)
+
+        self.pushButton_ch8point3 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch8point3.setObjectName(u"pushButton_ch8point3")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.pushButton_ch8point3)
+
+        self.lineEdit_ch8point4 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch8point4.setObjectName(u"lineEdit_ch8point4")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.lineEdit_ch8point4)
+
+        self.pushButton_ch8point4 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch8point4.setObjectName(u"pushButton_ch8point4")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.pushButton_ch8point4)
+
+        self.lineEdit_ch8point5 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch8point5.setObjectName(u"lineEdit_ch8point5")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.lineEdit_ch8point5)
+
+        self.pushButton_ch8point5 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch8point5.setObjectName(u"pushButton_ch8point5")
+
+        self.horizontalLayout_ch8calibration.addWidget(self.pushButton_ch8point5)
+
+        self.horizontalLayout_ch8calibration.setStretch(0, 1)
+        self.horizontalLayout_ch8calibration.setStretch(1, 1)
+        self.horizontalLayout_ch8calibration.setStretch(2, 1)
+        self.horizontalLayout_ch8calibration.setStretch(3, 1)
+        self.horizontalLayout_ch8calibration.setStretch(4, 1)
+        self.horizontalLayout_ch8calibration.setStretch(5, 1)
+        self.horizontalLayout_ch8calibration.setStretch(6, 1)
+        self.horizontalLayout_ch8calibration.setStretch(7, 1)
+        self.horizontalLayout_ch8calibration.setStretch(8, 1)
+        self.horizontalLayout_ch8calibration.setStretch(9, 1)
+        self.horizontalLayout_ch8calibration.setStretch(10, 1)
+
+        self.gridLayout_4.addLayout(self.horizontalLayout_ch8calibration, 7, 0, 1, 1)
+
+        self.horizontalLayout_ch4calibration = QHBoxLayout()
+        self.horizontalLayout_ch4calibration.setSpacing(10)
+        self.horizontalLayout_ch4calibration.setObjectName(u"horizontalLayout_ch4calibration")
+        self.label_ch4calibration = QLabel(self.groupBox_calibration)
+        self.label_ch4calibration.setObjectName(u"label_ch4calibration")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.label_ch4calibration)
+
+        self.lineEdit_ch4point1 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch4point1.setObjectName(u"lineEdit_ch4point1")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.lineEdit_ch4point1)
+
+        self.pushButton_ch4point1 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch4point1.setObjectName(u"pushButton_ch4point1")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.pushButton_ch4point1)
+
+        self.lineEdit_ch4point2 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch4point2.setObjectName(u"lineEdit_ch4point2")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.lineEdit_ch4point2)
+
+        self.pushButton_ch4point2 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch4point2.setObjectName(u"pushButton_ch4point2")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.pushButton_ch4point2)
+
+        self.lineEdit_ch4point3 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch4point3.setObjectName(u"lineEdit_ch4point3")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.lineEdit_ch4point3)
+
+        self.pushButton_ch4point3 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch4point3.setObjectName(u"pushButton_ch4point3")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.pushButton_ch4point3)
+
+        self.lineEdit_ch4point4 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch4point4.setObjectName(u"lineEdit_ch4point4")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.lineEdit_ch4point4)
+
+        self.pushButton_ch4point4 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch4point4.setObjectName(u"pushButton_ch4point4")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.pushButton_ch4point4)
+
+        self.lineEdit_ch4point5 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch4point5.setObjectName(u"lineEdit_ch4point5")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.lineEdit_ch4point5)
+
+        self.pushButton_ch4point5 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch4point5.setObjectName(u"pushButton_ch4point5")
+
+        self.horizontalLayout_ch4calibration.addWidget(self.pushButton_ch4point5)
+
+        self.horizontalLayout_ch4calibration.setStretch(0, 1)
+        self.horizontalLayout_ch4calibration.setStretch(1, 1)
+        self.horizontalLayout_ch4calibration.setStretch(2, 1)
+        self.horizontalLayout_ch4calibration.setStretch(3, 1)
+        self.horizontalLayout_ch4calibration.setStretch(4, 1)
+        self.horizontalLayout_ch4calibration.setStretch(5, 1)
+        self.horizontalLayout_ch4calibration.setStretch(6, 1)
+        self.horizontalLayout_ch4calibration.setStretch(7, 1)
+        self.horizontalLayout_ch4calibration.setStretch(8, 1)
+        self.horizontalLayout_ch4calibration.setStretch(9, 1)
+        self.horizontalLayout_ch4calibration.setStretch(10, 1)
+
+        self.gridLayout_4.addLayout(self.horizontalLayout_ch4calibration, 3, 0, 1, 1)
+
+        self.horizontalLayout_ch5calibration = QHBoxLayout()
+        self.horizontalLayout_ch5calibration.setSpacing(10)
+        self.horizontalLayout_ch5calibration.setObjectName(u"horizontalLayout_ch5calibration")
+        self.label_ch5calibration = QLabel(self.groupBox_calibration)
+        self.label_ch5calibration.setObjectName(u"label_ch5calibration")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.label_ch5calibration)
+
+        self.lineEdit_ch5point1 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch5point1.setObjectName(u"lineEdit_ch5point1")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.lineEdit_ch5point1)
+
+        self.pushButton_ch5point1 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch5point1.setObjectName(u"pushButton_ch5point1")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.pushButton_ch5point1)
+
+        self.lineEdit_ch5point2 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch5point2.setObjectName(u"lineEdit_ch5point2")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.lineEdit_ch5point2)
+
+        self.pushButton_ch5point2 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch5point2.setObjectName(u"pushButton_ch5point2")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.pushButton_ch5point2)
+
+        self.lineEdit_ch5point3 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch5point3.setObjectName(u"lineEdit_ch5point3")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.lineEdit_ch5point3)
+
+        self.pushButton_ch5point3 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch5point3.setObjectName(u"pushButton_ch5point3")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.pushButton_ch5point3)
+
+        self.lineEdit_ch5point4 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch5point4.setObjectName(u"lineEdit_ch5point4")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.lineEdit_ch5point4)
+
+        self.pushButton_ch5point4 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch5point4.setObjectName(u"pushButton_ch5point4")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.pushButton_ch5point4)
+
+        self.lineEdit_ch5point5 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch5point5.setObjectName(u"lineEdit_ch5point5")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.lineEdit_ch5point5)
+
+        self.pushButton_ch5point5 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch5point5.setObjectName(u"pushButton_ch5point5")
+
+        self.horizontalLayout_ch5calibration.addWidget(self.pushButton_ch5point5)
+
+        self.horizontalLayout_ch5calibration.setStretch(0, 1)
+        self.horizontalLayout_ch5calibration.setStretch(1, 1)
+        self.horizontalLayout_ch5calibration.setStretch(2, 1)
+        self.horizontalLayout_ch5calibration.setStretch(3, 1)
+        self.horizontalLayout_ch5calibration.setStretch(4, 1)
+        self.horizontalLayout_ch5calibration.setStretch(5, 1)
+        self.horizontalLayout_ch5calibration.setStretch(6, 1)
+        self.horizontalLayout_ch5calibration.setStretch(7, 1)
+        self.horizontalLayout_ch5calibration.setStretch(8, 1)
+        self.horizontalLayout_ch5calibration.setStretch(9, 1)
+        self.horizontalLayout_ch5calibration.setStretch(10, 1)
+
+        self.gridLayout_4.addLayout(self.horizontalLayout_ch5calibration, 4, 0, 1, 1)
+
+        self.horizontalLayout_ch3calibration = QHBoxLayout()
+        self.horizontalLayout_ch3calibration.setSpacing(10)
+        self.horizontalLayout_ch3calibration.setObjectName(u"horizontalLayout_ch3calibration")
+        self.label_ch3calibration = QLabel(self.groupBox_calibration)
+        self.label_ch3calibration.setObjectName(u"label_ch3calibration")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.label_ch3calibration)
+
+        self.lineEdit_ch3point1 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch3point1.setObjectName(u"lineEdit_ch3point1")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.lineEdit_ch3point1)
+
+        self.pushButton_ch3point1 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch3point1.setObjectName(u"pushButton_ch3point1")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.pushButton_ch3point1)
+
+        self.lineEdit_ch3point2 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch3point2.setObjectName(u"lineEdit_ch3point2")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.lineEdit_ch3point2)
+
+        self.pushButton_ch3point2 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch3point2.setObjectName(u"pushButton_ch3point2")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.pushButton_ch3point2)
+
+        self.lineEdit_ch3point3 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch3point3.setObjectName(u"lineEdit_ch3point3")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.lineEdit_ch3point3)
+
+        self.pushButton_ch3point3 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch3point3.setObjectName(u"pushButton_ch3point3")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.pushButton_ch3point3)
+
+        self.lineEdit_ch3point4 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch3point4.setObjectName(u"lineEdit_ch3point4")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.lineEdit_ch3point4)
+
+        self.pushButton_ch3point4 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch3point4.setObjectName(u"pushButton_ch3point4")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.pushButton_ch3point4)
+
+        self.lineEdit_ch3point5 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch3point5.setObjectName(u"lineEdit_ch3point5")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.lineEdit_ch3point5)
+
+        self.pushButton_ch3point5 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch3point5.setObjectName(u"pushButton_ch3point5")
+
+        self.horizontalLayout_ch3calibration.addWidget(self.pushButton_ch3point5)
+
+        self.horizontalLayout_ch3calibration.setStretch(0, 1)
+        self.horizontalLayout_ch3calibration.setStretch(1, 1)
+        self.horizontalLayout_ch3calibration.setStretch(2, 1)
+        self.horizontalLayout_ch3calibration.setStretch(3, 1)
+        self.horizontalLayout_ch3calibration.setStretch(4, 1)
+        self.horizontalLayout_ch3calibration.setStretch(5, 1)
+        self.horizontalLayout_ch3calibration.setStretch(6, 1)
+        self.horizontalLayout_ch3calibration.setStretch(7, 1)
+        self.horizontalLayout_ch3calibration.setStretch(8, 1)
+        self.horizontalLayout_ch3calibration.setStretch(9, 1)
+        self.horizontalLayout_ch3calibration.setStretch(10, 1)
+
+        self.gridLayout_4.addLayout(self.horizontalLayout_ch3calibration, 2, 0, 1, 1)
+
+        self.horizontalLayout_ch7calibration = QHBoxLayout()
+        self.horizontalLayout_ch7calibration.setSpacing(10)
+        self.horizontalLayout_ch7calibration.setObjectName(u"horizontalLayout_ch7calibration")
+        self.label_ch7calibration = QLabel(self.groupBox_calibration)
+        self.label_ch7calibration.setObjectName(u"label_ch7calibration")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.label_ch7calibration)
+
+        self.lineEdit_ch7point1 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch7point1.setObjectName(u"lineEdit_ch7point1")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.lineEdit_ch7point1)
+
+        self.pushButton_ch7point1 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch7point1.setObjectName(u"pushButton_ch7point1")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.pushButton_ch7point1)
+
+        self.lineEdit_ch7point2 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch7point2.setObjectName(u"lineEdit_ch7point2")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.lineEdit_ch7point2)
+
+        self.pushButton_ch7point2 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch7point2.setObjectName(u"pushButton_ch7point2")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.pushButton_ch7point2)
+
+        self.lineEdit_ch7point3 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch7point3.setObjectName(u"lineEdit_ch7point3")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.lineEdit_ch7point3)
+
+        self.pushButton_ch7point3 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch7point3.setObjectName(u"pushButton_ch7point3")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.pushButton_ch7point3)
+
+        self.lineEdit_ch7point4 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch7point4.setObjectName(u"lineEdit_ch7point4")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.lineEdit_ch7point4)
+
+        self.pushButton_ch7point4 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch7point4.setObjectName(u"pushButton_ch7point4")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.pushButton_ch7point4)
+
+        self.lineEdit_ch7point5 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch7point5.setObjectName(u"lineEdit_ch7point5")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.lineEdit_ch7point5)
+
+        self.pushButton_ch7point5 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch7point5.setObjectName(u"pushButton_ch7point5")
+
+        self.horizontalLayout_ch7calibration.addWidget(self.pushButton_ch7point5)
+
+        self.horizontalLayout_ch7calibration.setStretch(0, 1)
+        self.horizontalLayout_ch7calibration.setStretch(1, 1)
+        self.horizontalLayout_ch7calibration.setStretch(2, 1)
+        self.horizontalLayout_ch7calibration.setStretch(3, 1)
+        self.horizontalLayout_ch7calibration.setStretch(4, 1)
+        self.horizontalLayout_ch7calibration.setStretch(5, 1)
+        self.horizontalLayout_ch7calibration.setStretch(6, 1)
+        self.horizontalLayout_ch7calibration.setStretch(7, 1)
+        self.horizontalLayout_ch7calibration.setStretch(8, 1)
+        self.horizontalLayout_ch7calibration.setStretch(9, 1)
+        self.horizontalLayout_ch7calibration.setStretch(10, 1)
+
+        self.gridLayout_4.addLayout(self.horizontalLayout_ch7calibration, 6, 0, 1, 1)
+
+        self.horizontalLayout_ch6calibration = QHBoxLayout()
+        self.horizontalLayout_ch6calibration.setSpacing(10)
+        self.horizontalLayout_ch6calibration.setObjectName(u"horizontalLayout_ch6calibration")
+        self.label_ch6calibration = QLabel(self.groupBox_calibration)
+        self.label_ch6calibration.setObjectName(u"label_ch6calibration")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.label_ch6calibration)
+
+        self.lineEdit_ch6point1 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch6point1.setObjectName(u"lineEdit_ch6point1")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.lineEdit_ch6point1)
+
+        self.pushButton_ch6point1 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch6point1.setObjectName(u"pushButton_ch6point1")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.pushButton_ch6point1)
+
+        self.lineEdit_ch6point2 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch6point2.setObjectName(u"lineEdit_ch6point2")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.lineEdit_ch6point2)
+
+        self.pushButton_ch6point2 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch6point2.setObjectName(u"pushButton_ch6point2")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.pushButton_ch6point2)
+
+        self.lineEdit_ch6point3 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch6point3.setObjectName(u"lineEdit_ch6point3")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.lineEdit_ch6point3)
+
+        self.pushButton_ch6point3 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch6point3.setObjectName(u"pushButton_ch6point3")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.pushButton_ch6point3)
+
+        self.lineEdit_ch6point4 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch6point4.setObjectName(u"lineEdit_ch6point4")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.lineEdit_ch6point4)
+
+        self.pushButton_ch6point4 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch6point4.setObjectName(u"pushButton_ch6point4")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.pushButton_ch6point4)
+
+        self.lineEdit_ch6point5 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch6point5.setObjectName(u"lineEdit_ch6point5")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.lineEdit_ch6point5)
+
+        self.pushButton_ch6point5 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch6point5.setObjectName(u"pushButton_ch6point5")
+
+        self.horizontalLayout_ch6calibration.addWidget(self.pushButton_ch6point5)
+
+        self.horizontalLayout_ch6calibration.setStretch(0, 1)
+        self.horizontalLayout_ch6calibration.setStretch(1, 1)
+        self.horizontalLayout_ch6calibration.setStretch(2, 1)
+        self.horizontalLayout_ch6calibration.setStretch(3, 1)
+        self.horizontalLayout_ch6calibration.setStretch(4, 1)
+        self.horizontalLayout_ch6calibration.setStretch(5, 1)
+        self.horizontalLayout_ch6calibration.setStretch(6, 1)
+        self.horizontalLayout_ch6calibration.setStretch(7, 1)
+        self.horizontalLayout_ch6calibration.setStretch(8, 1)
+        self.horizontalLayout_ch6calibration.setStretch(9, 1)
+        self.horizontalLayout_ch6calibration.setStretch(10, 1)
+
+        self.gridLayout_4.addLayout(self.horizontalLayout_ch6calibration, 5, 0, 1, 1)
+
+        self.horizontalLayout_ch2calibration = QHBoxLayout()
+        self.horizontalLayout_ch2calibration.setSpacing(10)
+        self.horizontalLayout_ch2calibration.setObjectName(u"horizontalLayout_ch2calibration")
+        self.label_ch2calibration = QLabel(self.groupBox_calibration)
+        self.label_ch2calibration.setObjectName(u"label_ch2calibration")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.label_ch2calibration)
+
+        self.lineEdit_ch2point1 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch2point1.setObjectName(u"lineEdit_ch2point1")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.lineEdit_ch2point1)
+
+        self.pushButton_ch2point1 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch2point1.setObjectName(u"pushButton_ch2point1")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.pushButton_ch2point1)
+
+        self.lineEdit_ch2point2 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch2point2.setObjectName(u"lineEdit_ch2point2")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.lineEdit_ch2point2)
+
+        self.pushButton_ch2point2 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch2point2.setObjectName(u"pushButton_ch2point2")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.pushButton_ch2point2)
+
+        self.lineEdit_ch2point3 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch2point3.setObjectName(u"lineEdit_ch2point3")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.lineEdit_ch2point3)
+
+        self.pushButton_ch2point3 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch2point3.setObjectName(u"pushButton_ch2point3")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.pushButton_ch2point3)
+
+        self.lineEdit_ch2point4 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch2point4.setObjectName(u"lineEdit_ch2point4")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.lineEdit_ch2point4)
+
+        self.pushButton_ch2point4 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch2point4.setObjectName(u"pushButton_ch2point4")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.pushButton_ch2point4)
+
+        self.lineEdit_ch2point5 = QLineEdit(self.groupBox_calibration)
+        self.lineEdit_ch2point5.setObjectName(u"lineEdit_ch2point5")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.lineEdit_ch2point5)
+
+        self.pushButton_ch2point5 = QPushButton(self.groupBox_calibration)
+        self.pushButton_ch2point5.setObjectName(u"pushButton_ch2point5")
+
+        self.horizontalLayout_ch2calibration.addWidget(self.pushButton_ch2point5)
+
+        self.horizontalLayout_ch2calibration.setStretch(0, 1)
+        self.horizontalLayout_ch2calibration.setStretch(1, 1)
+        self.horizontalLayout_ch2calibration.setStretch(2, 1)
+        self.horizontalLayout_ch2calibration.setStretch(3, 1)
+        self.horizontalLayout_ch2calibration.setStretch(4, 1)
+        self.horizontalLayout_ch2calibration.setStretch(5, 1)
+        self.horizontalLayout_ch2calibration.setStretch(6, 1)
+        self.horizontalLayout_ch2calibration.setStretch(7, 1)
+        self.horizontalLayout_ch2calibration.setStretch(8, 1)
+        self.horizontalLayout_ch2calibration.setStretch(9, 1)
+        self.horizontalLayout_ch2calibration.setStretch(10, 1)
+
+        self.gridLayout_4.addLayout(self.horizontalLayout_ch2calibration, 1, 0, 1, 1)
+
+
+        self.gridLayout_3.addWidget(self.groupBox_calibration, 0, 0, 1, 1)
+
         self.stackedWidget.addWidget(self.calibration)
         self.log = QWidget()
         self.log.setObjectName(u"log")
@@ -2685,6 +3270,55 @@ class Ui_MainWindow(object):
         self.label_ch7Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 7:", None))
         self.label_ch8Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 8:", None))
         self.label_deviceModelSetting.setText(QCoreApplication.translate("MainWindow", u"Model", None))
+        self.groupBox_calibration.setTitle(QCoreApplication.translate("MainWindow", u"Calibration Values", None))
+        self.label_ch1calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 1:", None))
+        self.pushButton_ch1point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch1point2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch1point3.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch1point4.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch1point5.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.label_ch8calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 8:", None))
+        self.pushButton_ch8point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch8point2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch8point3.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch8point4.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch8point5.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.label_ch4calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 4:", None))
+        self.pushButton_ch4point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch4point2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch4point3.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch4point4.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch4point5.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.label_ch5calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 5:", None))
+        self.pushButton_ch5point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch5point2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch5point3.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch5point4.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch5point5.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.label_ch3calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 3:", None))
+        self.pushButton_ch3point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch3point2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch3point3.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch3point4.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch3point5.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.label_ch7calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 7:", None))
+        self.pushButton_ch7point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch7point2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch7point3.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch7point4.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch7point5.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.label_ch6calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 6:", None))
+        self.pushButton_ch6point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch6point2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch6point3.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch6point4.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch6point5.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.label_ch2calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 2:", None))
+        self.pushButton_ch2point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch2point2.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch2point3.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch2point4.setText(QCoreApplication.translate("MainWindow", u"Set", None))
+        self.pushButton_ch2point5.setText(QCoreApplication.translate("MainWindow", u"Set", None))
         self.labelBoxBlenderInstalation.setText(QCoreApplication.translate("MainWindow", u"FILE BOX", None))
         self.lineEdit.setText("")
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))

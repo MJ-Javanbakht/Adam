@@ -978,7 +978,7 @@ Button */
                   </property>
                  </widget>
                 </item>
-                 <item>
+                <item>
                  <widget class="QPushButton" name="btn_trend">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -3204,7 +3204,531 @@ p, li { white-space: pre-wrap; }
                        </item>
                       </layout>
                      </widget>
-                     <widget class="QWidget" name="calibration"/>
+                     <widget class="QWidget" name="calibration">
+                      <layout class="QGridLayout" name="gridLayout_3">
+                       <item row="0" column="0">
+                        <widget class="QGroupBox" name="groupBox_calibration">
+                         <property name="title">
+                          <string>Calibration Values</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_4">
+                          <item row="0" column="0">
+                           <layout class="QHBoxLayout" name="horizontalLayout_ch1calibration" stretch="1,1,1,1,1,1,1,1,1,1,1">
+                            <property name="spacing">
+                             <number>10</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_ch1calibration">
+                              <property name="text">
+                               <string>Channel 1:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch1point1"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch1point1">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch1point2"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch1point2">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch1point3"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch1point3">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch1point4"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch1point4">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch1point5"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch1point5">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item row="7" column="0">
+                           <layout class="QHBoxLayout" name="horizontalLayout_ch8calibration" stretch="1,1,1,1,1,1,1,1,1,1,1">
+                            <property name="spacing">
+                             <number>10</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_ch8calibration">
+                              <property name="text">
+                               <string>Channel 8:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch8point1"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch8point1">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch8point2"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch8point2">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch8point3"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch8point3">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch8point4"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch8point4">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch8point5"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch8point5">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item row="3" column="0">
+                           <layout class="QHBoxLayout" name="horizontalLayout_ch4calibration" stretch="1,1,1,1,1,1,1,1,1,1,1">
+                            <property name="spacing">
+                             <number>10</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_ch4calibration">
+                              <property name="text">
+                               <string>Channel 4:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch4point1"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch4point1">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch4point2"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch4point2">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch4point3"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch4point3">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch4point4"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch4point4">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch4point5"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch4point5">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item row="4" column="0">
+                           <layout class="QHBoxLayout" name="horizontalLayout_ch5calibration" stretch="1,1,1,1,1,1,1,1,1,1,1">
+                            <property name="spacing">
+                             <number>10</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_ch5calibration">
+                              <property name="text">
+                               <string>Channel 5:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch5point1"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch5point1">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch5point2"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch5point2">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch5point3"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch5point3">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch5point4"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch5point4">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch5point5"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch5point5">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item row="2" column="0">
+                           <layout class="QHBoxLayout" name="horizontalLayout_ch3calibration" stretch="1,1,1,1,1,1,1,1,1,1,1">
+                            <property name="spacing">
+                             <number>10</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_ch3calibration">
+                              <property name="text">
+                               <string>Channel 3:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch3point1"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch3point1">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch3point2"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch3point2">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch3point3"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch3point3">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch3point4"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch3point4">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch3point5"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch3point5">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item row="6" column="0">
+                           <layout class="QHBoxLayout" name="horizontalLayout_ch7calibration" stretch="1,1,1,1,1,1,1,1,1,1,1">
+                            <property name="spacing">
+                             <number>10</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_ch7calibration">
+                              <property name="text">
+                               <string>Channel 7:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch7point1"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch7point1">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch7point2"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch7point2">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch7point3"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch7point3">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch7point4"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch7point4">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch7point5"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch7point5">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item row="5" column="0">
+                           <layout class="QHBoxLayout" name="horizontalLayout_ch6calibration" stretch="1,1,1,1,1,1,1,1,1,1,1">
+                            <property name="spacing">
+                             <number>10</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_ch6calibration">
+                              <property name="text">
+                               <string>Channel 6:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch6point1"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch6point1">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch6point2"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch6point2">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch6point3"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch6point3">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch6point4"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch6point4">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch6point5"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch6point5">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item row="1" column="0">
+                           <layout class="QHBoxLayout" name="horizontalLayout_ch2calibration" stretch="1,1,1,1,1,1,1,1,1,1,1">
+                            <property name="spacing">
+                             <number>10</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_ch2calibration">
+                              <property name="text">
+                               <string>Channel 2:</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch2point1"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch2point1">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch2point2"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch2point2">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch2point3"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch2point3">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch2point4"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch2point4">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="lineEdit_ch2point5"/>
+                            </item>
+                            <item>
+                             <widget class="QPushButton" name="pushButton_ch2point5">
+                              <property name="text">
+                               <string>Set</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
                      <widget class="QWidget" name="log"/>
                      <widget class="QWidget" name="widgets">
                       <property name="styleSheet">
