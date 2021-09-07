@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Setup_DialogeQxbaq.ui'
+## Form generated from reading UI file 'Setup_Dialog.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.2
 ##
@@ -17,20 +17,12 @@ class Ui_Setup(object):
     def setupUi(self, Setup):
         if not Setup.objectName():
             Setup.setObjectName(u"Setup")
-        Setup.resize(600, 500)
-        font = QFont()
-        font.setPointSize(10)
-        Setup.setFont(font)
-        Setup.setCursor(QCursor(Qt.ArrowCursor))
-        Setup.setMouseTracking(False)
-        Setup.setIconSize(QSize(500, 500))
-        self.centralwidget_Setup = QWidget(Setup)
-        self.centralwidget_Setup.setObjectName(u"centralwidget_Setup")
-        self.gridLayout = QGridLayout(self.centralwidget_Setup)
-        self.gridLayout.setObjectName(u"gridLayout")
-        self.groupBox_Connection = QGroupBox(self.centralwidget_Setup)
+        Setup.resize(500, 404)
+        self.gridLayout_setup = QGridLayout(Setup)
+        self.gridLayout_setup.setObjectName(u"gridLayout_setup")
+        self.groupBox_Connection = QGroupBox(Setup)
         self.groupBox_Connection.setObjectName(u"groupBox_Connection")
-        sizePolicy = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Preferred)
+        sizePolicy = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.groupBox_Connection.sizePolicy().hasHeightForWidth())
@@ -54,11 +46,11 @@ class Ui_Setup(object):
         self.horizontalLayout_Connection.addWidget(self.comboBox_Connection)
 
 
-        self.gridLayout.addWidget(self.groupBox_Connection, 0, 0, 1, 1)
+        self.gridLayout_setup.addWidget(self.groupBox_Connection, 0, 0, 1, 1)
 
         self.verticalLayout_buttons = QVBoxLayout()
         self.verticalLayout_buttons.setObjectName(u"verticalLayout_buttons")
-        self.pushButton_ok = QPushButton(self.centralwidget_Setup)
+        self.pushButton_ok = QPushButton(Setup)
         self.pushButton_ok.setObjectName(u"pushButton_ok")
         sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Maximum)
         sizePolicy2.setHorizontalStretch(0)
@@ -66,28 +58,28 @@ class Ui_Setup(object):
         sizePolicy2.setHeightForWidth(self.pushButton_ok.sizePolicy().hasHeightForWidth())
         self.pushButton_ok.setSizePolicy(sizePolicy2)
 
-        self.verticalLayout_buttons.addWidget(self.pushButton_ok, 0, Qt.AlignHCenter)
+        self.verticalLayout_buttons.addWidget(self.pushButton_ok, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.pushButton_close = QPushButton(self.centralwidget_Setup)
+        self.pushButton_close = QPushButton(Setup)
         self.pushButton_close.setObjectName(u"pushButton_close")
         sizePolicy2.setHeightForWidth(self.pushButton_close.sizePolicy().hasHeightForWidth())
         self.pushButton_close.setSizePolicy(sizePolicy2)
 
-        self.verticalLayout_buttons.addWidget(self.pushButton_close, 0, Qt.AlignHCenter)
+        self.verticalLayout_buttons.addWidget(self.pushButton_close, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
 
-        self.gridLayout.addLayout(self.verticalLayout_buttons, 0, 1, 1, 1)
+        self.gridLayout_setup.addLayout(self.verticalLayout_buttons, 0, 1, 1, 1)
 
-        self.groupBox_Serial = QGroupBox(self.centralwidget_Setup)
+        self.groupBox_Serial = QGroupBox(Setup)
         self.groupBox_Serial.setObjectName(u"groupBox_Serial")
         sizePolicy1.setHeightForWidth(self.groupBox_Serial.sizePolicy().hasHeightForWidth())
         self.groupBox_Serial.setSizePolicy(sizePolicy1)
-        self.gridLayout_2 = QGridLayout(self.groupBox_Serial)
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout_Serial = QGridLayout(self.groupBox_Serial)
+        self.gridLayout_Serial.setObjectName(u"gridLayout_Serial")
         self.label_COM = QLabel(self.groupBox_Serial)
         self.label_COM.setObjectName(u"label_COM")
 
-        self.gridLayout_2.addWidget(self.label_COM, 0, 0, 1, 1)
+        self.gridLayout_Serial.addWidget(self.label_COM, 0, 0, 1, 1)
 
         self.comboBox_COM = QComboBox(self.groupBox_Serial)
         self.comboBox_COM.addItem("")
@@ -108,12 +100,12 @@ class Ui_Setup(object):
         sizePolicy3.setHeightForWidth(self.comboBox_COM.sizePolicy().hasHeightForWidth())
         self.comboBox_COM.setSizePolicy(sizePolicy3)
 
-        self.gridLayout_2.addWidget(self.comboBox_COM, 0, 1, 1, 1)
+        self.gridLayout_Serial.addWidget(self.comboBox_COM, 0, 1, 1, 1)
 
         self.label_BaudRate = QLabel(self.groupBox_Serial)
         self.label_BaudRate.setObjectName(u"label_BaudRate")
 
-        self.gridLayout_2.addWidget(self.label_BaudRate, 1, 0, 1, 1)
+        self.gridLayout_Serial.addWidget(self.label_BaudRate, 1, 0, 1, 1)
 
         self.comboBox_BaudRate = QComboBox(self.groupBox_Serial)
         self.comboBox_BaudRate.addItem("")
@@ -133,12 +125,12 @@ class Ui_Setup(object):
         self.comboBox_BaudRate.setSizePolicy(sizePolicy1)
         self.comboBox_BaudRate.setMaxVisibleItems(15)
 
-        self.gridLayout_2.addWidget(self.comboBox_BaudRate, 1, 1, 1, 1)
+        self.gridLayout_Serial.addWidget(self.comboBox_BaudRate, 1, 1, 1, 1)
 
         self.label_DataBits = QLabel(self.groupBox_Serial)
         self.label_DataBits.setObjectName(u"label_DataBits")
 
-        self.gridLayout_2.addWidget(self.label_DataBits, 2, 0, 1, 1)
+        self.gridLayout_Serial.addWidget(self.label_DataBits, 2, 0, 1, 1)
 
         self.comboBox_DataBits = QComboBox(self.groupBox_Serial)
         self.comboBox_DataBits.addItem("")
@@ -147,12 +139,12 @@ class Ui_Setup(object):
         sizePolicy1.setHeightForWidth(self.comboBox_DataBits.sizePolicy().hasHeightForWidth())
         self.comboBox_DataBits.setSizePolicy(sizePolicy1)
 
-        self.gridLayout_2.addWidget(self.comboBox_DataBits, 2, 1, 1, 1)
+        self.gridLayout_Serial.addWidget(self.comboBox_DataBits, 2, 1, 1, 1)
 
         self.label_Parity = QLabel(self.groupBox_Serial)
         self.label_Parity.setObjectName(u"label_Parity")
 
-        self.gridLayout_2.addWidget(self.label_Parity, 3, 0, 1, 1)
+        self.gridLayout_Serial.addWidget(self.label_Parity, 3, 0, 1, 1)
 
         self.comboBox_Parity = QComboBox(self.groupBox_Serial)
         self.comboBox_Parity.addItem("")
@@ -162,12 +154,12 @@ class Ui_Setup(object):
         sizePolicy1.setHeightForWidth(self.comboBox_Parity.sizePolicy().hasHeightForWidth())
         self.comboBox_Parity.setSizePolicy(sizePolicy1)
 
-        self.gridLayout_2.addWidget(self.comboBox_Parity, 3, 1, 1, 1)
+        self.gridLayout_Serial.addWidget(self.comboBox_Parity, 3, 1, 1, 1)
 
         self.label_StopBits = QLabel(self.groupBox_Serial)
         self.label_StopBits.setObjectName(u"label_StopBits")
 
-        self.gridLayout_2.addWidget(self.label_StopBits, 4, 0, 1, 1)
+        self.gridLayout_Serial.addWidget(self.label_StopBits, 4, 0, 1, 1)
 
         self.comboBox_StopBits = QComboBox(self.groupBox_Serial)
         self.comboBox_StopBits.addItem("")
@@ -176,12 +168,12 @@ class Ui_Setup(object):
         sizePolicy1.setHeightForWidth(self.comboBox_StopBits.sizePolicy().hasHeightForWidth())
         self.comboBox_StopBits.setSizePolicy(sizePolicy1)
 
-        self.gridLayout_2.addWidget(self.comboBox_StopBits, 4, 1, 1, 1)
+        self.gridLayout_Serial.addWidget(self.comboBox_StopBits, 4, 1, 1, 1)
 
 
-        self.gridLayout.addWidget(self.groupBox_Serial, 1, 0, 3, 1)
+        self.gridLayout_setup.addWidget(self.groupBox_Serial, 1, 0, 3, 1)
 
-        self.groupBox_Mode = QGroupBox(self.centralwidget_Setup)
+        self.groupBox_Mode = QGroupBox(Setup)
         self.groupBox_Mode.setObjectName(u"groupBox_Mode")
         sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
         sizePolicy4.setHorizontalStretch(0)
@@ -209,9 +201,9 @@ class Ui_Setup(object):
         self.horizontalLayout_Mode.addWidget(self.radioButton_ASCII, 0, Qt.AlignHCenter)
 
 
-        self.gridLayout.addWidget(self.groupBox_Mode, 1, 1, 1, 1)
+        self.gridLayout_setup.addWidget(self.groupBox_Mode, 1, 1, 1, 1)
 
-        self.groupBox_SlaveID = QGroupBox(self.centralwidget_Setup)
+        self.groupBox_SlaveID = QGroupBox(Setup)
         self.groupBox_SlaveID.setObjectName(u"groupBox_SlaveID")
         sizePolicy4.setHeightForWidth(self.groupBox_SlaveID.sizePolicy().hasHeightForWidth())
         self.groupBox_SlaveID.setSizePolicy(sizePolicy4)
@@ -225,35 +217,35 @@ class Ui_Setup(object):
         self.horizontalLayout_SlaveID.addWidget(self.lineEdit_SlaveID)
 
 
-        self.gridLayout.addWidget(self.groupBox_SlaveID, 2, 1, 1, 1)
+        self.gridLayout_setup.addWidget(self.groupBox_SlaveID, 2, 1, 1, 1)
 
-        self.groupBox_ResTout = QGroupBox(self.centralwidget_Setup)
+        self.groupBox_ResTout = QGroupBox(Setup)
         self.groupBox_ResTout.setObjectName(u"groupBox_ResTout")
         sizePolicy4.setHeightForWidth(self.groupBox_ResTout.sizePolicy().hasHeightForWidth())
         self.groupBox_ResTout.setSizePolicy(sizePolicy4)
-        self.horizontalLayout_2 = QHBoxLayout(self.groupBox_ResTout)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_ResTout = QHBoxLayout(self.groupBox_ResTout)
+        self.horizontalLayout_ResTout.setObjectName(u"horizontalLayout_ResTout")
         self.lineEdit_ResTout = QLineEdit(self.groupBox_ResTout)
         self.lineEdit_ResTout.setObjectName(u"lineEdit_ResTout")
         sizePolicy4.setHeightForWidth(self.lineEdit_ResTout.sizePolicy().hasHeightForWidth())
         self.lineEdit_ResTout.setSizePolicy(sizePolicy4)
 
-        self.horizontalLayout_2.addWidget(self.lineEdit_ResTout)
+        self.horizontalLayout_ResTout.addWidget(self.lineEdit_ResTout)
 
         self.label_ResTout = QLabel(self.groupBox_ResTout)
         self.label_ResTout.setObjectName(u"label_ResTout")
 
-        self.horizontalLayout_2.addWidget(self.label_ResTout)
+        self.horizontalLayout_ResTout.addWidget(self.label_ResTout)
 
 
-        self.gridLayout.addWidget(self.groupBox_ResTout, 3, 1, 1, 1)
+        self.gridLayout_setup.addWidget(self.groupBox_ResTout, 3, 1, 1, 1)
 
-        self.groupBox_Remote = QGroupBox(self.centralwidget_Setup)
+        self.groupBox_Remote = QGroupBox(Setup)
         self.groupBox_Remote.setObjectName(u"groupBox_Remote")
         sizePolicy4.setHeightForWidth(self.groupBox_Remote.sizePolicy().hasHeightForWidth())
         self.groupBox_Remote.setSizePolicy(sizePolicy4)
-        self.gridLayout_3 = QGridLayout(self.groupBox_Remote)
-        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.gridLayout_remote = QGridLayout(self.groupBox_Remote)
+        self.gridLayout_remote.setObjectName(u"gridLayout_remote")
         self.radioButton_IPv4 = QRadioButton(self.groupBox_Remote)
         self.radioButton_IPv4.setObjectName(u"radioButton_IPv4")
         self.radioButton_IPv4.setEnabled(False)
@@ -264,22 +256,24 @@ class Ui_Setup(object):
         self.radioButton_IPv4.setSizePolicy(sizePolicy6)
         self.radioButton_IPv4.setSizeIncrement(QSize(0, 0))
         self.radioButton_IPv4.setBaseSize(QSize(0, 0))
+        font = QFont()
+        font.setPointSize(10)
         self.radioButton_IPv4.setFont(font)
 
-        self.gridLayout_3.addWidget(self.radioButton_IPv4, 2, 4, 2, 1)
+        self.gridLayout_remote.addWidget(self.radioButton_IPv4, 2, 4, 2, 1)
 
         self.radioButton_IPv6 = QRadioButton(self.groupBox_Remote)
         self.radioButton_IPv6.setObjectName(u"radioButton_IPv6")
         self.radioButton_IPv6.setEnabled(False)
         self.radioButton_IPv6.setFont(font)
 
-        self.gridLayout_3.addWidget(self.radioButton_IPv6, 4, 4, 1, 1)
+        self.gridLayout_remote.addWidget(self.radioButton_IPv6, 4, 4, 1, 1)
 
         self.label_IP = QLabel(self.groupBox_Remote)
         self.label_IP.setObjectName(u"label_IP")
         self.label_IP.setEnabled(False)
 
-        self.gridLayout_3.addWidget(self.label_IP, 0, 0, 1, 1)
+        self.gridLayout_remote.addWidget(self.label_IP, 0, 0, 1, 1)
 
         self.lineEdit_ConnectTout = QLineEdit(self.groupBox_Remote)
         self.lineEdit_ConnectTout.setObjectName(u"lineEdit_ConnectTout")
@@ -287,13 +281,13 @@ class Ui_Setup(object):
         sizePolicy4.setHeightForWidth(self.lineEdit_ConnectTout.sizePolicy().hasHeightForWidth())
         self.lineEdit_ConnectTout.setSizePolicy(sizePolicy4)
 
-        self.gridLayout_3.addWidget(self.lineEdit_ConnectTout, 3, 2, 2, 1)
+        self.gridLayout_remote.addWidget(self.lineEdit_ConnectTout, 3, 2, 2, 1)
 
         self.label_ConnectToutMS = QLabel(self.groupBox_Remote)
         self.label_ConnectToutMS.setObjectName(u"label_ConnectToutMS")
         self.label_ConnectToutMS.setEnabled(False)
 
-        self.gridLayout_3.addWidget(self.label_ConnectToutMS, 2, 2, 1, 1)
+        self.gridLayout_remote.addWidget(self.label_ConnectToutMS, 2, 2, 1, 1)
 
         self.comboBox_IP = QComboBox(self.groupBox_Remote)
         self.comboBox_IP.addItem("")
@@ -302,19 +296,19 @@ class Ui_Setup(object):
         sizePolicy1.setHeightForWidth(self.comboBox_IP.sizePolicy().hasHeightForWidth())
         self.comboBox_IP.setSizePolicy(sizePolicy1)
 
-        self.gridLayout_3.addWidget(self.comboBox_IP, 1, 0, 1, 5)
+        self.gridLayout_remote.addWidget(self.comboBox_IP, 1, 0, 1, 5)
 
         self.label_ConnectTout = QLabel(self.groupBox_Remote)
         self.label_ConnectTout.setObjectName(u"label_ConnectTout")
         self.label_ConnectTout.setEnabled(False)
 
-        self.gridLayout_3.addWidget(self.label_ConnectTout, 3, 3, 2, 1)
+        self.gridLayout_remote.addWidget(self.label_ConnectTout, 3, 3, 2, 1)
 
         self.label_ServePort = QLabel(self.groupBox_Remote)
         self.label_ServePort.setObjectName(u"label_ServePort")
         self.label_ServePort.setEnabled(False)
 
-        self.gridLayout_3.addWidget(self.label_ServePort, 2, 0, 1, 1)
+        self.gridLayout_remote.addWidget(self.label_ServePort, 2, 0, 1, 1)
 
         self.lineEdit_ServerPort = QLineEdit(self.groupBox_Remote)
         self.lineEdit_ServerPort.setObjectName(u"lineEdit_ServerPort")
@@ -322,27 +316,20 @@ class Ui_Setup(object):
         sizePolicy4.setHeightForWidth(self.lineEdit_ServerPort.sizePolicy().hasHeightForWidth())
         self.lineEdit_ServerPort.setSizePolicy(sizePolicy4)
 
-        self.gridLayout_3.addWidget(self.lineEdit_ServerPort, 3, 0, 2, 1)
+        self.gridLayout_remote.addWidget(self.lineEdit_ServerPort, 3, 0, 2, 1)
 
         self.horizontalSpacer_Remote = QSpacerItem(40, 20, QSizePolicy.Preferred, QSizePolicy.Minimum)
 
-        self.gridLayout_3.addItem(self.horizontalSpacer_Remote, 2, 1, 3, 1)
+        self.gridLayout_remote.addItem(self.horizontalSpacer_Remote, 2, 1, 3, 1)
 
 
-        self.gridLayout.addWidget(self.groupBox_Remote, 4, 0, 1, 2)
+        self.gridLayout_setup.addWidget(self.groupBox_Remote, 4, 0, 1, 2)
 
-        Setup.setCentralWidget(self.centralwidget_Setup)
-        self.statusbar = QStatusBar(Setup)
-        self.statusbar.setObjectName(u"statusbar")
-        Setup.setStatusBar(self.statusbar)
-        QWidget.setTabOrder(self.radioButton_RTU, self.radioButton_ASCII)
-        QWidget.setTabOrder(self.radioButton_ASCII, self.lineEdit_ResTout)
-        QWidget.setTabOrder(self.lineEdit_ResTout, self.lineEdit_SlaveID)
-        QWidget.setTabOrder(self.lineEdit_SlaveID, self.comboBox_IP)
-        QWidget.setTabOrder(self.comboBox_IP, self.radioButton_IPv6)
-        QWidget.setTabOrder(self.radioButton_IPv6, self.radioButton_IPv4)
-        QWidget.setTabOrder(self.radioButton_IPv4, self.lineEdit_ServerPort)
-        QWidget.setTabOrder(self.lineEdit_ServerPort, self.lineEdit_ConnectTout)
+        self.gridLayout_setup.setRowStretch(0, 1)
+        self.gridLayout_setup.setRowStretch(1, 1)
+        self.gridLayout_setup.setRowStretch(2, 1)
+        self.gridLayout_setup.setRowStretch(3, 1)
+        self.gridLayout_setup.setRowStretch(4, 1)
 
         self.retranslateUi(Setup)
 
@@ -354,7 +341,7 @@ class Ui_Setup(object):
     # setupUi
 
     def retranslateUi(self, Setup):
-        Setup.setWindowTitle(QCoreApplication.translate("Setup", u"MainWindow", None))
+        Setup.setWindowTitle(QCoreApplication.translate("Setup", u"Dialog", None))
         self.groupBox_Connection.setTitle(QCoreApplication.translate("Setup", u"Connection", None))
         self.comboBox_Connection.setItemText(0, QCoreApplication.translate("Setup", u"Serial Port", None))
         self.comboBox_Connection.setItemText(1, QCoreApplication.translate("Setup", u"2", None))

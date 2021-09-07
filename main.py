@@ -1,6 +1,7 @@
 import sys
 import os
 import platform
+from pymodbus.client.sync import ModbusSerialClient as ModbusClient
 
 # IMPORT / GUI AND MODULES AND WIDGETS
 # ///////////////////////////////////////////////////////////////
@@ -69,9 +70,22 @@ class MainWindow(QMainWindow):
             UIFunctions.toggleRightBox(self, True)
         widgets.settingsTopBtn.clicked.connect(openCloseRightBox)
 
+        # Open Setup Dialog
+        # ///////////////////////////////////////////////////////////////
+        setup = SetupDialog()
+        setup.exec()
+
+        if setup.value:
+            self.show()
+            self.client = setup.client
+            # self.connection = self.client.connect()
+
+        self.register = self.client.read_holding_registers(0,8,unit= int(setup.ui.lineEdit_SlaveID.text()))
+        print(self.register.getRegister(0))
+        
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
-        self.show()
+        # self.show()
 
         # SET CUSTOM THEME
         # ///////////////////////////////////////////////////////////////
@@ -90,6 +104,8 @@ class MainWindow(QMainWindow):
         # ///////////////////////////////////////////////////////////////
         widgets.stackedWidget.setCurrentWidget(widgets.home)
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
+
+        self.client.close()
 
 
     # BUTTONS CLICK
@@ -150,20 +166,29 @@ class MainWindow(QMainWindow):
         if event.buttons() == Qt.RightButton:
             print('Mouse click: RIGHT CLICK')
 
-class SetupDialog(QMainWindow):
+# Setup Dialog
+# ///////////////////////////////////////////////////////////////
+class SetupDialog(QDialog):
     def __init__(self,*args, **kwargs):
         super(SetupDialog, self).__init__(*args, **kwargs)
-
+        
+        # setting the ui
+        # ///////////////////////////////////////////////////////////////
         self.ui = Ui_Setup()
         self.ui.setupUi(self)
         title = "Setup"
         self.setWindowTitle(title)
-        self.show()
+        # self.show()
+
+        # Value to check if device is connected
+        # ///////////////////////////////////////////////////////////////
+        self.value = False
 
         self.ui.pushButton_ok.clicked.connect(self.buttonClick)
         self.ui.pushButton_close.clicked.connect(self.buttonClick)
         
-
+    # MOUSE CLICK EVENTS
+    # ///////////////////////////////////////////////////////////////
     def buttonClick(self):
         # GET BUTTON CLICKED
         btn = self.sender()
@@ -173,14 +198,40 @@ class SetupDialog(QMainWindow):
             self.connectCheck()
 
         if btnName == 'pushButton_close':
-            app.exit()
+            sys.exit()
 
+    # MCheck the connection
+    # ///////////////////////////////////////////////////////////////
     def connectCheck(self):
-        self.close()
-        MainWindow().show()
+        self.connectToPort()
+        connection = self.client.connect()
+        mapreg = self.client.read_holding_registers(20,1,unit= 1)
+        print(mapreg.getRegister(0))
+        if connection:
+            self.value = True
+            self.setStatusTip('')
+            self.close()
+        else:
+            self.value = False
+            self.setStatusTip('Cannot connect to the port!') 
+        # self.close()
+
+    # Set client
+    # ///////////////////////////////////////////////////////////////
+    def connectToPort(self):
+        method = self.ui.radioButton_RTU.text().lower()
+        port = self.ui.comboBox_COM.currentText()
+        bytesize = int(self.ui.comboBox_DataBits.currentText())
+        baudrate = int(self.ui.comboBox_BaudRate.currentText())
+        timeout = int(self.ui.lineEdit_ResTout.text())
+        # print(method + port + str(bytesize) + str(baudrate) + str(timeout))
+        self.client = ModbusClient(method= method, port= port, stopbits= 1, bytesize= bytesize, parity= 'N',
+        baudrate= baudrate, timeout= timeout)
+    
+        # return client
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setWindowIcon(QIcon("icon.ico"))
-    window = SetupDialog()
+    window = MainWindow()
     sys.exit(app.exec())
