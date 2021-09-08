@@ -7,93 +7,62 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>404</height>
+    <height>412</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_setup" rowstretch="1,1,1,1,1">
-   <item row="0" column="0">
-    <widget class="QGroupBox" name="groupBox_Connection">
+  <layout class="QGridLayout" name="gridLayout_setup" rowstretch="1,0,0,0,0,0">
+   <item row="3" column="1">
+    <widget class="QGroupBox" name="groupBox_ResTout">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
      <property name="title">
-      <string>Connection</string>
+      <string>Response Timeout</string>
      </property>
-     <property name="flat">
-      <bool>false</bool>
-     </property>
-     <property name="checkable">
-      <bool>false</bool>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_Connection">
+     <layout class="QHBoxLayout" name="horizontalLayout_ResTout">
       <item>
-       <widget class="QComboBox" name="comboBox_Connection">
+       <widget class="QLineEdit" name="lineEdit_ResTout">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <item>
-         <property name="text">
-          <string>Serial Port</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>2</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>3</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>4</string>
-         </property>
-        </item>
+        <property name="inputMethodHints">
+         <set>Qt::ImhNone</set>
+        </property>
+        <property name="text">
+         <string>1000</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+        <property name="placeholderText">
+         <string notr="true"/>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_ResTout">
+        <property name="text">
+         <string>[ms]</string>
+        </property>
        </widget>
       </item>
      </layout>
     </widget>
-   </item>
-   <item row="0" column="1">
-    <layout class="QVBoxLayout" name="verticalLayout_buttons">
-     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-      <widget class="QPushButton" name="pushButton_ok">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Ok</string>
-       </property>
-      </widget>
-     </item>
-     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-      <widget class="QPushButton" name="pushButton_close">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="text">
-        <string>Close</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </item>
    <item row="1" column="0" rowspan="3">
     <widget class="QGroupBox" name="groupBox_Serial">
@@ -175,6 +144,1236 @@
           <string>COM10</string>
          </property>
         </item>
+        <item>
+         <property name="text">
+          <string>COM11</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM12</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM13</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM14</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM15</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM16</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM17</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM18</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM19</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM20</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM21</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM22</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM23</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM24</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM25</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM26</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM27</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM28</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM29</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM30</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM31</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM32</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM33</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM34</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM35</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM36</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM37</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM38</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM39</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM40</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM41</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM42</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM43</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM44</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM45</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM46</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM47</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM48</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM49</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM50</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM51</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM52</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM53</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM54</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM55</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM56</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM57</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM58</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM59</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM60</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM61</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM62</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM63</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM64</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM65</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM66</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM67</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM68</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM69</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM70</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM71</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM72</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM73</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM74</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM75</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM76</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM77</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM78</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM79</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM80</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM81</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM82</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM83</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM84</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM85</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM86</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM87</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM88</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM89</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM90</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM91</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM92</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM93</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM94</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM95</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM96</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM97</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM98</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM99</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM100</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM101</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM102</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM103</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM104</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM105</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM106</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM107</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM108</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM109</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM110</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM111</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM112</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM113</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM114</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM115</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM116</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM117</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM118</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM119</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM120</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM121</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM122</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM123</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM124</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM125</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM126</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM127</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM128</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM129</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM130</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM131</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM132</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM133</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM134</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM135</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM136</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM137</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM138</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM139</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM140</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM141</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM142</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM143</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM144</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM145</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM146</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM147</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM148</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM149</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM150</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM151</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM152</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM153</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM154</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM155</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM156</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM157</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM158</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM159</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM160</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM161</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM162</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM163</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM164</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM165</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM166</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM167</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM168</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM169</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM170</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM171</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM172</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM173</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM174</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM175</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM176</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM177</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM178</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM179</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM180</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM181</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM182</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM183</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM184</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM185</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM186</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM187</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM188</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM189</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM190</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM191</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM192</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM193</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM194</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM195</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM196</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM197</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM198</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM199</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM200</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM201</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM202</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM203</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM204</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM205</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM206</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM207</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM208</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM209</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM210</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM211</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM212</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM213</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM214</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM215</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM216</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM217</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM218</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM219</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM220</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM221</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM222</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM223</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM224</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM225</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM226</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM227</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM228</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM229</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM230</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM231</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM232</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM233</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM234</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM235</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM236</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM237</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM238</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM239</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM240</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM241</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM242</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM243</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM244</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM245</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM246</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM247</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM248</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM249</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM250</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM251</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM252</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM253</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM254</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM255</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>COM256</string>
+         </property>
+        </item>
        </widget>
       </item>
       <item row="1" column="0">
@@ -196,7 +1395,7 @@
          <number>11</number>
         </property>
         <property name="maxVisibleItems">
-         <number>15</number>
+         <number>20</number>
         </property>
         <item>
          <property name="text">
@@ -256,6 +1455,36 @@
         <item>
          <property name="text">
           <string>115200</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>128000</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>153600</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>230400</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>256000</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>460800</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>921600</string>
          </property>
         </item>
        </widget>
@@ -352,52 +1581,8 @@
      </layout>
     </widget>
    </item>
-   <item row="1" column="1">
-    <widget class="QGroupBox" name="groupBox_Mode">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="title">
-      <string>Mode</string>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_Mode">
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QRadioButton" name="radioButton_RTU">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>RTU</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item alignment="Qt::AlignHCenter">
-       <widget class="QRadioButton" name="radioButton_ASCII">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>ASCII</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item row="2" column="1">
-    <widget class="QGroupBox" name="groupBox_SlaveID">
+    <widget class="QGroupBox" name="groupBox_UnitID">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
        <horstretch>0</horstretch>
@@ -409,58 +1594,109 @@
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_SlaveID">
       <item>
-       <widget class="QLineEdit" name="lineEdit_SlaveID">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
+       <widget class="QSpinBox" name="spinBox_UnitID">
+        <property name="inputMethodHints">
+         <set>Qt::ImhNone</set>
         </property>
-        <property name="text">
-         <string>1</string>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::UpDownArrows</enum>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>255</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+        <property name="displayIntegerBase">
+         <number>10</number>
         </property>
        </widget>
       </item>
      </layout>
     </widget>
    </item>
-   <item row="3" column="1">
-    <widget class="QGroupBox" name="groupBox_ResTout">
+   <item row="5" column="0" colspan="2">
+    <layout class="QVBoxLayout" name="verticalLayout_statusBar"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox_Connection">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
      <property name="title">
-      <string>Response Timeout</string>
+      <string>Connection</string>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_ResTout">
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_Connection">
       <item>
-       <widget class="QLineEdit" name="lineEdit_ResTout">
+       <widget class="QComboBox" name="comboBox_Connection">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="text">
-         <string>1000</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_ResTout">
-        <property name="text">
-         <string>[ms]</string>
-        </property>
+        <item>
+         <property name="text">
+          <string>Serial Port</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ModBus TCP</string>
+         </property>
+        </item>
        </widget>
       </item>
      </layout>
     </widget>
    </item>
+   <item row="0" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout_buttons">
+     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QPushButton" name="pushButton_ok">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Ok</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QPushButton" name="pushButton_close">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item row="4" column="0" colspan="2">
     <widget class="QGroupBox" name="groupBox_Remote">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
        <horstretch>0</horstretch>
@@ -477,7 +1713,7 @@
          <bool>false</bool>
         </property>
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -502,12 +1738,21 @@
         <property name="text">
          <string>IPv4</string>
         </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="4" column="4">
        <widget class="QRadioButton" name="radioButton_IPv6">
         <property name="enabled">
          <bool>false</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
@@ -561,7 +1806,7 @@
          <bool>false</bool>
         </property>
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -611,6 +1856,9 @@
       </item>
       <item row="2" column="1" rowspan="3">
        <spacer name="horizontalSpacer_Remote">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -628,8 +1876,71 @@
      </layout>
     </widget>
    </item>
+   <item row="1" column="1">
+    <widget class="QGroupBox" name="groupBox_Mode">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Mode</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_Mode">
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QRadioButton" name="radioButton_RTU">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>RTU</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QRadioButton" name="radioButton_ASCII">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>ASCII</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>comboBox_Connection</tabstop>
+  <tabstop>comboBox_COM</tabstop>
+  <tabstop>comboBox_BaudRate</tabstop>
+  <tabstop>comboBox_DataBits</tabstop>
+  <tabstop>comboBox_Parity</tabstop>
+  <tabstop>comboBox_StopBits</tabstop>
+  <tabstop>radioButton_RTU</tabstop>
+  <tabstop>radioButton_ASCII</tabstop>
+  <tabstop>spinBox_UnitID</tabstop>
+  <tabstop>lineEdit_ResTout</tabstop>
+  <tabstop>comboBox_IP</tabstop>
+  <tabstop>lineEdit_ServerPort</tabstop>
+  <tabstop>lineEdit_ConnectTout</tabstop>
+  <tabstop>radioButton_IPv4</tabstop>
+  <tabstop>radioButton_IPv6</tabstop>
+  <tabstop>pushButton_ok</tabstop>
+  <tabstop>pushButton_close</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -75,13 +75,13 @@ class MainWindow(QMainWindow):
         setup = SetupDialog()
         setup.exec()
 
-        if setup.value:
-            self.show()
-            self.client = setup.client
+        # if setup.value:
+        self.show()
+        # self.client = setup.client
             # self.connection = self.client.connect()
 
-        self.register = self.client.read_holding_registers(0,8,unit= int(setup.ui.lineEdit_SlaveID.text()))
-        print(self.register.getRegister(0))
+        # self.register = self.client.read_holding_registers(0,8,unit= int(setup.ui.lineEdit_SlaveID.text()))
+        # print(self.register.getRegister(0))
         
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
@@ -105,7 +105,7 @@ class MainWindow(QMainWindow):
         widgets.stackedWidget.setCurrentWidget(widgets.home)
         widgets.btn_home.setStyleSheet(UIFunctions.selectMenu(widgets.btn_home.styleSheet()))
 
-        self.client.close()
+        # self.client.close()
 
 
     # BUTTONS CLICK
@@ -178,6 +178,9 @@ class SetupDialog(QDialog):
         self.ui.setupUi(self)
         title = "Setup"
         self.setWindowTitle(title)
+        status = QStatusBar()
+        self.ui.verticalLayout_statusBar.addWidget(status)
+        status.showMessage("Press OK to connect")
         # self.show()
 
         # Value to check if device is connected
@@ -203,31 +206,31 @@ class SetupDialog(QDialog):
     # MCheck the connection
     # ///////////////////////////////////////////////////////////////
     def connectCheck(self):
-        self.connectToPort()
-        connection = self.client.connect()
-        mapreg = self.client.read_holding_registers(20,1,unit= 1)
-        print(mapreg.getRegister(0))
-        if connection:
-            self.value = True
-            self.setStatusTip('')
+        # self.connectToPort()
+        # connection = self.client.connect()
+        # mapreg = self.client.read_holding_registers(20,1,unit= 1)
+        # print(mapreg.getRegister(0))
+        # if connection:
+        #     self.value = True
+        #     self.setStatusTip('')
             self.close()
-        else:
-            self.value = False
-            self.setStatusTip('Cannot connect to the port!') 
+        # else:
+        #     self.value = False
+        #     self.setStatusTip('Cannot connect to the port!') 
         # self.close()
 
     # Set client
     # ///////////////////////////////////////////////////////////////
     def connectToPort(self):
-        method = self.ui.radioButton_RTU.text().lower()
-        port = self.ui.comboBox_COM.currentText()
-        bytesize = int(self.ui.comboBox_DataBits.currentText())
-        baudrate = int(self.ui.comboBox_BaudRate.currentText())
-        timeout = int(self.ui.lineEdit_ResTout.text())
-        # print(method + port + str(bytesize) + str(baudrate) + str(timeout))
-        self.client = ModbusClient(method= method, port= port, stopbits= 1, bytesize= bytesize, parity= 'N',
-        baudrate= baudrate, timeout= timeout)
-    
+        # method = self.ui.radioButton_RTU.text().lower()
+        # port = self.ui.comboBox_COM.currentText()
+        # bytesize = int(self.ui.comboBox_DataBits.currentText())
+        # baudrate = int(self.ui.comboBox_BaudRate.currentText())
+        # timeout = int(self.ui.lineEdit_ResTout.text())
+        # # print(method + port + str(bytesize) + str(baudrate) + str(timeout))
+        # self.client = ModbusClient(method= method, port= port, stopbits= 1, bytesize= bytesize, parity= 'N',
+        # baudrate= baudrate, timeout= timeout)
+        pass
         # return client
 
 if __name__ == "__main__":
