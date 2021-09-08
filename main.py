@@ -235,6 +235,6 @@ class SetupDialog(QDialog):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    app.setWindowIcon(QIcon("icon.ico"))
+    app.setWindowIcon(QIcon("Ayra.ico"))
     window = MainWindow()
     sys.exit(app.exec())
