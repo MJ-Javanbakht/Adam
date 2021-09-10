@@ -1563,65 +1563,51 @@ class Ui_MainWindow(object):
         self.setting.setObjectName(u"setting")
         self.gridLayout_setting = QGridLayout(self.setting)
         self.gridLayout_setting.setObjectName(u"gridLayout_setting")
-        self.gridLayout_setting.setHorizontalSpacing(20)
-        self.horizontalLayout_ch4ScaleMinMax = QHBoxLayout()
-        self.horizontalLayout_ch4ScaleMinMax.setSpacing(10)
-        self.horizontalLayout_ch4ScaleMinMax.setObjectName(u"horizontalLayout_ch4ScaleMinMax")
-        self.lineEdit_ch4vLow = QLineEdit(self.setting)
-        self.lineEdit_ch4vLow.setObjectName(u"lineEdit_ch4vLow")
-        sizePolicy7 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
-        sizePolicy7.setHorizontalStretch(0)
-        sizePolicy7.setVerticalStretch(0)
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch4vLow.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch4vLow.setSizePolicy(sizePolicy7)
+        self.gridLayout_scalesMinMax = QGridLayout()
+        self.gridLayout_scalesMinMax.setObjectName(u"gridLayout_scalesMinMax")
+        self.label = QLabel(self.setting)
+        self.label.setObjectName(u"label")
+        sizePolicy6.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy6)
 
-        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.lineEdit_ch4vLow)
+        self.gridLayout_scalesMinMax.addWidget(self.label, 1, 0, 1, 1, Qt.AlignHCenter)
 
-        self.label_ch4vScaleDash = QLabel(self.setting)
-        self.label_ch4vScaleDash.setObjectName(u"label_ch4vScaleDash")
+        self.label_2 = QLabel(self.setting)
+        self.label_2.setObjectName(u"label_2")
+        sizePolicy6.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy6)
 
-        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.label_ch4vScaleDash)
+        self.gridLayout_scalesMinMax.addWidget(self.label_2, 1, 1, 1, 1, Qt.AlignHCenter)
 
-        self.lineEdit_ch4vHigh = QLineEdit(self.setting)
-        self.lineEdit_ch4vHigh.setObjectName(u"lineEdit_ch4vHigh")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch4vHigh.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch4vHigh.setSizePolicy(sizePolicy7)
+        self.label_vScale = QLabel(self.setting)
+        self.label_vScale.setObjectName(u"label_vScale")
+        sizePolicy6.setHeightForWidth(self.label_vScale.sizePolicy().hasHeightForWidth())
+        self.label_vScale.setSizePolicy(sizePolicy6)
+        font4 = QFont()
+        font4.setPointSize(12)
+        font4.setBold(False)
+        font4.setItalic(False)
+        font4.setUnderline(False)
+        self.label_vScale.setFont(font4)
 
-        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.lineEdit_ch4vHigh)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch4ScaleMinMax, 4, 2, 1, 1)
-
-        self.horizontalLayout_ch7ScaleMinMax = QHBoxLayout()
-        self.horizontalLayout_ch7ScaleMinMax.setSpacing(10)
-        self.horizontalLayout_ch7ScaleMinMax.setObjectName(u"horizontalLayout_ch7ScaleMinMax")
-        self.lineEdit_ch7vLow = QLineEdit(self.setting)
-        self.lineEdit_ch7vLow.setObjectName(u"lineEdit_ch7vLow")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch7vLow.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch7vLow.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.lineEdit_ch7vLow)
-
-        self.label_ch7vScaleDash = QLabel(self.setting)
-        self.label_ch7vScaleDash.setObjectName(u"label_ch7vScaleDash")
-
-        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.label_ch7vScaleDash)
-
-        self.lineEdit_ch7vHigh = QLineEdit(self.setting)
-        self.lineEdit_ch7vHigh.setObjectName(u"lineEdit_ch7vHigh")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch7vHigh.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch7vHigh.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.lineEdit_ch7vHigh)
+        self.gridLayout_scalesMinMax.addWidget(self.label_vScale, 0, 0, 1, 2, Qt.AlignHCenter)
 
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch7ScaleMinMax, 7, 2, 1, 1)
+        self.gridLayout_setting.addLayout(self.gridLayout_scalesMinMax, 0, 2, 1, 1)
+
+        self.label_ch1Setting = QLabel(self.setting)
+        self.label_ch1Setting.setObjectName(u"label_ch1Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch1Setting, 1, 1, 1, 1, Qt.AlignRight)
 
         self.horizontalLayout_ch1ScaleMinMax = QHBoxLayout()
         self.horizontalLayout_ch1ScaleMinMax.setSpacing(10)
         self.horizontalLayout_ch1ScaleMinMax.setObjectName(u"horizontalLayout_ch1ScaleMinMax")
         self.lineEdit_ch1vLow = QLineEdit(self.setting)
         self.lineEdit_ch1vLow.setObjectName(u"lineEdit_ch1vLow")
+        sizePolicy7 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
         sizePolicy7.setHeightForWidth(self.lineEdit_ch1vLow.sizePolicy().hasHeightForWidth())
         self.lineEdit_ch1vLow.setSizePolicy(sizePolicy7)
         self.lineEdit_ch1vLow.setFont(font1)
@@ -1643,66 +1629,240 @@ class Ui_MainWindow(object):
 
         self.gridLayout_setting.addLayout(self.horizontalLayout_ch1ScaleMinMax, 1, 2, 1, 1)
 
-        self.horizontalLayout_ch5Scale = QHBoxLayout()
-        self.horizontalLayout_ch5Scale.setSpacing(10)
-        self.horizontalLayout_ch5Scale.setObjectName(u"horizontalLayout_ch5Scale")
-        self.comboBox_ch5scale = QComboBox(self.setting)
-        self.comboBox_ch5scale.addItem("")
-        self.comboBox_ch5scale.addItem("")
-        self.comboBox_ch5scale.addItem("")
-        self.comboBox_ch5scale.setObjectName(u"comboBox_ch5scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch5scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch5scale.setSizePolicy(sizePolicy7)
+        self.horizontalLayout_ch1Scale = QHBoxLayout()
+        self.horizontalLayout_ch1Scale.setSpacing(10)
+        self.horizontalLayout_ch1Scale.setObjectName(u"horizontalLayout_ch1Scale")
+        self.comboBox_ch1scale = QComboBox(self.setting)
+        self.comboBox_ch1scale.addItem("")
+        self.comboBox_ch1scale.addItem("")
+        self.comboBox_ch1scale.addItem("")
+        self.comboBox_ch1scale.setObjectName(u"comboBox_ch1scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch1scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch1scale.setSizePolicy(sizePolicy7)
 
-        self.horizontalLayout_ch5Scale.addWidget(self.comboBox_ch5scale)
+        self.horizontalLayout_ch1Scale.addWidget(self.comboBox_ch1scale)
 
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch5Scale, 5, 3, 1, 1)
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch1Scale, 1, 3, 1, 1)
 
         self.label_ch2Setting = QLabel(self.setting)
         self.label_ch2Setting.setObjectName(u"label_ch2Setting")
 
         self.gridLayout_setting.addWidget(self.label_ch2Setting, 2, 1, 1, 1, Qt.AlignRight)
 
+        self.horizontalLayout_ch2ScaleMinMax = QHBoxLayout()
+        self.horizontalLayout_ch2ScaleMinMax.setSpacing(10)
+        self.horizontalLayout_ch2ScaleMinMax.setObjectName(u"horizontalLayout_ch2ScaleMinMax")
+        self.lineEdit_ch2vLow = QLineEdit(self.setting)
+        self.lineEdit_ch2vLow.setObjectName(u"lineEdit_ch2vLow")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch2vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2vLow.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.lineEdit_ch2vLow)
+
+        self.label_ch2vScaleDash = QLabel(self.setting)
+        self.label_ch2vScaleDash.setObjectName(u"label_ch2vScaleDash")
+
+        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.label_ch2vScaleDash)
+
+        self.lineEdit_ch2vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch2vHigh.setObjectName(u"lineEdit_ch2vHigh")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch2vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2vHigh.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.lineEdit_ch2vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch2ScaleMinMax, 2, 2, 1, 1)
+
+        self.horizontalLayout_ch2Scale = QHBoxLayout()
+        self.horizontalLayout_ch2Scale.setSpacing(10)
+        self.horizontalLayout_ch2Scale.setObjectName(u"horizontalLayout_ch2Scale")
+        self.comboBox_ch2scale = QComboBox(self.setting)
+        self.comboBox_ch2scale.addItem("")
+        self.comboBox_ch2scale.addItem("")
+        self.comboBox_ch2scale.addItem("")
+        self.comboBox_ch2scale.setObjectName(u"comboBox_ch2scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch2scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch2scale.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch2Scale.addWidget(self.comboBox_ch2scale)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch2Scale, 2, 3, 1, 1)
+
+        self.horizontalLayout_unitID = QHBoxLayout()
+        self.horizontalLayout_unitID.setObjectName(u"horizontalLayout_unitID")
+        self.label_unitID = QLabel(self.setting)
+        self.label_unitID.setObjectName(u"label_unitID")
+
+        self.horizontalLayout_unitID.addWidget(self.label_unitID)
+
+        self.lineEdit_unitID = QLineEdit(self.setting)
+        self.lineEdit_unitID.setObjectName(u"lineEdit_unitID")
+        sizePolicy6.setHeightForWidth(self.lineEdit_unitID.sizePolicy().hasHeightForWidth())
+        self.lineEdit_unitID.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_unitID.addWidget(self.lineEdit_unitID)
+
+        self.horizontalLayout_unitID.setStretch(0, 1)
+        self.horizontalLayout_unitID.setStretch(1, 1)
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_unitID, 3, 0, 1, 1)
+
         self.label_ch3Setting = QLabel(self.setting)
         self.label_ch3Setting.setObjectName(u"label_ch3Setting")
 
         self.gridLayout_setting.addWidget(self.label_ch3Setting, 3, 1, 1, 1, Qt.AlignRight)
 
-        self.horizontalLayout_ResRate = QHBoxLayout()
-        self.horizontalLayout_ResRate.setObjectName(u"horizontalLayout_ResRate")
-        self.label_ResRate = QLabel(self.setting)
-        self.label_ResRate.setObjectName(u"label_ResRate")
+        self.horizontalLayout_ch3ScaleMinMax = QHBoxLayout()
+        self.horizontalLayout_ch3ScaleMinMax.setSpacing(10)
+        self.horizontalLayout_ch3ScaleMinMax.setObjectName(u"horizontalLayout_ch3ScaleMinMax")
+        self.lineEdit_ch3vLow = QLineEdit(self.setting)
+        self.lineEdit_ch3vLow.setObjectName(u"lineEdit_ch3vLow")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch3vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3vLow.setSizePolicy(sizePolicy7)
 
-        self.horizontalLayout_ResRate.addWidget(self.label_ResRate)
+        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.lineEdit_ch3vLow)
 
-        self.lineEdit_ResRate = QLineEdit(self.setting)
-        self.lineEdit_ResRate.setObjectName(u"lineEdit_ResRate")
-        sizePolicy6.setHeightForWidth(self.lineEdit_ResRate.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ResRate.setSizePolicy(sizePolicy6)
+        self.label_ch3vScaleDash = QLabel(self.setting)
+        self.label_ch3vScaleDash.setObjectName(u"label_ch3vScaleDash")
 
-        self.horizontalLayout_ResRate.addWidget(self.lineEdit_ResRate)
+        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.label_ch3vScaleDash)
 
-        self.horizontalLayout_ResRate.setStretch(0, 1)
-        self.horizontalLayout_ResRate.setStretch(1, 1)
+        self.lineEdit_ch3vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch3vHigh.setObjectName(u"lineEdit_ch3vHigh")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch3vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3vHigh.setSizePolicy(sizePolicy7)
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ResRate, 6, 0, 1, 1)
-
-        self.horizontalLayout_ch7Scale = QHBoxLayout()
-        self.horizontalLayout_ch7Scale.setSpacing(10)
-        self.horizontalLayout_ch7Scale.setObjectName(u"horizontalLayout_ch7Scale")
-        self.comboBox_ch7scale = QComboBox(self.setting)
-        self.comboBox_ch7scale.addItem("")
-        self.comboBox_ch7scale.addItem("")
-        self.comboBox_ch7scale.addItem("")
-        self.comboBox_ch7scale.setObjectName(u"comboBox_ch7scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch7scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch7scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch7Scale.addWidget(self.comboBox_ch7scale)
+        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.lineEdit_ch3vHigh)
 
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch7Scale, 7, 3, 1, 1)
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch3ScaleMinMax, 3, 2, 1, 1)
+
+        self.horizontalLayout_ch3Scale = QHBoxLayout()
+        self.horizontalLayout_ch3Scale.setSpacing(10)
+        self.horizontalLayout_ch3Scale.setObjectName(u"horizontalLayout_ch3Scale")
+        self.comboBox_ch3scale = QComboBox(self.setting)
+        self.comboBox_ch3scale.addItem("")
+        self.comboBox_ch3scale.addItem("")
+        self.comboBox_ch3scale.addItem("")
+        self.comboBox_ch3scale.setObjectName(u"comboBox_ch3scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch3scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch3scale.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch3Scale.addWidget(self.comboBox_ch3scale)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch3Scale, 3, 3, 1, 1)
+
+        self.horizontalLayout_baudRate = QHBoxLayout()
+        self.horizontalLayout_baudRate.setObjectName(u"horizontalLayout_baudRate")
+        self.label_baudRate = QLabel(self.setting)
+        self.label_baudRate.setObjectName(u"label_baudRate")
+
+        self.horizontalLayout_baudRate.addWidget(self.label_baudRate)
+
+        self.comboBox_baudRate = QComboBox(self.setting)
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.addItem("")
+        self.comboBox_baudRate.setObjectName(u"comboBox_baudRate")
+        sizePolicy6.setHeightForWidth(self.comboBox_baudRate.sizePolicy().hasHeightForWidth())
+        self.comboBox_baudRate.setSizePolicy(sizePolicy6)
+        self.comboBox_baudRate.setMaxVisibleItems(20)
+
+        self.horizontalLayout_baudRate.addWidget(self.comboBox_baudRate)
+
+        self.horizontalLayout_baudRate.setStretch(0, 1)
+        self.horizontalLayout_baudRate.setStretch(1, 1)
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_baudRate, 4, 0, 1, 1)
+
+        self.label_ch4Setting = QLabel(self.setting)
+        self.label_ch4Setting.setObjectName(u"label_ch4Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch4Setting, 4, 1, 1, 1, Qt.AlignRight)
+
+        self.horizontalLayout_ch4ScaleMinMax = QHBoxLayout()
+        self.horizontalLayout_ch4ScaleMinMax.setSpacing(10)
+        self.horizontalLayout_ch4ScaleMinMax.setObjectName(u"horizontalLayout_ch4ScaleMinMax")
+        self.lineEdit_ch4vLow = QLineEdit(self.setting)
+        self.lineEdit_ch4vLow.setObjectName(u"lineEdit_ch4vLow")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch4vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4vLow.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.lineEdit_ch4vLow)
+
+        self.label_ch4vScaleDash = QLabel(self.setting)
+        self.label_ch4vScaleDash.setObjectName(u"label_ch4vScaleDash")
+
+        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.label_ch4vScaleDash)
+
+        self.lineEdit_ch4vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch4vHigh.setObjectName(u"lineEdit_ch4vHigh")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch4vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4vHigh.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.lineEdit_ch4vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch4ScaleMinMax, 4, 2, 1, 1)
+
+        self.horizontalLayout_ch4Scale = QHBoxLayout()
+        self.horizontalLayout_ch4Scale.setSpacing(10)
+        self.horizontalLayout_ch4Scale.setObjectName(u"horizontalLayout_ch4Scale")
+        self.comboBox_ch4scale = QComboBox(self.setting)
+        self.comboBox_ch4scale.addItem("")
+        self.comboBox_ch4scale.addItem("")
+        self.comboBox_ch4scale.addItem("")
+        self.comboBox_ch4scale.setObjectName(u"comboBox_ch4scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch4scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch4scale.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch4Scale.addWidget(self.comboBox_ch4scale)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch4Scale, 4, 3, 1, 1)
+
+        self.horizontalLayout_timeout = QHBoxLayout()
+        self.horizontalLayout_timeout.setObjectName(u"horizontalLayout_timeout")
+        self.label_timeout = QLabel(self.setting)
+        self.label_timeout.setObjectName(u"label_timeout")
+
+        self.horizontalLayout_timeout.addWidget(self.label_timeout)
+
+        self.lineEdit_timeout = QLineEdit(self.setting)
+        self.lineEdit_timeout.setObjectName(u"lineEdit_timeout")
+        sizePolicy6.setHeightForWidth(self.lineEdit_timeout.sizePolicy().hasHeightForWidth())
+        self.lineEdit_timeout.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_timeout.addWidget(self.lineEdit_timeout)
+
+        self.horizontalLayout_timeout.setStretch(0, 1)
+        self.horizontalLayout_timeout.setStretch(1, 1)
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_timeout, 5, 0, 1, 1)
+
+        self.label_ch5Setting = QLabel(self.setting)
+        self.label_ch5Setting.setObjectName(u"label_ch5Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch5Setting, 5, 1, 1, 1, Qt.AlignRight)
 
         self.horizontalLayout_ch5ScaleMinMax = QHBoxLayout()
         self.horizontalLayout_ch5ScaleMinMax.setSpacing(10)
@@ -1729,31 +1889,45 @@ class Ui_MainWindow(object):
 
         self.gridLayout_setting.addLayout(self.horizontalLayout_ch5ScaleMinMax, 5, 2, 1, 1)
 
-        self.horizontalLayout_ch4Scale = QHBoxLayout()
-        self.horizontalLayout_ch4Scale.setSpacing(10)
-        self.horizontalLayout_ch4Scale.setObjectName(u"horizontalLayout_ch4Scale")
-        self.comboBox_ch4scale = QComboBox(self.setting)
-        self.comboBox_ch4scale.addItem("")
-        self.comboBox_ch4scale.addItem("")
-        self.comboBox_ch4scale.addItem("")
-        self.comboBox_ch4scale.setObjectName(u"comboBox_ch4scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch4scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch4scale.setSizePolicy(sizePolicy7)
+        self.horizontalLayout_ch5Scale = QHBoxLayout()
+        self.horizontalLayout_ch5Scale.setSpacing(10)
+        self.horizontalLayout_ch5Scale.setObjectName(u"horizontalLayout_ch5Scale")
+        self.comboBox_ch5scale = QComboBox(self.setting)
+        self.comboBox_ch5scale.addItem("")
+        self.comboBox_ch5scale.addItem("")
+        self.comboBox_ch5scale.addItem("")
+        self.comboBox_ch5scale.setObjectName(u"comboBox_ch5scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch5scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch5scale.setSizePolicy(sizePolicy7)
 
-        self.horizontalLayout_ch4Scale.addWidget(self.comboBox_ch4scale)
+        self.horizontalLayout_ch5Scale.addWidget(self.comboBox_ch5scale)
 
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch4Scale, 4, 3, 1, 1)
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch5Scale, 5, 3, 1, 1)
 
-        self.label_ch4Setting = QLabel(self.setting)
-        self.label_ch4Setting.setObjectName(u"label_ch4Setting")
+        self.horizontalLayout_ResRate = QHBoxLayout()
+        self.horizontalLayout_ResRate.setObjectName(u"horizontalLayout_ResRate")
+        self.label_ResRate = QLabel(self.setting)
+        self.label_ResRate.setObjectName(u"label_ResRate")
 
-        self.gridLayout_setting.addWidget(self.label_ch4Setting, 4, 1, 1, 1, Qt.AlignRight)
+        self.horizontalLayout_ResRate.addWidget(self.label_ResRate)
 
-        self.label_ch7Setting = QLabel(self.setting)
-        self.label_ch7Setting.setObjectName(u"label_ch7Setting")
+        self.lineEdit_ResRate = QLineEdit(self.setting)
+        self.lineEdit_ResRate.setObjectName(u"lineEdit_ResRate")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ResRate.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ResRate.setSizePolicy(sizePolicy6)
 
-        self.gridLayout_setting.addWidget(self.label_ch7Setting, 7, 1, 1, 1, Qt.AlignRight)
+        self.horizontalLayout_ResRate.addWidget(self.lineEdit_ResRate)
+
+        self.horizontalLayout_ResRate.setStretch(0, 1)
+        self.horizontalLayout_ResRate.setStretch(1, 1)
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ResRate, 6, 0, 1, 1)
+
+        self.label_ch6Setting = QLabel(self.setting)
+        self.label_ch6Setting.setObjectName(u"label_ch6Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch6Setting, 6, 1, 1, 1, Qt.AlignRight)
 
         self.horizontalLayout_ch6ScaleMinMax = QHBoxLayout()
         self.horizontalLayout_ch6ScaleMinMax.setSpacing(10)
@@ -1796,203 +1970,56 @@ class Ui_MainWindow(object):
 
         self.gridLayout_setting.addLayout(self.horizontalLayout_ch6Scale, 6, 3, 1, 1)
 
-        self.horizontalLayout_timeout = QHBoxLayout()
-        self.horizontalLayout_timeout.setObjectName(u"horizontalLayout_timeout")
-        self.label_timeout = QLabel(self.setting)
-        self.label_timeout.setObjectName(u"label_timeout")
+        self.label_ch7Setting = QLabel(self.setting)
+        self.label_ch7Setting.setObjectName(u"label_ch7Setting")
 
-        self.horizontalLayout_timeout.addWidget(self.label_timeout)
+        self.gridLayout_setting.addWidget(self.label_ch7Setting, 7, 1, 1, 1, Qt.AlignRight)
 
-        self.lineEdit_timeout = QLineEdit(self.setting)
-        self.lineEdit_timeout.setObjectName(u"lineEdit_timeout")
-        sizePolicy6.setHeightForWidth(self.lineEdit_timeout.sizePolicy().hasHeightForWidth())
-        self.lineEdit_timeout.setSizePolicy(sizePolicy6)
+        self.horizontalLayout_ch7ScaleMinMax = QHBoxLayout()
+        self.horizontalLayout_ch7ScaleMinMax.setSpacing(10)
+        self.horizontalLayout_ch7ScaleMinMax.setObjectName(u"horizontalLayout_ch7ScaleMinMax")
+        self.lineEdit_ch7vLow = QLineEdit(self.setting)
+        self.lineEdit_ch7vLow.setObjectName(u"lineEdit_ch7vLow")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch7vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7vLow.setSizePolicy(sizePolicy7)
 
-        self.horizontalLayout_timeout.addWidget(self.lineEdit_timeout)
+        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.lineEdit_ch7vLow)
 
-        self.horizontalLayout_timeout.setStretch(0, 1)
-        self.horizontalLayout_timeout.setStretch(1, 1)
+        self.label_ch7vScaleDash = QLabel(self.setting)
+        self.label_ch7vScaleDash.setObjectName(u"label_ch7vScaleDash")
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_timeout, 5, 0, 1, 1)
+        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.label_ch7vScaleDash)
 
-        self.label_ch5Setting = QLabel(self.setting)
-        self.label_ch5Setting.setObjectName(u"label_ch5Setting")
+        self.lineEdit_ch7vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch7vHigh.setObjectName(u"lineEdit_ch7vHigh")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch7vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7vHigh.setSizePolicy(sizePolicy7)
 
-        self.gridLayout_setting.addWidget(self.label_ch5Setting, 5, 1, 1, 1, Qt.AlignRight)
-
-        self.label_ch6Setting = QLabel(self.setting)
-        self.label_ch6Setting.setObjectName(u"label_ch6Setting")
-
-        self.gridLayout_setting.addWidget(self.label_ch6Setting, 6, 1, 1, 1, Qt.AlignRight)
-
-        self.horizontalLayout_ch3ScaleMinMax = QHBoxLayout()
-        self.horizontalLayout_ch3ScaleMinMax.setSpacing(10)
-        self.horizontalLayout_ch3ScaleMinMax.setObjectName(u"horizontalLayout_ch3ScaleMinMax")
-        self.lineEdit_ch3vLow = QLineEdit(self.setting)
-        self.lineEdit_ch3vLow.setObjectName(u"lineEdit_ch3vLow")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch3vLow.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch3vLow.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.lineEdit_ch3vLow)
-
-        self.label_ch3vScaleDash = QLabel(self.setting)
-        self.label_ch3vScaleDash.setObjectName(u"label_ch3vScaleDash")
-
-        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.label_ch3vScaleDash)
-
-        self.lineEdit_ch3vHigh = QLineEdit(self.setting)
-        self.lineEdit_ch3vHigh.setObjectName(u"lineEdit_ch3vHigh")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch3vHigh.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch3vHigh.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.lineEdit_ch3vHigh)
+        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.lineEdit_ch7vHigh)
 
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch3ScaleMinMax, 3, 2, 1, 1)
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch7ScaleMinMax, 7, 2, 1, 1)
 
-        self.label_deviceModelSetting = QLabel(self.setting)
-        self.label_deviceModelSetting.setObjectName(u"label_deviceModelSetting")
+        self.horizontalLayout_ch7Scale = QHBoxLayout()
+        self.horizontalLayout_ch7Scale.setSpacing(10)
+        self.horizontalLayout_ch7Scale.setObjectName(u"horizontalLayout_ch7Scale")
+        self.comboBox_ch7scale = QComboBox(self.setting)
+        self.comboBox_ch7scale.addItem("")
+        self.comboBox_ch7scale.addItem("")
+        self.comboBox_ch7scale.addItem("")
+        self.comboBox_ch7scale.setObjectName(u"comboBox_ch7scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch7scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch7scale.setSizePolicy(sizePolicy7)
 
-        self.gridLayout_setting.addWidget(self.label_deviceModelSetting, 0, 0, 1, 2, Qt.AlignHCenter)
-
-        self.horizontalLayout_ch2Scale = QHBoxLayout()
-        self.horizontalLayout_ch2Scale.setSpacing(10)
-        self.horizontalLayout_ch2Scale.setObjectName(u"horizontalLayout_ch2Scale")
-        self.comboBox_ch2scale = QComboBox(self.setting)
-        self.comboBox_ch2scale.addItem("")
-        self.comboBox_ch2scale.addItem("")
-        self.comboBox_ch2scale.addItem("")
-        self.comboBox_ch2scale.setObjectName(u"comboBox_ch2scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch2scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch2scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch2Scale.addWidget(self.comboBox_ch2scale)
+        self.horizontalLayout_ch7Scale.addWidget(self.comboBox_ch7scale)
 
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch2Scale, 2, 3, 1, 1)
-
-        self.horizontalLayout_baudRate = QHBoxLayout()
-        self.horizontalLayout_baudRate.setObjectName(u"horizontalLayout_baudRate")
-        self.label_baudRate = QLabel(self.setting)
-        self.label_baudRate.setObjectName(u"label_baudRate")
-
-        self.horizontalLayout_baudRate.addWidget(self.label_baudRate)
-
-        self.lineEdit_baudRate = QLineEdit(self.setting)
-        self.lineEdit_baudRate.setObjectName(u"lineEdit_baudRate")
-        sizePolicy6.setHeightForWidth(self.lineEdit_baudRate.sizePolicy().hasHeightForWidth())
-        self.lineEdit_baudRate.setSizePolicy(sizePolicy6)
-        self.lineEdit_baudRate.setValidator(QRegularExpressionValidator(QRegularExpression('[0-9]+')))
-
-        self.horizontalLayout_baudRate.addWidget(self.lineEdit_baudRate)
-
-        self.horizontalLayout_baudRate.setStretch(0, 1)
-        self.horizontalLayout_baudRate.setStretch(1, 1)
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_baudRate, 4, 0, 1, 1)
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch7Scale, 7, 3, 1, 1)
 
         self.label_ch8Setting = QLabel(self.setting)
         self.label_ch8Setting.setObjectName(u"label_ch8Setting")
 
         self.gridLayout_setting.addWidget(self.label_ch8Setting, 8, 1, 1, 1, Qt.AlignRight)
-
-        self.horizontalLayout_unitID = QHBoxLayout()
-        self.horizontalLayout_unitID.setObjectName(u"horizontalLayout_unitID")
-        self.label_unitID = QLabel(self.setting)
-        self.label_unitID.setObjectName(u"label_unitID")
-
-        self.horizontalLayout_unitID.addWidget(self.label_unitID)
-
-        self.lineEdit_unitID = QLineEdit(self.setting)
-        self.lineEdit_unitID.setObjectName(u"lineEdit_unitID")
-        sizePolicy6.setHeightForWidth(self.lineEdit_unitID.sizePolicy().hasHeightForWidth())
-        self.lineEdit_unitID.setSizePolicy(sizePolicy6)
-        self.lineEdit_unitID.setValidator(QIntValidator(1,5))
-
-        self.horizontalLayout_unitID.addWidget(self.lineEdit_unitID)
-
-        self.horizontalLayout_unitID.setStretch(0, 1)
-        self.horizontalLayout_unitID.setStretch(1, 1)
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_unitID, 3, 0, 1, 1)
-
-        self.label_ch1Setting = QLabel(self.setting)
-        self.label_ch1Setting.setObjectName(u"label_ch1Setting")
-
-        self.gridLayout_setting.addWidget(self.label_ch1Setting, 1, 1, 1, 1, Qt.AlignRight)
-
-        self.horizontalLayout_ch8Scale = QHBoxLayout()
-        self.horizontalLayout_ch8Scale.setSpacing(10)
-        self.horizontalLayout_ch8Scale.setObjectName(u"horizontalLayout_ch8Scale")
-        self.comboBox_ch8scale = QComboBox(self.setting)
-        self.comboBox_ch8scale.addItem("")
-        self.comboBox_ch8scale.addItem("")
-        self.comboBox_ch8scale.addItem("")
-        self.comboBox_ch8scale.setObjectName(u"comboBox_ch8scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch8scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch8scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch8Scale.addWidget(self.comboBox_ch8scale)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch8Scale, 8, 3, 1, 1)
-
-        self.horizontalLayout_ch1Scale = QHBoxLayout()
-        self.horizontalLayout_ch1Scale.setSpacing(10)
-        self.horizontalLayout_ch1Scale.setObjectName(u"horizontalLayout_ch1Scale")
-        self.comboBox_ch1scale = QComboBox(self.setting)
-        self.comboBox_ch1scale.addItem("")
-        self.comboBox_ch1scale.addItem("")
-        self.comboBox_ch1scale.addItem("")
-        self.comboBox_ch1scale.setObjectName(u"comboBox_ch1scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch1scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch1scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch1Scale.addWidget(self.comboBox_ch1scale)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch1Scale, 1, 3, 1, 1)
-
-        self.horizontalLayout_ch2ScaleMinMax = QHBoxLayout()
-        self.horizontalLayout_ch2ScaleMinMax.setSpacing(10)
-        self.horizontalLayout_ch2ScaleMinMax.setObjectName(u"horizontalLayout_ch2ScaleMinMax")
-        self.lineEdit_ch2vLow = QLineEdit(self.setting)
-        self.lineEdit_ch2vLow.setObjectName(u"lineEdit_ch2vLow")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch2vLow.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch2vLow.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.lineEdit_ch2vLow)
-
-        self.label_ch2vScaleDash = QLabel(self.setting)
-        self.label_ch2vScaleDash.setObjectName(u"label_ch2vScaleDash")
-
-        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.label_ch2vScaleDash)
-
-        self.lineEdit_ch2vHigh = QLineEdit(self.setting)
-        self.lineEdit_ch2vHigh.setObjectName(u"lineEdit_ch2vHigh")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch2vHigh.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch2vHigh.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.lineEdit_ch2vHigh)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch2ScaleMinMax, 2, 2, 1, 1)
-
-        self.horizontalLayout_ch3Scale = QHBoxLayout()
-        self.horizontalLayout_ch3Scale.setSpacing(10)
-        self.horizontalLayout_ch3Scale.setObjectName(u"horizontalLayout_ch3Scale")
-        self.comboBox_ch3scale = QComboBox(self.setting)
-        self.comboBox_ch3scale.addItem("")
-        self.comboBox_ch3scale.addItem("")
-        self.comboBox_ch3scale.addItem("")
-        self.comboBox_ch3scale.setObjectName(u"comboBox_ch3scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch3scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch3scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch3Scale.addWidget(self.comboBox_ch3scale)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch3Scale, 3, 3, 1, 1)
 
         self.horizontalLayout_ch8ScaleMinMax = QHBoxLayout()
         self.horizontalLayout_ch8ScaleMinMax.setSpacing(10)
@@ -2019,47 +2046,36 @@ class Ui_MainWindow(object):
 
         self.gridLayout_setting.addLayout(self.horizontalLayout_ch8ScaleMinMax, 8, 2, 1, 1)
 
-        self.gridLayout_scalesMinMax = QGridLayout()
-        self.gridLayout_scalesMinMax.setObjectName(u"gridLayout_scalesMinMax")
-        self.label = QLabel(self.setting)
-        self.label.setObjectName(u"label")
-        sizePolicy6.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy6)
+        self.horizontalLayout_ch8Scale = QHBoxLayout()
+        self.horizontalLayout_ch8Scale.setSpacing(10)
+        self.horizontalLayout_ch8Scale.setObjectName(u"horizontalLayout_ch8Scale")
+        self.comboBox_ch8scale = QComboBox(self.setting)
+        self.comboBox_ch8scale.addItem("")
+        self.comboBox_ch8scale.addItem("")
+        self.comboBox_ch8scale.addItem("")
+        self.comboBox_ch8scale.setObjectName(u"comboBox_ch8scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch8scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch8scale.setSizePolicy(sizePolicy7)
 
-        self.gridLayout_scalesMinMax.addWidget(self.label, 1, 0, 1, 1, Qt.AlignHCenter)
-
-        self.label_2 = QLabel(self.setting)
-        self.label_2.setObjectName(u"label_2")
-        sizePolicy6.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
-        self.label_2.setSizePolicy(sizePolicy6)
-
-        self.gridLayout_scalesMinMax.addWidget(self.label_2, 1, 1, 1, 1, Qt.AlignHCenter)
-
-        self.label_vScale = QLabel(self.setting)
-        self.label_vScale.setObjectName(u"label_vScale")
-        sizePolicy6.setHeightForWidth(self.label_vScale.sizePolicy().hasHeightForWidth())
-        self.label_vScale.setSizePolicy(sizePolicy6)
-        font4 = QFont()
-        font4.setPointSize(12)
-        font4.setBold(False)
-        font4.setItalic(False)
-        font4.setUnderline(False)
-        self.label_vScale.setFont(font4)
-
-        self.gridLayout_scalesMinMax.addWidget(self.label_vScale, 0, 0, 1, 2, Qt.AlignHCenter)
+        self.horizontalLayout_ch8Scale.addWidget(self.comboBox_ch8scale)
 
 
-        self.gridLayout_setting.addLayout(self.gridLayout_scalesMinMax, 0, 2, 1, 1)
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch8Scale, 8, 3, 1, 1)
 
-        self.gridLayout_setting.setColumnStretch(0, 4)
-        self.gridLayout_setting.setColumnStretch(1, 2)
-        self.gridLayout_setting.setColumnStretch(2, 2)
+        self.label_deviceModelSetting = QLabel(self.setting)
+        self.label_deviceModelSetting.setObjectName(u"label_deviceModelSetting")
+
+        self.gridLayout_setting.addWidget(self.label_deviceModelSetting, 0, 0, 1, 2, Qt.AlignHCenter)
+
+        self.gridLayout_setting.setColumnStretch(0, 3)
+        self.gridLayout_setting.setColumnStretch(1, 1)
+        self.gridLayout_setting.setColumnStretch(2, 1)
         self.gridLayout_setting.setColumnStretch(3, 1)
         self.stackedWidget.addWidget(self.setting)
         self.calibration = QWidget()
         self.calibration.setObjectName(u"calibration")
-        self.gridLayout_3 = QGridLayout(self.calibration)
-        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.gridLayout_calibration = QGridLayout(self.calibration)
+        self.gridLayout_calibration.setObjectName(u"gridLayout_calibration")
         self.groupBox_calibration = QGroupBox(self.calibration)
         self.groupBox_calibration.setObjectName(u"groupBox_calibration")
         self.gridLayout_4 = QGridLayout(self.groupBox_calibration)
@@ -2802,13 +2818,13 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addLayout(self.horizontalLayout_Points, 0, 0, 1, 1)
 
 
-        self.gridLayout_3.addWidget(self.groupBox_calibration, 0, 0, 1, 1)
+        self.gridLayout_calibration.addWidget(self.groupBox_calibration, 0, 0, 1, 1)
 
         self.stackedWidget.addWidget(self.calibration)
         self.log = QWidget()
         self.log.setObjectName(u"log")
-        self.gridLayout_5 = QGridLayout(self.log)
-        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.gridLayout_log = QGridLayout(self.log)
+        self.gridLayout_log.setObjectName(u"gridLayout_log")
         self.frame_log = QFrame(self.log)
         self.frame_log.setObjectName(u"frame_log")
         self.frame_log.setFrameShape(QFrame.StyledPanel)
@@ -2816,27 +2832,31 @@ class Ui_MainWindow(object):
         self.gridLayout_6 = QGridLayout(self.frame_log)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
         self.tableWidget_log = QTableWidget(self.frame_log)
-        if (self.tableWidget_log.columnCount() < 3):
-            self.tableWidget_log.setColumnCount(3)
+        if (self.tableWidget_log.columnCount() < 5):
+            self.tableWidget_log.setColumnCount(5)
         __qtablewidgetitem = QTableWidgetItem()
         self.tableWidget_log.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
         self.tableWidget_log.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
         self.tableWidget_log.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget_log.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.tableWidget_log.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         if (self.tableWidget_log.rowCount() < 1):
             self.tableWidget_log.setRowCount(1)
-        __qtablewidgetitem3 = QTableWidgetItem()
-        self.tableWidget_log.setVerticalHeaderItem(0, __qtablewidgetitem3)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.tableWidget_log.setVerticalHeaderItem(0, __qtablewidgetitem5)
         self.tableWidget_log.setObjectName(u"tableWidget_log")
-        self.tableWidget_log.setFrameShape(QFrame.WinPanel)
+        self.tableWidget_log.setFrameShape(QFrame.StyledPanel)
         self.tableWidget_log.setFrameShadow(QFrame.Plain)
         self.tableWidget_log.setShowGrid(True)
         self.tableWidget_log.setGridStyle(Qt.SolidLine)
         self.tableWidget_log.setWordWrap(True)
         self.tableWidget_log.setCornerButtonEnabled(False)
         self.tableWidget_log.horizontalHeader().setVisible(True)
-        self.tableWidget_log.horizontalHeader().setMinimumSectionSize(100)
+        self.tableWidget_log.horizontalHeader().setMinimumSectionSize(50)
         self.tableWidget_log.horizontalHeader().setDefaultSectionSize(100)
         self.tableWidget_log.horizontalHeader().setStretchLastSection(True)
         self.tableWidget_log.verticalHeader().setMinimumSectionSize(30)
@@ -2844,7 +2864,7 @@ class Ui_MainWindow(object):
         self.gridLayout_6.addWidget(self.tableWidget_log, 0, 0, 1, 1)
 
 
-        self.gridLayout_5.addWidget(self.frame_log, 0, 0, 1, 1)
+        self.gridLayout_log.addWidget(self.frame_log, 0, 0, 1, 1)
 
         self.stackedWidget.addWidget(self.log)
         self.widgets = QWidget()
@@ -2988,7 +3008,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 218, 218))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 274, 218))
         self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
 "	border: none;\n"
 "    background: rgb(52, 59, 72);\n"
@@ -3067,58 +3087,58 @@ class Ui_MainWindow(object):
         self.tableWidget = QTableWidget(self.row_3)
         if (self.tableWidget.columnCount() < 4):
             self.tableWidget.setColumnCount(4)
-        __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem4)
-        __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem6)
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem7)
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem9)
         if (self.tableWidget.rowCount() < 16):
             self.tableWidget.setRowCount(16)
         font5 = QFont()
-        __qtablewidgetitem8 = QTableWidgetItem()
-        __qtablewidgetitem8.setFont(font5);
-        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem8)
-        __qtablewidgetitem9 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem9)
         __qtablewidgetitem10 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem10)
+        __qtablewidgetitem10.setFont(font5);
+        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem11)
+        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem11)
         __qtablewidgetitem12 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem12)
+        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem12)
         __qtablewidgetitem13 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(5, __qtablewidgetitem13)
+        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem13)
         __qtablewidgetitem14 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(6, __qtablewidgetitem14)
+        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem14)
         __qtablewidgetitem15 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(7, __qtablewidgetitem15)
+        self.tableWidget.setVerticalHeaderItem(5, __qtablewidgetitem15)
         __qtablewidgetitem16 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(8, __qtablewidgetitem16)
+        self.tableWidget.setVerticalHeaderItem(6, __qtablewidgetitem16)
         __qtablewidgetitem17 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem17)
+        self.tableWidget.setVerticalHeaderItem(7, __qtablewidgetitem17)
         __qtablewidgetitem18 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(10, __qtablewidgetitem18)
+        self.tableWidget.setVerticalHeaderItem(8, __qtablewidgetitem18)
         __qtablewidgetitem19 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(11, __qtablewidgetitem19)
+        self.tableWidget.setVerticalHeaderItem(9, __qtablewidgetitem19)
         __qtablewidgetitem20 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem20)
+        self.tableWidget.setVerticalHeaderItem(10, __qtablewidgetitem20)
         __qtablewidgetitem21 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(13, __qtablewidgetitem21)
+        self.tableWidget.setVerticalHeaderItem(11, __qtablewidgetitem21)
         __qtablewidgetitem22 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(14, __qtablewidgetitem22)
+        self.tableWidget.setVerticalHeaderItem(12, __qtablewidgetitem22)
         __qtablewidgetitem23 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(15, __qtablewidgetitem23)
+        self.tableWidget.setVerticalHeaderItem(13, __qtablewidgetitem23)
         __qtablewidgetitem24 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 0, __qtablewidgetitem24)
+        self.tableWidget.setVerticalHeaderItem(14, __qtablewidgetitem24)
         __qtablewidgetitem25 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 1, __qtablewidgetitem25)
+        self.tableWidget.setVerticalHeaderItem(15, __qtablewidgetitem25)
         __qtablewidgetitem26 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 2, __qtablewidgetitem26)
+        self.tableWidget.setItem(0, 0, __qtablewidgetitem26)
         __qtablewidgetitem27 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 3, __qtablewidgetitem27)
+        self.tableWidget.setItem(0, 1, __qtablewidgetitem27)
+        __qtablewidgetitem28 = QTableWidgetItem()
+        self.tableWidget.setItem(0, 2, __qtablewidgetitem28)
+        __qtablewidgetitem29 = QTableWidgetItem()
+        self.tableWidget.setItem(0, 3, __qtablewidgetitem29)
         self.tableWidget.setObjectName(u"tableWidget")
         sizePolicy9 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy9.setHorizontalStretch(0)
@@ -3286,16 +3306,16 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.creditsLabel = QLabel(self.bottomBar)
-        self.creditsLabel.setObjectName(u"creditsLabel")
-        self.creditsLabel.setMaximumSize(QSize(16777215, 16))
+        self.stateLabel = QLabel(self.bottomBar)
+        self.stateLabel.setObjectName(u"stateLabel")
+        self.stateLabel.setMaximumSize(QSize(16777215, 16))
         font6 = QFont()
         font6.setBold(False)
         font6.setItalic(False)
-        self.creditsLabel.setFont(font6)
-        self.creditsLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.stateLabel.setFont(font6)
+        self.stateLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.horizontalLayout_5.addWidget(self.creditsLabel)
+        self.horizontalLayout_5.addWidget(self.stateLabel)
 
         self.version = QLabel(self.bottomBar)
         self.version.setObjectName(u"version")
@@ -3363,8 +3383,8 @@ class Ui_MainWindow(object):
         QWidget.setTabOrder(self.maximizeRestoreAppBtn, self.closeAppBtn)
         QWidget.setTabOrder(self.closeAppBtn, self.settingsTopBtn)
         QWidget.setTabOrder(self.settingsTopBtn, self.lineEdit_unitID)
-        QWidget.setTabOrder(self.lineEdit_unitID, self.lineEdit_baudRate)
-        QWidget.setTabOrder(self.lineEdit_baudRate, self.lineEdit_timeout)
+        QWidget.setTabOrder(self.lineEdit_unitID, self.comboBox_baudRate)
+        QWidget.setTabOrder(self.comboBox_baudRate, self.lineEdit_timeout)
         QWidget.setTabOrder(self.lineEdit_timeout, self.lineEdit_ResRate)
         QWidget.setTabOrder(self.lineEdit_ResRate, self.lineEdit_ch1vLow)
         QWidget.setTabOrder(self.lineEdit_ch1vLow, self.lineEdit_ch1vHigh)
@@ -3487,6 +3507,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(0)
+        self.comboBox_baudRate.setCurrentIndex(11)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -3582,62 +3603,81 @@ class Ui_MainWindow(object):
         self.label_deviceModel.setText(QCoreApplication.translate("MainWindow", u"Model", None))
         self.label_vol.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
         self.label_cur.setText(QCoreApplication.translate("MainWindow", u"Current", None))
-        self.label_ch4vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.label_ch7vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Min", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Max", None))
+        self.label_vScale.setText(QCoreApplication.translate("MainWindow", u"Scales", None))
+        self.label_ch1Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 1:", None))
         self.label_ch1vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.comboBox_ch5scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch5scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch5scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.comboBox_ch1scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch1scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch1scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.label_ch2Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 2:", None))
-        self.label_ch3Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 3:", None))
-        self.label_ResRate.setText(QCoreApplication.translate("MainWindow", u"Response Rate:", None))
-        self.comboBox_ch7scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch7scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch7scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.label_ch2vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.comboBox_ch2scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch2scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch2scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
-        self.label_ch5vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_unitID.setText(QCoreApplication.translate("MainWindow", u"Unit ID:", None))
+        self.label_ch3Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 3:", None))
+        self.label_ch3vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.comboBox_ch3scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch3scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch3scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+
+        self.label_baudRate.setText(QCoreApplication.translate("MainWindow", u"Baud Rate:", None))
+        self.comboBox_baudRate.setItemText(0, QCoreApplication.translate("MainWindow", u"300", None))
+        self.comboBox_baudRate.setItemText(1, QCoreApplication.translate("MainWindow", u"600", None))
+        self.comboBox_baudRate.setItemText(2, QCoreApplication.translate("MainWindow", u"1200", None))
+        self.comboBox_baudRate.setItemText(3, QCoreApplication.translate("MainWindow", u"2400", None))
+        self.comboBox_baudRate.setItemText(4, QCoreApplication.translate("MainWindow", u"4800", None))
+        self.comboBox_baudRate.setItemText(5, QCoreApplication.translate("MainWindow", u"9600", None))
+        self.comboBox_baudRate.setItemText(6, QCoreApplication.translate("MainWindow", u"14400", None))
+        self.comboBox_baudRate.setItemText(7, QCoreApplication.translate("MainWindow", u"19200", None))
+        self.comboBox_baudRate.setItemText(8, QCoreApplication.translate("MainWindow", u"38400", None))
+        self.comboBox_baudRate.setItemText(9, QCoreApplication.translate("MainWindow", u"56000", None))
+        self.comboBox_baudRate.setItemText(10, QCoreApplication.translate("MainWindow", u"57600", None))
+        self.comboBox_baudRate.setItemText(11, QCoreApplication.translate("MainWindow", u"115200", None))
+        self.comboBox_baudRate.setItemText(12, QCoreApplication.translate("MainWindow", u"128000", None))
+        self.comboBox_baudRate.setItemText(13, QCoreApplication.translate("MainWindow", u"153600", None))
+        self.comboBox_baudRate.setItemText(14, QCoreApplication.translate("MainWindow", u"230400", None))
+        self.comboBox_baudRate.setItemText(15, QCoreApplication.translate("MainWindow", u"256000", None))
+        self.comboBox_baudRate.setItemText(16, QCoreApplication.translate("MainWindow", u"460800", None))
+        self.comboBox_baudRate.setItemText(17, QCoreApplication.translate("MainWindow", u"921600", None))
+
+        self.label_ch4Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 4:", None))
+        self.label_ch4vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.comboBox_ch4scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
         self.comboBox_ch4scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
         self.comboBox_ch4scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
-        self.label_ch4Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 4:", None))
-        self.label_ch7Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 7:", None))
+        self.label_timeout.setText(QCoreApplication.translate("MainWindow", u"Timeout:", None))
+        self.label_ch5Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 5:", None))
+        self.label_ch5vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.comboBox_ch5scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch5scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch5scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+
+        self.label_ResRate.setText(QCoreApplication.translate("MainWindow", u"Response Rate:", None))
+        self.label_ch6Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 6:", None))
         self.label_ch6vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.comboBox_ch6scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
         self.comboBox_ch6scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
         self.comboBox_ch6scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
-        self.label_timeout.setText(QCoreApplication.translate("MainWindow", u"Timeout:", None))
-        self.label_ch5Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 5:", None))
-        self.label_ch6Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 6:", None))
-        self.label_ch3vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.label_deviceModelSetting.setText(QCoreApplication.translate("MainWindow", u"Model", None))
-        self.comboBox_ch2scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch2scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch2scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.label_ch7Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 7:", None))
+        self.label_ch7vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.comboBox_ch7scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch7scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch7scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
-        self.label_baudRate.setText(QCoreApplication.translate("MainWindow", u"Baud Rate:", None))
         self.label_ch8Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 8:", None))
-        self.label_unitID.setText(QCoreApplication.translate("MainWindow", u"Unit ID:", None))
-        self.label_ch1Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 1:", None))
+        self.label_ch8vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.comboBox_ch8scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
         self.comboBox_ch8scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
         self.comboBox_ch8scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
-        self.comboBox_ch1scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch1scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch1scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
-
-        self.label_ch2vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.comboBox_ch3scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch3scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch3scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
-
-        self.label_ch8vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Min", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Max", None))
-        self.label_vScale.setText(QCoreApplication.translate("MainWindow", u"Scales", None))
+        self.label_deviceModelSetting.setText(QCoreApplication.translate("MainWindow", u"Model", None))
         self.groupBox_calibration.setTitle(QCoreApplication.translate("MainWindow", u"Calibration Values", None))
         self.label_ch1calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 1:", None))
         self.pushButton_ch1point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
@@ -3720,11 +3760,15 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem = self.tableWidget_log.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Date", None));
         ___qtablewidgetitem1 = self.tableWidget_log.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Level", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Time", None));
         ___qtablewidgetitem2 = self.tableWidget_log.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Message", None));
-        ___qtablewidgetitem3 = self.tableWidget_log.verticalHeaderItem(0)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"1", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Level", None));
+        ___qtablewidgetitem3 = self.tableWidget_log.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"State", None));
+        ___qtablewidgetitem4 = self.tableWidget_log.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Message", None));
+        ___qtablewidgetitem5 = self.tableWidget_log.verticalHeaderItem(0)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"1", None));
         self.labelBoxBlenderInstalation.setText(QCoreApplication.translate("MainWindow", u"FILE BOX", None))
         self.lineEdit.setText("")
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
@@ -3738,63 +3782,63 @@ class Ui_MainWindow(object):
 
         self.commandLinkButton.setText(QCoreApplication.translate("MainWindow", u"Link Button", None))
         self.commandLinkButton.setDescription(QCoreApplication.translate("MainWindow", u"Link description", None))
-        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"0", None));
-        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"2", None));
-        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"3", None));
-        ___qtablewidgetitem8 = self.tableWidget.verticalHeaderItem(0)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem9 = self.tableWidget.verticalHeaderItem(1)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem10 = self.tableWidget.verticalHeaderItem(2)
+        ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"0", None));
+        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"1", None));
+        ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"2", None));
+        ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"3", None));
+        ___qtablewidgetitem10 = self.tableWidget.verticalHeaderItem(0)
         ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(3)
+        ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(1)
         ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(4)
+        ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(2)
         ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem13 = self.tableWidget.verticalHeaderItem(5)
+        ___qtablewidgetitem13 = self.tableWidget.verticalHeaderItem(3)
         ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem14 = self.tableWidget.verticalHeaderItem(6)
+        ___qtablewidgetitem14 = self.tableWidget.verticalHeaderItem(4)
         ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem15 = self.tableWidget.verticalHeaderItem(7)
+        ___qtablewidgetitem15 = self.tableWidget.verticalHeaderItem(5)
         ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem16 = self.tableWidget.verticalHeaderItem(8)
+        ___qtablewidgetitem16 = self.tableWidget.verticalHeaderItem(6)
         ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(9)
+        ___qtablewidgetitem17 = self.tableWidget.verticalHeaderItem(7)
         ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem18 = self.tableWidget.verticalHeaderItem(10)
+        ___qtablewidgetitem18 = self.tableWidget.verticalHeaderItem(8)
         ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(11)
+        ___qtablewidgetitem19 = self.tableWidget.verticalHeaderItem(9)
         ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem20 = self.tableWidget.verticalHeaderItem(12)
+        ___qtablewidgetitem20 = self.tableWidget.verticalHeaderItem(10)
         ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem21 = self.tableWidget.verticalHeaderItem(13)
+        ___qtablewidgetitem21 = self.tableWidget.verticalHeaderItem(11)
         ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem22 = self.tableWidget.verticalHeaderItem(14)
+        ___qtablewidgetitem22 = self.tableWidget.verticalHeaderItem(12)
         ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
-        ___qtablewidgetitem23 = self.tableWidget.verticalHeaderItem(15)
+        ___qtablewidgetitem23 = self.tableWidget.verticalHeaderItem(13)
         ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
+        ___qtablewidgetitem24 = self.tableWidget.verticalHeaderItem(14)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
+        ___qtablewidgetitem25 = self.tableWidget.verticalHeaderItem(15)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"New Row", None));
 
         __sortingEnabled = self.tableWidget.isSortingEnabled()
         self.tableWidget.setSortingEnabled(False)
-        ___qtablewidgetitem24 = self.tableWidget.item(0, 0)
-        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"Test", None));
-        ___qtablewidgetitem25 = self.tableWidget.item(0, 1)
-        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"Text", None));
-        ___qtablewidgetitem26 = self.tableWidget.item(0, 2)
-        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Cell", None));
-        ___qtablewidgetitem27 = self.tableWidget.item(0, 3)
-        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"Line", None));
+        ___qtablewidgetitem26 = self.tableWidget.item(0, 0)
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Test", None));
+        ___qtablewidgetitem27 = self.tableWidget.item(0, 1)
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"Text", None));
+        ___qtablewidgetitem28 = self.tableWidget.item(0, 2)
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"Cell", None));
+        ___qtablewidgetitem29 = self.tableWidget.item(0, 3)
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Line", None));
         self.tableWidget.setSortingEnabled(__sortingEnabled)
 
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
-        self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"By: Wanderson M. Pimenta", None))
-        self.version.setText(QCoreApplication.translate("MainWindow", u"v1.0.3", None))
+        self.stateLabel.setText("")
+        self.version.setText(QCoreApplication.translate("MainWindow", u"v1.0", None))
     # retranslateUi
 

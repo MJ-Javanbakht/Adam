@@ -24,6 +24,16 @@ class MainWindow(QMainWindow):
         global widgets
         widgets = self.ui
 
+        # MAKE THE LINE EDITS ACCEPT ONLY DIGITS
+        # ///////////////////////////////////////////////////////////////
+        lineEdits = widgets.setting.findChildren(QLineEdit)
+        for l in lineEdits:
+            l.setValidator(QRegularExpressionValidator(QRegularExpression('[0-9]+')))
+
+        lineEdits = widgets.calibration.findChildren(QLineEdit)
+        for l in lineEdits:
+            l.setValidator(QRegularExpressionValidator(QRegularExpression('[0-9]+')))
+
         # USE CUSTOM TITLE BAR | USE AS "False" FOR MAC OR LINUX
         # ///////////////////////////////////////////////////////////////
         Settings.ENABLE_CUSTOM_TITLE_BAR = False
@@ -76,6 +86,7 @@ class MainWindow(QMainWindow):
         setup.exec()
 
         # if setup.value:
+        widgets.stateLabel.setText('Connected')
         self.show()
         # self.client = setup.client
             # self.connection = self.client.connect()
