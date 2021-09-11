@@ -23,6 +23,10 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         global widgets
         widgets = self.ui
+        # pix = QPixmap('Adam\design\images\images\AYRA_LOGO.png')
+        # QPixmap.convertFromImage(self= pix,img=':/images/images/images/Ayra.png',flags= [0])
+        # widgets.topLogo.setPixmap(pix)
+        widgets.stateLabel.setStyleSheet('font: 13pt; color: rgb(100,189,100);')
 
         # MAKE THE LINE EDITS ACCEPT ONLY DIGITS
         # ///////////////////////////////////////////////////////////////
@@ -36,7 +40,7 @@ class MainWindow(QMainWindow):
 
         # USE CUSTOM TITLE BAR | USE AS "False" FOR MAC OR LINUX
         # ///////////////////////////////////////////////////////////////
-        Settings.ENABLE_CUSTOM_TITLE_BAR = False
+        Settings.ENABLE_CUSTOM_TITLE_BAR = True
 
         # APP NAME
         # ///////////////////////////////////////////////////////////////
@@ -189,9 +193,14 @@ class SetupDialog(QDialog):
         self.ui.setupUi(self)
         title = "Setup"
         self.setWindowTitle(title)
-        status = QStatusBar()
-        self.ui.verticalLayout_statusBar.addWidget(status)
-        status.showMessage("Press OK to connect")
+        icon = QIcon()
+        icon.addPixmap("Adam\design\images\icons\AYRA_LOGO.ico")
+        self.setWindowIcon(icon)
+        self.ui.status = QStatusBar()
+        self.ui.verticalLayout_statusBar.addWidget(self.ui.status)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+        self.ui.status.setSizePolicy(sizePolicy)
+        self.ui.status.showMessage("Press OK to connect")
         # self.show()
 
         # Value to check if device is connected

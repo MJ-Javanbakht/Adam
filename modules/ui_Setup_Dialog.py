@@ -12,12 +12,219 @@ from PySide6.QtCore import *  # type: ignore
 from PySide6.QtGui import *  # type: ignore
 from PySide6.QtWidgets import *  # type: ignore
 
+from . setup_resources_rc import *
 
 class Ui_Setup(object):
     def setupUi(self, Setup):
         if not Setup.objectName():
             Setup.setObjectName(u"Setup")
-        Setup.resize(500, 412)
+        Setup.resize(500, 550)
+        Setup.setMinimumSize(QSize(500, 550))
+        Setup.setStyleSheet(u"QWidget{\n"
+"	color: rgb(221, 221, 221);\n"
+"	font: 12pt \"Segoe UI\";\n"
+"}\n"
+"\n"
+"QToolTip {\n"
+"	color: #ffffff;\n"
+"	background-color: rgba(33, 37, 43, 180);\n"
+"	border: 1px solid rgb(44, 49, 58);\n"
+"	background-image: none;\n"
+"	background-position: left center;\n"
+"    background-repeat: no-repeat;\n"
+"	border: none;\n"
+"	border-left: 2px solid rgb(255, 121, 198);\n"
+"	text-align: left;\n"
+"	padding-left: 8px;\n"
+"	margin: 0px;\n"
+"}\n"
+"\n"
+"#Setup {	\n"
+"	background-color: rgb(40, 44, 52);\n"
+"	border: 1px solid rgb(44, 49, 58);\n"
+"}\n"
+"\n"
+"/* SpinBox */\n"
+"QSpinBox {\n"
+"	background-color: solid rgb(33, 37, 43);\n"
+"	border-radius: 5px;\n"
+"	border: 2px solid rgb(20, 20, 20);\n"
+"	padding-left: 10px;\n"
+"	selection-color: rgb(255, 255, 255);\n"
+"	selection-background-color: rgb(255, 121, 198);\n"
+"}\n"
+"QSpinBox:hover {\n"
+"	border: 2px solid rgb(64, 71, 88);\n"
+"}\n"
+"QSpinBox:focus {\n"
+"	border: 2px solid rgb(150, 150, 150);\n"
+"}\n"
+"QSpinBox:disabled {\n"
+"	background-color: rgb(150, 150,"
+                        " 150);\n"
+"	border: 2px solid rgb(43, 50, 61);\n"
+"	color: rgb(100,100,100);\n"
+"}\n"
+"\n"
+"/* LineEdit */\n"
+"QLineEdit {\n"
+"	background-color: solid rgb(33, 37, 43);\n"
+"	border-radius: 5px;\n"
+"	border: 2px solid rgb(20, 20, 20);\n"
+"	padding-left: 10px;\n"
+"	selection-color: rgb(255, 255, 255);\n"
+"	selection-background-color: rgb(255, 121, 198);\n"
+"}\n"
+"QLineEdit:hover {\n"
+"	border: 2px solid rgb(64, 71, 88);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"	border: 2px solid rgb(150, 150, 150);\n"
+"}\n"
+"QLineEdit:disabled {\n"
+"	background-color: rgb(150, 150, 150);\n"
+"	border: 2px solid rgb(43, 50, 61);\n"
+"	color: rgb(100,100,100);\n"
+"}\n"
+"\n"
+"/* RadioButton */\n"
+"QRadioButton::indicator {\n"
+"    border: 3px solid rgb(100, 100, 100);\n"
+"	width: 15px;\n"
+"	height: 15px;\n"
+"	border-radius: 10px;\n"
+"    background: rgb(44, 49, 60);\n"
+"}\n"
+"QRadioButton::indicator:hover {\n"
+"    border: 3px solid rgb(58, 66, 81);\n"
+"}\n"
+"QRadioButton::indicator:checked {\n"
+"    background: 3px solid rgb(100, 106, 130);\n"
+""
+                        "	border: 3px solid rgb(52, 59, 72);	\n"
+"}\n"
+"QRadioButton:disabled {\n"
+"	background-color: rgb(150, 150, 150);\n"
+"	color: rgb(100,100,100);\n"
+"}\n"
+"\n"
+"/* ComboBox */\n"
+"QComboBox{\n"
+"	background-color: rgb(27, 29, 35);\n"
+"	border-radius: 5px;\n"
+"	border: 2px solid rgb(20, 20, 20);\n"
+"	padding: 5px;\n"
+"	padding-left: 10px;\n"
+"}\n"
+"QComboBox:hover{\n"
+"	border: 2px solid rgb(64, 71, 88);\n"
+"}\n"
+"QComboBox::drop-down {\n"
+"	subcontrol-origin: padding;\n"
+"	subcontrol-position: top right;\n"
+"	width: 25px; \n"
+"	border-left-width: 3px;\n"
+"	border-left-color: rgba(39, 44, 54, 150);\n"
+"	border-left-style: solid;\n"
+"	border-top-right-radius: 3px;\n"
+"	border-bottom-right-radius: 3px;	\n"
+"	background-image: url(:/icons/images/icons/cil-arrow-bottom.png);\n"
+"	background-position: center;\n"
+"	background-repeat: no-reperat;\n"
+" }\n"
+"QComboBox QAbstractItemView {\n"
+"	color: rgb(255, 121, 198);	\n"
+"	background-color: rgb(33, 37, 43);\n"
+"	padding: 10px;\n"
+"	selection-background-color: rgb(39, 4"
+                        "4, 54);\n"
+"}\n"
+"QComboBox:disabled {\n"
+"	background-color: rgb(150, 150, 150);\n"
+"	border: 2px solid rgb(43, 50, 61);\n"
+"	color: rgb(100,100,100);\n"
+"}\n"
+"\n"
+"/* Slider */\n"
+"QSlider::groove:horizontal {\n"
+"    border-radius: 5px;\n"
+"    height: 10px;\n"
+"	margin: 0px;\n"
+"	background-color: rgb(52, 59, 72);\n"
+"}\n"
+"QSlider::groove:horizontal:hover {\n"
+"	background-color: rgb(55, 62, 76);\n"
+"}\n"
+"QSlider::handle:horizontal {\n"
+"    background-color: rgb(189, 147, 249);\n"
+"    border: none;\n"
+"    height: 10px;\n"
+"    width: 10px;\n"
+"    margin: 0px;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QSlider::handle:horizontal:hover {\n"
+"    background-color: rgb(195, 155, 255);\n"
+"}\n"
+"QSlider::handle:horizontal:pressed {\n"
+"    background-color: rgb(255, 121, 198);\n"
+"}\n"
+"\n"
+"QSlider::groove:vertical {\n"
+"    border-radius: 5px;\n"
+"    width: 10px;\n"
+"    margin: 0px;\n"
+"	background-color: rgb(52, 59, 72);\n"
+"}\n"
+"QSlider::groove:vertical:hover {\n"
+"	background-color: rgb(55, 62, 76);\n"
+""
+                        "}\n"
+"QSlider::handle:vertical {\n"
+"    background-color: rgb(189, 147, 249);\n"
+"	border: none;\n"
+"    height: 10px;\n"
+"    width: 10px;\n"
+"    margin: 0px;\n"
+"	border-radius: 5px;\n"
+"}\n"
+"QSlider::handle:vertical:hover {\n"
+"    background-color: rgb(195, 155, 255);\n"
+"}\n"
+"QSlider::handle:vertical:pressed {\n"
+"    background-color: rgb(255, 121, 198);\n"
+"}\n"
+"QSlider:disabled {\n"
+"	background-color: rgb(150, 150, 150);\n"
+"	border: 2px solid rgb(43, 50, 61);\n"
+"	color: rgb(100,100,100);\n"
+"}\n"
+"\n"
+"/* PushButton */\n"
+"QPushButton {\n"
+"	border: 2px solid rgb(61, 70, 86);\n"
+"	border-radius: 5px;	\n"
+"	background-color: rgb(52, 59, 72);\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(57, 65, 80);\n"
+"	border: 2px solid rgb(150, 150, 150);\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: rgb(35, 40, 49);\n"
+"	border: 2px solid rgb(43, 50, 61);\n"
+"}\n"
+"QPushButton:disabled {	\n"
+"	background-color: rgb(150, 150, 150);\n"
+"	border: 2px solid rgb(43, 50, 61);\n"
+"	color: rgb(1"
+                        "00,100,100);\n"
+"}\n"
+"\n"
+"/* Label */\n"
+"QLabel:disabled {\n"
+"	color: rgb(100,100,100);\n"
+"}")
         self.gridLayout_setup = QGridLayout(Setup)
         self.gridLayout_setup.setObjectName(u"gridLayout_setup")
         self.groupBox_ResTout = QGroupBox(Setup)
@@ -27,14 +234,19 @@ class Ui_Setup(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.groupBox_ResTout.sizePolicy().hasHeightForWidth())
         self.groupBox_ResTout.setSizePolicy(sizePolicy)
+        self.groupBox_ResTout.setStyleSheet(u"background-color: transparent;")
         self.horizontalLayout_ResTout = QHBoxLayout(self.groupBox_ResTout)
         self.horizontalLayout_ResTout.setObjectName(u"horizontalLayout_ResTout")
         self.lineEdit_ResTout = QLineEdit(self.groupBox_ResTout)
         self.lineEdit_ResTout.setObjectName(u"lineEdit_ResTout")
         sizePolicy.setHeightForWidth(self.lineEdit_ResTout.sizePolicy().hasHeightForWidth())
         self.lineEdit_ResTout.setSizePolicy(sizePolicy)
+        self.lineEdit_ResTout.setInputMethodHints(Qt.ImhNone)
         self.lineEdit_ResTout.setAlignment(Qt.AlignCenter)
-        self.lineEdit_ResTout.setValidator(QRegularExpressionValidator(QRegularExpression('[0-9]+')))
+        self.lineEdit_ResTout.setReadOnly(False)
+        self.lineEdit_ResTout.setPlaceholderText(u"")
+        self.lineEdit_ResTout.setClearButtonEnabled(False)
+
         self.horizontalLayout_ResTout.addWidget(self.lineEdit_ResTout)
 
         self.label_ResTout = QLabel(self.groupBox_ResTout)
@@ -52,6 +264,7 @@ class Ui_Setup(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.groupBox_Serial.sizePolicy().hasHeightForWidth())
         self.groupBox_Serial.setSizePolicy(sizePolicy1)
+        self.groupBox_Serial.setStyleSheet(u"background-color: transparent;")
         self.gridLayout_Serial = QGridLayout(self.groupBox_Serial)
         self.gridLayout_Serial.setObjectName(u"gridLayout_Serial")
         self.label_COM = QLabel(self.groupBox_Serial)
@@ -407,10 +620,12 @@ class Ui_Setup(object):
         self.groupBox_UnitID.setObjectName(u"groupBox_UnitID")
         sizePolicy.setHeightForWidth(self.groupBox_UnitID.sizePolicy().hasHeightForWidth())
         self.groupBox_UnitID.setSizePolicy(sizePolicy)
+        self.groupBox_UnitID.setStyleSheet(u"background-color: transparent;")
         self.horizontalLayout_SlaveID = QHBoxLayout(self.groupBox_UnitID)
         self.horizontalLayout_SlaveID.setObjectName(u"horizontalLayout_SlaveID")
         self.spinBox_UnitID = QSpinBox(self.groupBox_UnitID)
         self.spinBox_UnitID.setObjectName(u"spinBox_UnitID")
+        self.spinBox_UnitID.setEnabled(True)
         self.spinBox_UnitID.setInputMethodHints(Qt.ImhNone)
         self.spinBox_UnitID.setButtonSymbols(QAbstractSpinBox.UpDownArrows)
         self.spinBox_UnitID.setMinimum(1)
@@ -435,6 +650,7 @@ class Ui_Setup(object):
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.groupBox_Connection.sizePolicy().hasHeightForWidth())
         self.groupBox_Connection.setSizePolicy(sizePolicy3)
+        self.groupBox_Connection.setStyleSheet(u"background-color: transparent;")
         self.groupBox_Connection.setFlat(False)
         self.groupBox_Connection.setCheckable(False)
         self.horizontalLayout_Connection = QHBoxLayout(self.groupBox_Connection)
@@ -455,20 +671,21 @@ class Ui_Setup(object):
         self.verticalLayout_buttons.setObjectName(u"verticalLayout_buttons")
         self.pushButton_ok = QPushButton(Setup)
         self.pushButton_ok.setObjectName(u"pushButton_ok")
+        self.pushButton_ok.setEnabled(True)
         sizePolicy4 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Maximum)
         sizePolicy4.setHorizontalStretch(0)
         sizePolicy4.setVerticalStretch(0)
         sizePolicy4.setHeightForWidth(self.pushButton_ok.sizePolicy().hasHeightForWidth())
         self.pushButton_ok.setSizePolicy(sizePolicy4)
 
-        self.verticalLayout_buttons.addWidget(self.pushButton_ok, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.verticalLayout_buttons.addWidget(self.pushButton_ok, 0, Qt.AlignVCenter)
 
         self.pushButton_close = QPushButton(Setup)
         self.pushButton_close.setObjectName(u"pushButton_close")
         sizePolicy4.setHeightForWidth(self.pushButton_close.sizePolicy().hasHeightForWidth())
         self.pushButton_close.setSizePolicy(sizePolicy4)
 
-        self.verticalLayout_buttons.addWidget(self.pushButton_close, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.verticalLayout_buttons.addWidget(self.pushButton_close, 0, Qt.AlignVCenter)
 
 
         self.gridLayout_setup.addLayout(self.verticalLayout_buttons, 0, 1, 1, 1)
@@ -478,6 +695,7 @@ class Ui_Setup(object):
         self.groupBox_Remote.setEnabled(False)
         sizePolicy.setHeightForWidth(self.groupBox_Remote.sizePolicy().hasHeightForWidth())
         self.groupBox_Remote.setSizePolicy(sizePolicy)
+        self.groupBox_Remote.setStyleSheet(u"background-color: transparent;")
         self.gridLayout_remote = QGridLayout(self.groupBox_Remote)
         self.gridLayout_remote.setObjectName(u"gridLayout_remote")
         self.radioButton_IPv4 = QRadioButton(self.groupBox_Remote)
@@ -488,7 +706,9 @@ class Ui_Setup(object):
         self.radioButton_IPv4.setSizeIncrement(QSize(0, 0))
         self.radioButton_IPv4.setBaseSize(QSize(0, 0))
         font = QFont()
-        font.setPointSize(10)
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
         self.radioButton_IPv4.setFont(font)
         self.radioButton_IPv4.setChecked(True)
 
@@ -563,6 +783,7 @@ class Ui_Setup(object):
         self.groupBox_Mode.setObjectName(u"groupBox_Mode")
         sizePolicy.setHeightForWidth(self.groupBox_Mode.sizePolicy().hasHeightForWidth())
         self.groupBox_Mode.setSizePolicy(sizePolicy)
+        self.groupBox_Mode.setStyleSheet(u"background-color: transparent;")
         self.horizontalLayout_Mode = QHBoxLayout(self.groupBox_Mode)
         self.horizontalLayout_Mode.setObjectName(u"horizontalLayout_Mode")
         self.radioButton_RTU = QRadioButton(self.groupBox_Mode)
@@ -586,7 +807,6 @@ class Ui_Setup(object):
 
         self.gridLayout_setup.addWidget(self.groupBox_Mode, 1, 1, 1, 1)
 
-        self.gridLayout_setup.setRowStretch(0, 1)
         QWidget.setTabOrder(self.comboBox_Connection, self.comboBox_COM)
         QWidget.setTabOrder(self.comboBox_COM, self.comboBox_BaudRate)
         QWidget.setTabOrder(self.comboBox_BaudRate, self.comboBox_DataBits)

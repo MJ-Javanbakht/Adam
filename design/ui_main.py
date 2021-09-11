@@ -73,7 +73,7 @@ class Ui_MainWindow(object):
 "}\n"
 "#topLogo {\n"
 "	background-color: rgb(33, 37, 43);\n"
-"	background-image: url(:/images/images/images/Ayra.png);\n"
+"	background-image: url(:/images/images/images/AYRA_LOGO.png);\n"
 "	background-position: centered;\n"
 "	background-repeat: no-repeat;\n"
 "}\n"
@@ -94,8 +94,8 @@ class Ui_MainWindow(object):
 "	background-color: rgb(40, 44, 52);\n"
 "}\n"
 "#topMenu .QPushButton:pressed {	\n"
-"	background-color: rgb(189, 14"
-                        "7, 249);\n"
+"	background-color: rgb(18"
+                        "9, 147, 249);\n"
 "	color: rgb(255, 255, 255);\n"
 "}\n"
 "#bottomMenu .QPushButton {	\n"
@@ -133,8 +133,8 @@ class Ui_MainWindow(object):
 "	background-color: rgb(40, 44, 52);\n"
 "}\n"
 "#toggleButton:pressed {\n"
-"	background-color: rgb(189, "
-                        "147, 249);\n"
+"	background-color: rgb("
+                        "189, 147, 249);\n"
 "}\n"
 "\n"
 "/* Title Menu */\n"
@@ -167,8 +167,8 @@ class Ui_MainWindow(object):
 "\n"
 "/* Extra Content */\n"
 "#extraContent{\n"
-"	border-top:"
-                        " 3px solid rgb(40, 44, 52);\n"
+"	border"
+                        "-top: 3px solid rgb(40, 44, 52);\n"
 "}\n"
 "\n"
 "/* Extra Top Menus */\n"
@@ -200,8 +200,8 @@ class Ui_MainWindow(object):
 "\n"
 "/* Top Buttons */\n"
 "#rightButtons .QPushButton { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
-"#rightButtons .QPushButton:hover { background-color: rgb(44, 49, 57); border-style: s"
-                        "olid; border-radius: 4px; }\n"
+"#rightButtons .QPushButton:hover { background-color: rgb(44, 49, 57); border-sty"
+                        "le: solid; border-radius: 4px; }\n"
 "#rightButtons .QPushButton:pressed { background-color: rgb(23, 26, 30); border-style: solid; border-radius: 4px; }\n"
 "\n"
 "/* Theme Settings */\n"
@@ -210,7 +210,7 @@ class Ui_MainWindow(object):
 "\n"
 "/* Bottom Bar */\n"
 "#bottomBar { background-color: rgb(44, 49, 58); }\n"
-"#bottomBar QLabel { font-size: 11px; color: rgb(113, 126, 149); padding-left: 10px; padding-right: 10px; padding-bottom: 2px; }\n"
+"#bottomBar QLabel { font-size: 16px; color: rgb(221, 221, 221); padding-left: 10px; padding-right: 10px; padding-bottom: 2px; }\n"
 "\n"
 "/* CONTENT SETTINGS */\n"
 "/* MENUS */\n"
@@ -228,8 +228,8 @@ class Ui_MainWindow(object):
 "}\n"
 "#contentSettings .QPushButton:pressed {	\n"
 "	background-color: rgb(189, 147, 249);\n"
-"	color: rgb(255,"
-                        " 255, 255);\n"
+"	color: rgb"
+                        "(255, 255, 255);\n"
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
@@ -248,7 +248,7 @@ class Ui_MainWindow(object):
 "	gridline-color: rgb(44, 49, 60);\n"
 "}\n"
 "QTableWidget::item:selected{\n"
-"	background-color: rgb(189, 147, 249);\n"
+"	background-color: rgb(44, 49, 58);\n"
 "}\n"
 "QHeaderView::section{\n"
 "	background-color: rgb(33, 37, 43);\n"
@@ -264,8 +264,8 @@ class Ui_MainWindow(object):
 "QHeaderView::section:horizontal\n"
 "{\n"
 "    border: 1px solid rgb(33, 37, 43);\n"
-"	background-color: "
-                        "rgb(33, 37, 43);\n"
+"	background-color"
+                        ": rgb(33, 37, 43);\n"
 "	padding: 3px;\n"
 "	border-top-left-radius: 7px;\n"
 "    border-top-right-radius: 7px;\n"
@@ -278,9 +278,9 @@ class Ui_MainWindow(object):
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "LineEdit */\n"
 "QLineEdit {\n"
-"	background-color: rgb(33, 37, 43);\n"
+"	background-color: solid rgb(33, 37, 43);\n"
 "	border-radius: 5px;\n"
-"	border: 2px solid rgb(33, 37, 43);\n"
+"	border: 2px solid rgb(20, 20, 20);\n"
 "	padding-left: 10px;\n"
 "	selection-color: rgb(255, 255, 255);\n"
 "	selection-background-color: rgb(255, 121, 198);\n"
@@ -289,7 +289,7 @@ class Ui_MainWindow(object):
 "	border: 2px solid rgb(64, 71, 88);\n"
 "}\n"
 "QLineEdit:focus {\n"
-"	border: 2px solid rgb(91, 101, 124);\n"
+"	border: 2px solid rgb(150, 150, 150);\n"
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
@@ -299,8 +299,8 @@ class Ui_MainWindow(object):
 "	border-radius: 5px;\n"
 "	padding: 10px;\n"
 "	selection-color: rgb(255, 255, 255);\n"
-"	selection-background-color:"
-                        " rgb(255, 121, 198);\n"
+"	selection-backgrou"
+                        "nd-color: rgb(255, 121, 198);\n"
 "}\n"
 "QPlainTextEdit  QScrollBar:vertical {\n"
 "    width: 8px;\n"
@@ -337,9 +337,9 @@ class Ui_MainWindow(object):
 "    border-bottom-right-radius: 4px;\n"
 "    subcontrol-position: right;\n"
 "    subcontrol-origin: margin;\n"
-"}\n"
-"QSc"
-                        "rollBar::sub-line:horizontal {\n"
+""
+                        "}\n"
+"QScrollBar::sub-line:horizontal {\n"
 "    border: none;\n"
 "    background: rgb(55, 63, 77);\n"
 "    width: 20px;\n"
@@ -375,8 +375,8 @@ class Ui_MainWindow(object):
 "	border-bottom-left-radius: 4px;\n"
 "    border-bottom-right-radius: 4px;\n"
 "     subcontrol-position: bottom;\n"
-"     subco"
-                        "ntrol-origin: margin;\n"
+" "
+                        "    subcontrol-origin: margin;\n"
 " }\n"
 " QScrollBar::sub-line:vertical {\n"
 "	border: none;\n"
@@ -398,7 +398,7 @@ class Ui_MainWindow(object):
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "CheckBox */\n"
 "QCheckBox::indicator {\n"
-"    border: 3px solid rgb(52, 59, 72);\n"
+"    border: 3px solid rgb(100, 100, 100);\n"
 "	width: 15px;\n"
 "	height: 15px;\n"
 "	border-radius: 10px;\n"
@@ -410,14 +410,14 @@ class Ui_MainWindow(object):
 "QCheckBox::indicator:checked {\n"
 "    background: 3px solid rgb(52, 59, 72);\n"
 "	border: 3px solid rgb(52, 59, 72);	\n"
-"	backgro"
-                        "und-image: url(:/icons/images/icons/cil-check-alt.png);\n"
+""
+                        "	background-image: url(:/icons/images/icons/cil-check-alt.png);\n"
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "RadioButton */\n"
 "QRadioButton::indicator {\n"
-"    border: 3px solid rgb(52, 59, 72);\n"
+"    border: 3px solid rgb(100, 100, 100);\n"
 "	width: 15px;\n"
 "	height: 15px;\n"
 "	border-radius: 10px;\n"
@@ -427,7 +427,7 @@ class Ui_MainWindow(object):
 "    border: 3px solid rgb(58, 66, 81);\n"
 "}\n"
 "QRadioButton::indicator:checked {\n"
-"    background: 3px solid rgb(94, 106, 130);\n"
+"    background: 3px solid rgb(100, 106, 130);\n"
 "	border: 3px solid rgb(52, 59, 72);	\n"
 "}\n"
 "\n"
@@ -436,7 +436,7 @@ class Ui_MainWindow(object):
 "QComboBox{\n"
 "	background-color: rgb(27, 29, 35);\n"
 "	border-radius: 5px;\n"
-"	border: 2px solid rgb(33, 37, 43);\n"
+"	border: 2px solid rgb(20, 20, 20);\n"
 "	padding: 5px;\n"
 "	padding-left: 10px;\n"
 "}\n"
@@ -445,8 +445,8 @@ class Ui_MainWindow(object):
 "}\n"
 "QComboBox::drop-down {\n"
 "	subcontrol-origin: padding;\n"
-"	subcontr"
-                        "ol-position: top right;\n"
+""
+                        "	subcontrol-position: top right;\n"
 "	width: 25px; \n"
 "	border-left-width: 3px;\n"
 "	border-left-color: rgba(39, 44, 54, 150);\n"
@@ -478,8 +478,8 @@ class Ui_MainWindow(object):
 "QSlider::handle:horizontal {\n"
 "    background-color: rgb(189, 147, 249);\n"
 "    border: none;\n"
-"    heig"
-                        "ht: 10px;\n"
+""
+                        "    height: 10px;\n"
 "    width: 10px;\n"
 "    margin: 0px;\n"
 "	border-radius: 5px;\n"
@@ -517,8 +517,8 @@ class Ui_MainWindow(object):
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "CommandLinkButton */\n"
-"QCommandLinkB"
-                        "utton {	\n"
+"QComm"
+                        "andLinkButton {	\n"
 "	color: rgb(255, 121, 198);\n"
 "	border-radius: 5px;\n"
 "	padding: 5px;\n"
@@ -536,7 +536,7 @@ class Ui_MainWindow(object):
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "Button */\n"
 "#pagesContainer QPushButton {\n"
-"	border: 2px solid rgb(52, 59, 72);\n"
+"	border: 2px solid rgb(150, 150, 150);\n"
 "	border-radius: 5px;	\n"
 "	background-color: rgb(52, 59, 72);\n"
 "}\n"
@@ -579,14 +579,6 @@ class Ui_MainWindow(object):
         self.topLogoInfo.setMaximumSize(QSize(16777215, 50))
         self.topLogoInfo.setFrameShape(QFrame.NoFrame)
         self.topLogoInfo.setFrameShadow(QFrame.Raised)
-        self.topLogo = QFrame(self.topLogoInfo)
-        self.topLogo.setObjectName(u"topLogo")
-        self.topLogo.setGeometry(QRect(10, 5, 42, 42))
-        self.topLogo.setMinimumSize(QSize(42, 42))
-        self.topLogo.setMaximumSize(QSize(42, 42))
-        self.topLogo.setStyleSheet(u"background-image: \":/images/images/images/Ayra.png\";")
-        self.topLogo.setFrameShape(QFrame.NoFrame)
-        self.topLogo.setFrameShadow(QFrame.Raised)
         self.titleLeftApp = QLabel(self.topLogoInfo)
         self.titleLeftApp.setObjectName(u"titleLeftApp")
         self.titleLeftApp.setGeometry(QRect(70, 8, 160, 20))
@@ -602,6 +594,10 @@ class Ui_MainWindow(object):
         font2.setItalic(False)
         self.titleLeftDescription.setFont(font2)
         self.titleLeftDescription.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.topLogo = QLabel(self.topLogoInfo)
+        self.topLogo.setObjectName(u"topLogo")
+        self.topLogo.setGeometry(QRect(10, 5, 42, 42))
+        self.topLogo.setMinimumSize(QSize(42, 42))
 
         self.verticalLayout_3.addWidget(self.topLogoInfo)
 
@@ -1563,21 +1559,40 @@ class Ui_MainWindow(object):
         self.setting.setObjectName(u"setting")
         self.gridLayout_setting = QGridLayout(self.setting)
         self.gridLayout_setting.setObjectName(u"gridLayout_setting")
+        self.horizontalLayout_ch6Scale = QHBoxLayout()
+        self.horizontalLayout_ch6Scale.setSpacing(10)
+        self.horizontalLayout_ch6Scale.setObjectName(u"horizontalLayout_ch6Scale")
+        self.comboBox_ch6scale = QComboBox(self.setting)
+        self.comboBox_ch6scale.addItem("")
+        self.comboBox_ch6scale.addItem("")
+        self.comboBox_ch6scale.addItem("")
+        self.comboBox_ch6scale.setObjectName(u"comboBox_ch6scale")
+        sizePolicy7 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.comboBox_ch6scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch6scale.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch6Scale.addWidget(self.comboBox_ch6scale)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch6Scale, 6, 3, 1, 1)
+
         self.gridLayout_scalesMinMax = QGridLayout()
         self.gridLayout_scalesMinMax.setObjectName(u"gridLayout_scalesMinMax")
-        self.label = QLabel(self.setting)
-        self.label.setObjectName(u"label")
-        sizePolicy6.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy6)
+        self.label_minScale = QLabel(self.setting)
+        self.label_minScale.setObjectName(u"label_minScale")
+        sizePolicy6.setHeightForWidth(self.label_minScale.sizePolicy().hasHeightForWidth())
+        self.label_minScale.setSizePolicy(sizePolicy6)
 
-        self.gridLayout_scalesMinMax.addWidget(self.label, 1, 0, 1, 1, Qt.AlignHCenter)
+        self.gridLayout_scalesMinMax.addWidget(self.label_minScale, 1, 0, 1, 1, Qt.AlignHCenter)
 
-        self.label_2 = QLabel(self.setting)
-        self.label_2.setObjectName(u"label_2")
-        sizePolicy6.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
-        self.label_2.setSizePolicy(sizePolicy6)
+        self.label_maxScale = QLabel(self.setting)
+        self.label_maxScale.setObjectName(u"label_maxScale")
+        sizePolicy6.setHeightForWidth(self.label_maxScale.sizePolicy().hasHeightForWidth())
+        self.label_maxScale.setSizePolicy(sizePolicy6)
 
-        self.gridLayout_scalesMinMax.addWidget(self.label_2, 1, 1, 1, 1, Qt.AlignHCenter)
+        self.gridLayout_scalesMinMax.addWidget(self.label_maxScale, 1, 1, 1, 1, Qt.AlignHCenter)
 
         self.label_vScale = QLabel(self.setting)
         self.label_vScale.setObjectName(u"label_vScale")
@@ -1595,19 +1610,212 @@ class Ui_MainWindow(object):
 
         self.gridLayout_setting.addLayout(self.gridLayout_scalesMinMax, 0, 2, 1, 1)
 
+        self.horizontalLayout_ch8Scale = QHBoxLayout()
+        self.horizontalLayout_ch8Scale.setSpacing(10)
+        self.horizontalLayout_ch8Scale.setObjectName(u"horizontalLayout_ch8Scale")
+        self.comboBox_ch8scale = QComboBox(self.setting)
+        self.comboBox_ch8scale.addItem("")
+        self.comboBox_ch8scale.addItem("")
+        self.comboBox_ch8scale.addItem("")
+        self.comboBox_ch8scale.setObjectName(u"comboBox_ch8scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch8scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch8scale.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch8Scale.addWidget(self.comboBox_ch8scale)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch8Scale, 8, 3, 1, 1)
+
+        self.horizontalLayout_ch8ScaleMinMax = QHBoxLayout()
+        self.horizontalLayout_ch8ScaleMinMax.setSpacing(10)
+        self.horizontalLayout_ch8ScaleMinMax.setObjectName(u"horizontalLayout_ch8ScaleMinMax")
+        self.lineEdit_ch8vLow = QLineEdit(self.setting)
+        self.lineEdit_ch8vLow.setObjectName(u"lineEdit_ch8vLow")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch8vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8vLow.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch8ScaleMinMax.addWidget(self.lineEdit_ch8vLow)
+
+        self.label_ch8vScaleDash = QLabel(self.setting)
+        self.label_ch8vScaleDash.setObjectName(u"label_ch8vScaleDash")
+
+        self.horizontalLayout_ch8ScaleMinMax.addWidget(self.label_ch8vScaleDash)
+
+        self.lineEdit_ch8vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch8vHigh.setObjectName(u"lineEdit_ch8vHigh")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch8vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8vHigh.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch8ScaleMinMax.addWidget(self.lineEdit_ch8vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch8ScaleMinMax, 8, 2, 1, 1)
+
+        self.horizontalLayout_timeout = QHBoxLayout()
+        self.horizontalLayout_timeout.setObjectName(u"horizontalLayout_timeout")
+        self.label_timeout = QLabel(self.setting)
+        self.label_timeout.setObjectName(u"label_timeout")
+
+        self.horizontalLayout_timeout.addWidget(self.label_timeout)
+
+        self.lineEdit_timeout = QLineEdit(self.setting)
+        self.lineEdit_timeout.setObjectName(u"lineEdit_timeout")
+        sizePolicy6.setHeightForWidth(self.lineEdit_timeout.sizePolicy().hasHeightForWidth())
+        self.lineEdit_timeout.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_timeout.addWidget(self.lineEdit_timeout)
+
+        self.horizontalLayout_timeout.setStretch(0, 1)
+        self.horizontalLayout_timeout.setStretch(1, 1)
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_timeout, 5, 0, 1, 1)
+
         self.label_ch1Setting = QLabel(self.setting)
         self.label_ch1Setting.setObjectName(u"label_ch1Setting")
 
         self.gridLayout_setting.addWidget(self.label_ch1Setting, 1, 1, 1, 1, Qt.AlignRight)
+
+        self.horizontalLayout_ch4ScaleMinMax = QHBoxLayout()
+        self.horizontalLayout_ch4ScaleMinMax.setSpacing(10)
+        self.horizontalLayout_ch4ScaleMinMax.setObjectName(u"horizontalLayout_ch4ScaleMinMax")
+        self.lineEdit_ch4vLow = QLineEdit(self.setting)
+        self.lineEdit_ch4vLow.setObjectName(u"lineEdit_ch4vLow")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch4vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4vLow.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.lineEdit_ch4vLow)
+
+        self.label_ch4vScaleDash = QLabel(self.setting)
+        self.label_ch4vScaleDash.setObjectName(u"label_ch4vScaleDash")
+
+        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.label_ch4vScaleDash)
+
+        self.lineEdit_ch4vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch4vHigh.setObjectName(u"lineEdit_ch4vHigh")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch4vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4vHigh.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.lineEdit_ch4vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch4ScaleMinMax, 4, 2, 1, 1)
+
+        self.horizontalLayout_ch7Scale = QHBoxLayout()
+        self.horizontalLayout_ch7Scale.setSpacing(10)
+        self.horizontalLayout_ch7Scale.setObjectName(u"horizontalLayout_ch7Scale")
+        self.comboBox_ch7scale = QComboBox(self.setting)
+        self.comboBox_ch7scale.addItem("")
+        self.comboBox_ch7scale.addItem("")
+        self.comboBox_ch7scale.addItem("")
+        self.comboBox_ch7scale.setObjectName(u"comboBox_ch7scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch7scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch7scale.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch7Scale.addWidget(self.comboBox_ch7scale)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch7Scale, 7, 3, 1, 1)
+
+        self.label_ch3Setting = QLabel(self.setting)
+        self.label_ch3Setting.setObjectName(u"label_ch3Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch3Setting, 3, 1, 1, 1, Qt.AlignRight)
+
+        self.horizontalLayout_unitID = QHBoxLayout()
+        self.horizontalLayout_unitID.setObjectName(u"horizontalLayout_unitID")
+        self.label_unitID = QLabel(self.setting)
+        self.label_unitID.setObjectName(u"label_unitID")
+
+        self.horizontalLayout_unitID.addWidget(self.label_unitID)
+
+        self.lineEdit_unitID = QLineEdit(self.setting)
+        self.lineEdit_unitID.setObjectName(u"lineEdit_unitID")
+        sizePolicy6.setHeightForWidth(self.lineEdit_unitID.sizePolicy().hasHeightForWidth())
+        self.lineEdit_unitID.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_unitID.addWidget(self.lineEdit_unitID)
+
+        self.horizontalLayout_unitID.setStretch(0, 1)
+        self.horizontalLayout_unitID.setStretch(1, 1)
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_unitID, 3, 0, 1, 1)
+
+        self.horizontalLayout_ch5ScaleMinMax = QHBoxLayout()
+        self.horizontalLayout_ch5ScaleMinMax.setSpacing(10)
+        self.horizontalLayout_ch5ScaleMinMax.setObjectName(u"horizontalLayout_ch5ScaleMinMax")
+        self.lineEdit_ch5vLow = QLineEdit(self.setting)
+        self.lineEdit_ch5vLow.setObjectName(u"lineEdit_ch5vLow")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch5vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5vLow.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch5ScaleMinMax.addWidget(self.lineEdit_ch5vLow)
+
+        self.label_ch5vScaleDash = QLabel(self.setting)
+        self.label_ch5vScaleDash.setObjectName(u"label_ch5vScaleDash")
+
+        self.horizontalLayout_ch5ScaleMinMax.addWidget(self.label_ch5vScaleDash)
+
+        self.lineEdit_ch5vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch5vHigh.setObjectName(u"lineEdit_ch5vHigh")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch5vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5vHigh.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch5ScaleMinMax.addWidget(self.lineEdit_ch5vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch5ScaleMinMax, 5, 2, 1, 1)
+
+        self.horizontalLayout_ch1Scale = QHBoxLayout()
+        self.horizontalLayout_ch1Scale.setSpacing(10)
+        self.horizontalLayout_ch1Scale.setObjectName(u"horizontalLayout_ch1Scale")
+        self.comboBox_ch1scale = QComboBox(self.setting)
+        self.comboBox_ch1scale.addItem("")
+        self.comboBox_ch1scale.addItem("")
+        self.comboBox_ch1scale.addItem("")
+        self.comboBox_ch1scale.setObjectName(u"comboBox_ch1scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch1scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch1scale.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch1Scale.addWidget(self.comboBox_ch1scale)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch1Scale, 1, 3, 1, 1)
+
+        self.horizontalLayout_ch7ScaleMinMax = QHBoxLayout()
+        self.horizontalLayout_ch7ScaleMinMax.setSpacing(10)
+        self.horizontalLayout_ch7ScaleMinMax.setObjectName(u"horizontalLayout_ch7ScaleMinMax")
+        self.lineEdit_ch7vLow = QLineEdit(self.setting)
+        self.lineEdit_ch7vLow.setObjectName(u"lineEdit_ch7vLow")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch7vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7vLow.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.lineEdit_ch7vLow)
+
+        self.label_ch7vScaleDash = QLabel(self.setting)
+        self.label_ch7vScaleDash.setObjectName(u"label_ch7vScaleDash")
+
+        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.label_ch7vScaleDash)
+
+        self.lineEdit_ch7vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch7vHigh.setObjectName(u"lineEdit_ch7vHigh")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch7vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7vHigh.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.lineEdit_ch7vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch7ScaleMinMax, 7, 2, 1, 1)
+
+        self.label_deviceModelSetting = QLabel(self.setting)
+        self.label_deviceModelSetting.setObjectName(u"label_deviceModelSetting")
+
+        self.gridLayout_setting.addWidget(self.label_deviceModelSetting, 0, 0, 1, 2, Qt.AlignHCenter)
 
         self.horizontalLayout_ch1ScaleMinMax = QHBoxLayout()
         self.horizontalLayout_ch1ScaleMinMax.setSpacing(10)
         self.horizontalLayout_ch1ScaleMinMax.setObjectName(u"horizontalLayout_ch1ScaleMinMax")
         self.lineEdit_ch1vLow = QLineEdit(self.setting)
         self.lineEdit_ch1vLow.setObjectName(u"lineEdit_ch1vLow")
-        sizePolicy7 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
-        sizePolicy7.setHorizontalStretch(0)
-        sizePolicy7.setVerticalStretch(0)
         sizePolicy7.setHeightForWidth(self.lineEdit_ch1vLow.sizePolicy().hasHeightForWidth())
         self.lineEdit_ch1vLow.setSizePolicy(sizePolicy7)
         self.lineEdit_ch1vLow.setFont(font1)
@@ -1629,132 +1837,61 @@ class Ui_MainWindow(object):
 
         self.gridLayout_setting.addLayout(self.horizontalLayout_ch1ScaleMinMax, 1, 2, 1, 1)
 
-        self.horizontalLayout_ch1Scale = QHBoxLayout()
-        self.horizontalLayout_ch1Scale.setSpacing(10)
-        self.horizontalLayout_ch1Scale.setObjectName(u"horizontalLayout_ch1Scale")
-        self.comboBox_ch1scale = QComboBox(self.setting)
-        self.comboBox_ch1scale.addItem("")
-        self.comboBox_ch1scale.addItem("")
-        self.comboBox_ch1scale.addItem("")
-        self.comboBox_ch1scale.setObjectName(u"comboBox_ch1scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch1scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch1scale.setSizePolicy(sizePolicy7)
+        self.horizontalLayout_ResRate = QHBoxLayout()
+        self.horizontalLayout_ResRate.setObjectName(u"horizontalLayout_ResRate")
+        self.label_ResRate = QLabel(self.setting)
+        self.label_ResRate.setObjectName(u"label_ResRate")
 
-        self.horizontalLayout_ch1Scale.addWidget(self.comboBox_ch1scale)
+        self.horizontalLayout_ResRate.addWidget(self.label_ResRate)
 
+        self.lineEdit_ResRate = QLineEdit(self.setting)
+        self.lineEdit_ResRate.setObjectName(u"lineEdit_ResRate")
+        sizePolicy6.setHeightForWidth(self.lineEdit_ResRate.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ResRate.setSizePolicy(sizePolicy6)
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch1Scale, 1, 3, 1, 1)
+        self.horizontalLayout_ResRate.addWidget(self.lineEdit_ResRate)
 
-        self.label_ch2Setting = QLabel(self.setting)
-        self.label_ch2Setting.setObjectName(u"label_ch2Setting")
+        self.horizontalLayout_ResRate.setStretch(0, 1)
+        self.horizontalLayout_ResRate.setStretch(1, 1)
 
-        self.gridLayout_setting.addWidget(self.label_ch2Setting, 2, 1, 1, 1, Qt.AlignRight)
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ResRate, 6, 0, 1, 1)
 
-        self.horizontalLayout_ch2ScaleMinMax = QHBoxLayout()
-        self.horizontalLayout_ch2ScaleMinMax.setSpacing(10)
-        self.horizontalLayout_ch2ScaleMinMax.setObjectName(u"horizontalLayout_ch2ScaleMinMax")
-        self.lineEdit_ch2vLow = QLineEdit(self.setting)
-        self.lineEdit_ch2vLow.setObjectName(u"lineEdit_ch2vLow")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch2vLow.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch2vLow.setSizePolicy(sizePolicy7)
+        self.label_ch6Setting = QLabel(self.setting)
+        self.label_ch6Setting.setObjectName(u"label_ch6Setting")
 
-        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.lineEdit_ch2vLow)
+        self.gridLayout_setting.addWidget(self.label_ch6Setting, 6, 1, 1, 1, Qt.AlignRight)
 
-        self.label_ch2vScaleDash = QLabel(self.setting)
-        self.label_ch2vScaleDash.setObjectName(u"label_ch2vScaleDash")
+        self.horizontalLayout_ch4Scale = QHBoxLayout()
+        self.horizontalLayout_ch4Scale.setSpacing(10)
+        self.horizontalLayout_ch4Scale.setObjectName(u"horizontalLayout_ch4Scale")
+        self.comboBox_ch4scale = QComboBox(self.setting)
+        self.comboBox_ch4scale.addItem("")
+        self.comboBox_ch4scale.addItem("")
+        self.comboBox_ch4scale.addItem("")
+        self.comboBox_ch4scale.setObjectName(u"comboBox_ch4scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch4scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch4scale.setSizePolicy(sizePolicy7)
 
-        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.label_ch2vScaleDash)
-
-        self.lineEdit_ch2vHigh = QLineEdit(self.setting)
-        self.lineEdit_ch2vHigh.setObjectName(u"lineEdit_ch2vHigh")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch2vHigh.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch2vHigh.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.lineEdit_ch2vHigh)
+        self.horizontalLayout_ch4Scale.addWidget(self.comboBox_ch4scale)
 
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch2ScaleMinMax, 2, 2, 1, 1)
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch4Scale, 4, 3, 1, 1)
 
-        self.horizontalLayout_ch2Scale = QHBoxLayout()
-        self.horizontalLayout_ch2Scale.setSpacing(10)
-        self.horizontalLayout_ch2Scale.setObjectName(u"horizontalLayout_ch2Scale")
-        self.comboBox_ch2scale = QComboBox(self.setting)
-        self.comboBox_ch2scale.addItem("")
-        self.comboBox_ch2scale.addItem("")
-        self.comboBox_ch2scale.addItem("")
-        self.comboBox_ch2scale.setObjectName(u"comboBox_ch2scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch2scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch2scale.setSizePolicy(sizePolicy7)
+        self.horizontalLayout_ch5Scale = QHBoxLayout()
+        self.horizontalLayout_ch5Scale.setSpacing(10)
+        self.horizontalLayout_ch5Scale.setObjectName(u"horizontalLayout_ch5Scale")
+        self.comboBox_ch5scale = QComboBox(self.setting)
+        self.comboBox_ch5scale.addItem("")
+        self.comboBox_ch5scale.addItem("")
+        self.comboBox_ch5scale.addItem("")
+        self.comboBox_ch5scale.setObjectName(u"comboBox_ch5scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch5scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch5scale.setSizePolicy(sizePolicy7)
 
-        self.horizontalLayout_ch2Scale.addWidget(self.comboBox_ch2scale)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch2Scale, 2, 3, 1, 1)
-
-        self.horizontalLayout_unitID = QHBoxLayout()
-        self.horizontalLayout_unitID.setObjectName(u"horizontalLayout_unitID")
-        self.label_unitID = QLabel(self.setting)
-        self.label_unitID.setObjectName(u"label_unitID")
-
-        self.horizontalLayout_unitID.addWidget(self.label_unitID)
-
-        self.lineEdit_unitID = QLineEdit(self.setting)
-        self.lineEdit_unitID.setObjectName(u"lineEdit_unitID")
-        sizePolicy6.setHeightForWidth(self.lineEdit_unitID.sizePolicy().hasHeightForWidth())
-        self.lineEdit_unitID.setSizePolicy(sizePolicy6)
-
-        self.horizontalLayout_unitID.addWidget(self.lineEdit_unitID)
-
-        self.horizontalLayout_unitID.setStretch(0, 1)
-        self.horizontalLayout_unitID.setStretch(1, 1)
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_unitID, 3, 0, 1, 1)
-
-        self.label_ch3Setting = QLabel(self.setting)
-        self.label_ch3Setting.setObjectName(u"label_ch3Setting")
-
-        self.gridLayout_setting.addWidget(self.label_ch3Setting, 3, 1, 1, 1, Qt.AlignRight)
-
-        self.horizontalLayout_ch3ScaleMinMax = QHBoxLayout()
-        self.horizontalLayout_ch3ScaleMinMax.setSpacing(10)
-        self.horizontalLayout_ch3ScaleMinMax.setObjectName(u"horizontalLayout_ch3ScaleMinMax")
-        self.lineEdit_ch3vLow = QLineEdit(self.setting)
-        self.lineEdit_ch3vLow.setObjectName(u"lineEdit_ch3vLow")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch3vLow.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch3vLow.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.lineEdit_ch3vLow)
-
-        self.label_ch3vScaleDash = QLabel(self.setting)
-        self.label_ch3vScaleDash.setObjectName(u"label_ch3vScaleDash")
-
-        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.label_ch3vScaleDash)
-
-        self.lineEdit_ch3vHigh = QLineEdit(self.setting)
-        self.lineEdit_ch3vHigh.setObjectName(u"lineEdit_ch3vHigh")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch3vHigh.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch3vHigh.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.lineEdit_ch3vHigh)
+        self.horizontalLayout_ch5Scale.addWidget(self.comboBox_ch5scale)
 
 
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch3ScaleMinMax, 3, 2, 1, 1)
-
-        self.horizontalLayout_ch3Scale = QHBoxLayout()
-        self.horizontalLayout_ch3Scale.setSpacing(10)
-        self.horizontalLayout_ch3Scale.setObjectName(u"horizontalLayout_ch3Scale")
-        self.comboBox_ch3scale = QComboBox(self.setting)
-        self.comboBox_ch3scale.addItem("")
-        self.comboBox_ch3scale.addItem("")
-        self.comboBox_ch3scale.addItem("")
-        self.comboBox_ch3scale.setObjectName(u"comboBox_ch3scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch3scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch3scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch3Scale.addWidget(self.comboBox_ch3scale)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch3Scale, 3, 3, 1, 1)
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch5Scale, 5, 3, 1, 1)
 
         self.horizontalLayout_baudRate = QHBoxLayout()
         self.horizontalLayout_baudRate.setObjectName(u"horizontalLayout_baudRate")
@@ -1794,140 +1931,107 @@ class Ui_MainWindow(object):
 
         self.gridLayout_setting.addLayout(self.horizontalLayout_baudRate, 4, 0, 1, 1)
 
+        self.horizontalLayout_ch2ScaleMinMax = QHBoxLayout()
+        self.horizontalLayout_ch2ScaleMinMax.setSpacing(10)
+        self.horizontalLayout_ch2ScaleMinMax.setObjectName(u"horizontalLayout_ch2ScaleMinMax")
+        self.lineEdit_ch2vLow = QLineEdit(self.setting)
+        self.lineEdit_ch2vLow.setObjectName(u"lineEdit_ch2vLow")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch2vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2vLow.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.lineEdit_ch2vLow)
+
+        self.label_ch2vScaleDash = QLabel(self.setting)
+        self.label_ch2vScaleDash.setObjectName(u"label_ch2vScaleDash")
+
+        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.label_ch2vScaleDash)
+
+        self.lineEdit_ch2vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch2vHigh.setObjectName(u"lineEdit_ch2vHigh")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch2vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2vHigh.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch2ScaleMinMax.addWidget(self.lineEdit_ch2vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch2ScaleMinMax, 2, 2, 1, 1)
+
+        self.horizontalLayout_ch3Scale = QHBoxLayout()
+        self.horizontalLayout_ch3Scale.setSpacing(10)
+        self.horizontalLayout_ch3Scale.setObjectName(u"horizontalLayout_ch3Scale")
+        self.comboBox_ch3scale = QComboBox(self.setting)
+        self.comboBox_ch3scale.addItem("")
+        self.comboBox_ch3scale.addItem("")
+        self.comboBox_ch3scale.addItem("")
+        self.comboBox_ch3scale.setObjectName(u"comboBox_ch3scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch3scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch3scale.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch3Scale.addWidget(self.comboBox_ch3scale)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch3Scale, 3, 3, 1, 1)
+
+        self.label_ch7Setting = QLabel(self.setting)
+        self.label_ch7Setting.setObjectName(u"label_ch7Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch7Setting, 7, 1, 1, 1, Qt.AlignRight)
+
+        self.horizontalLayout_ch3ScaleMinMax = QHBoxLayout()
+        self.horizontalLayout_ch3ScaleMinMax.setSpacing(10)
+        self.horizontalLayout_ch3ScaleMinMax.setObjectName(u"horizontalLayout_ch3ScaleMinMax")
+        self.lineEdit_ch3vLow = QLineEdit(self.setting)
+        self.lineEdit_ch3vLow.setObjectName(u"lineEdit_ch3vLow")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch3vLow.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3vLow.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.lineEdit_ch3vLow)
+
+        self.label_ch3vScaleDash = QLabel(self.setting)
+        self.label_ch3vScaleDash.setObjectName(u"label_ch3vScaleDash")
+
+        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.label_ch3vScaleDash)
+
+        self.lineEdit_ch3vHigh = QLineEdit(self.setting)
+        self.lineEdit_ch3vHigh.setObjectName(u"lineEdit_ch3vHigh")
+        sizePolicy7.setHeightForWidth(self.lineEdit_ch3vHigh.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3vHigh.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch3ScaleMinMax.addWidget(self.lineEdit_ch3vHigh)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch3ScaleMinMax, 3, 2, 1, 1)
+
+        self.horizontalLayout_ch2Scale = QHBoxLayout()
+        self.horizontalLayout_ch2Scale.setSpacing(10)
+        self.horizontalLayout_ch2Scale.setObjectName(u"horizontalLayout_ch2Scale")
+        self.comboBox_ch2scale = QComboBox(self.setting)
+        self.comboBox_ch2scale.addItem("")
+        self.comboBox_ch2scale.addItem("")
+        self.comboBox_ch2scale.addItem("")
+        self.comboBox_ch2scale.setObjectName(u"comboBox_ch2scale")
+        sizePolicy7.setHeightForWidth(self.comboBox_ch2scale.sizePolicy().hasHeightForWidth())
+        self.comboBox_ch2scale.setSizePolicy(sizePolicy7)
+
+        self.horizontalLayout_ch2Scale.addWidget(self.comboBox_ch2scale)
+
+
+        self.gridLayout_setting.addLayout(self.horizontalLayout_ch2Scale, 2, 3, 1, 1)
+
+        self.label_ch2Setting = QLabel(self.setting)
+        self.label_ch2Setting.setObjectName(u"label_ch2Setting")
+
+        self.gridLayout_setting.addWidget(self.label_ch2Setting, 2, 1, 1, 1, Qt.AlignRight)
+
         self.label_ch4Setting = QLabel(self.setting)
         self.label_ch4Setting.setObjectName(u"label_ch4Setting")
 
         self.gridLayout_setting.addWidget(self.label_ch4Setting, 4, 1, 1, 1, Qt.AlignRight)
 
-        self.horizontalLayout_ch4ScaleMinMax = QHBoxLayout()
-        self.horizontalLayout_ch4ScaleMinMax.setSpacing(10)
-        self.horizontalLayout_ch4ScaleMinMax.setObjectName(u"horizontalLayout_ch4ScaleMinMax")
-        self.lineEdit_ch4vLow = QLineEdit(self.setting)
-        self.lineEdit_ch4vLow.setObjectName(u"lineEdit_ch4vLow")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch4vLow.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch4vLow.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.lineEdit_ch4vLow)
-
-        self.label_ch4vScaleDash = QLabel(self.setting)
-        self.label_ch4vScaleDash.setObjectName(u"label_ch4vScaleDash")
-
-        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.label_ch4vScaleDash)
-
-        self.lineEdit_ch4vHigh = QLineEdit(self.setting)
-        self.lineEdit_ch4vHigh.setObjectName(u"lineEdit_ch4vHigh")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch4vHigh.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch4vHigh.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch4ScaleMinMax.addWidget(self.lineEdit_ch4vHigh)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch4ScaleMinMax, 4, 2, 1, 1)
-
-        self.horizontalLayout_ch4Scale = QHBoxLayout()
-        self.horizontalLayout_ch4Scale.setSpacing(10)
-        self.horizontalLayout_ch4Scale.setObjectName(u"horizontalLayout_ch4Scale")
-        self.comboBox_ch4scale = QComboBox(self.setting)
-        self.comboBox_ch4scale.addItem("")
-        self.comboBox_ch4scale.addItem("")
-        self.comboBox_ch4scale.addItem("")
-        self.comboBox_ch4scale.setObjectName(u"comboBox_ch4scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch4scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch4scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch4Scale.addWidget(self.comboBox_ch4scale)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch4Scale, 4, 3, 1, 1)
-
-        self.horizontalLayout_timeout = QHBoxLayout()
-        self.horizontalLayout_timeout.setObjectName(u"horizontalLayout_timeout")
-        self.label_timeout = QLabel(self.setting)
-        self.label_timeout.setObjectName(u"label_timeout")
-
-        self.horizontalLayout_timeout.addWidget(self.label_timeout)
-
-        self.lineEdit_timeout = QLineEdit(self.setting)
-        self.lineEdit_timeout.setObjectName(u"lineEdit_timeout")
-        sizePolicy6.setHeightForWidth(self.lineEdit_timeout.sizePolicy().hasHeightForWidth())
-        self.lineEdit_timeout.setSizePolicy(sizePolicy6)
-
-        self.horizontalLayout_timeout.addWidget(self.lineEdit_timeout)
-
-        self.horizontalLayout_timeout.setStretch(0, 1)
-        self.horizontalLayout_timeout.setStretch(1, 1)
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_timeout, 5, 0, 1, 1)
-
         self.label_ch5Setting = QLabel(self.setting)
         self.label_ch5Setting.setObjectName(u"label_ch5Setting")
 
         self.gridLayout_setting.addWidget(self.label_ch5Setting, 5, 1, 1, 1, Qt.AlignRight)
-
-        self.horizontalLayout_ch5ScaleMinMax = QHBoxLayout()
-        self.horizontalLayout_ch5ScaleMinMax.setSpacing(10)
-        self.horizontalLayout_ch5ScaleMinMax.setObjectName(u"horizontalLayout_ch5ScaleMinMax")
-        self.lineEdit_ch5vLow = QLineEdit(self.setting)
-        self.lineEdit_ch5vLow.setObjectName(u"lineEdit_ch5vLow")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch5vLow.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch5vLow.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch5ScaleMinMax.addWidget(self.lineEdit_ch5vLow)
-
-        self.label_ch5vScaleDash = QLabel(self.setting)
-        self.label_ch5vScaleDash.setObjectName(u"label_ch5vScaleDash")
-
-        self.horizontalLayout_ch5ScaleMinMax.addWidget(self.label_ch5vScaleDash)
-
-        self.lineEdit_ch5vHigh = QLineEdit(self.setting)
-        self.lineEdit_ch5vHigh.setObjectName(u"lineEdit_ch5vHigh")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch5vHigh.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch5vHigh.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch5ScaleMinMax.addWidget(self.lineEdit_ch5vHigh)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch5ScaleMinMax, 5, 2, 1, 1)
-
-        self.horizontalLayout_ch5Scale = QHBoxLayout()
-        self.horizontalLayout_ch5Scale.setSpacing(10)
-        self.horizontalLayout_ch5Scale.setObjectName(u"horizontalLayout_ch5Scale")
-        self.comboBox_ch5scale = QComboBox(self.setting)
-        self.comboBox_ch5scale.addItem("")
-        self.comboBox_ch5scale.addItem("")
-        self.comboBox_ch5scale.addItem("")
-        self.comboBox_ch5scale.setObjectName(u"comboBox_ch5scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch5scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch5scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch5Scale.addWidget(self.comboBox_ch5scale)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch5Scale, 5, 3, 1, 1)
-
-        self.horizontalLayout_ResRate = QHBoxLayout()
-        self.horizontalLayout_ResRate.setObjectName(u"horizontalLayout_ResRate")
-        self.label_ResRate = QLabel(self.setting)
-        self.label_ResRate.setObjectName(u"label_ResRate")
-
-        self.horizontalLayout_ResRate.addWidget(self.label_ResRate)
-
-        self.lineEdit_ResRate = QLineEdit(self.setting)
-        self.lineEdit_ResRate.setObjectName(u"lineEdit_ResRate")
-        sizePolicy6.setHeightForWidth(self.lineEdit_ResRate.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ResRate.setSizePolicy(sizePolicy6)
-
-        self.horizontalLayout_ResRate.addWidget(self.lineEdit_ResRate)
-
-        self.horizontalLayout_ResRate.setStretch(0, 1)
-        self.horizontalLayout_ResRate.setStretch(1, 1)
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ResRate, 6, 0, 1, 1)
-
-        self.label_ch6Setting = QLabel(self.setting)
-        self.label_ch6Setting.setObjectName(u"label_ch6Setting")
-
-        self.gridLayout_setting.addWidget(self.label_ch6Setting, 6, 1, 1, 1, Qt.AlignRight)
 
         self.horizontalLayout_ch6ScaleMinMax = QHBoxLayout()
         self.horizontalLayout_ch6ScaleMinMax.setSpacing(10)
@@ -1954,118 +2058,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_setting.addLayout(self.horizontalLayout_ch6ScaleMinMax, 6, 2, 1, 1)
 
-        self.horizontalLayout_ch6Scale = QHBoxLayout()
-        self.horizontalLayout_ch6Scale.setSpacing(10)
-        self.horizontalLayout_ch6Scale.setObjectName(u"horizontalLayout_ch6Scale")
-        self.comboBox_ch6scale = QComboBox(self.setting)
-        self.comboBox_ch6scale.addItem("")
-        self.comboBox_ch6scale.addItem("")
-        self.comboBox_ch6scale.addItem("")
-        self.comboBox_ch6scale.setObjectName(u"comboBox_ch6scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch6scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch6scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch6Scale.addWidget(self.comboBox_ch6scale)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch6Scale, 6, 3, 1, 1)
-
-        self.label_ch7Setting = QLabel(self.setting)
-        self.label_ch7Setting.setObjectName(u"label_ch7Setting")
-
-        self.gridLayout_setting.addWidget(self.label_ch7Setting, 7, 1, 1, 1, Qt.AlignRight)
-
-        self.horizontalLayout_ch7ScaleMinMax = QHBoxLayout()
-        self.horizontalLayout_ch7ScaleMinMax.setSpacing(10)
-        self.horizontalLayout_ch7ScaleMinMax.setObjectName(u"horizontalLayout_ch7ScaleMinMax")
-        self.lineEdit_ch7vLow = QLineEdit(self.setting)
-        self.lineEdit_ch7vLow.setObjectName(u"lineEdit_ch7vLow")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch7vLow.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch7vLow.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.lineEdit_ch7vLow)
-
-        self.label_ch7vScaleDash = QLabel(self.setting)
-        self.label_ch7vScaleDash.setObjectName(u"label_ch7vScaleDash")
-
-        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.label_ch7vScaleDash)
-
-        self.lineEdit_ch7vHigh = QLineEdit(self.setting)
-        self.lineEdit_ch7vHigh.setObjectName(u"lineEdit_ch7vHigh")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch7vHigh.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch7vHigh.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch7ScaleMinMax.addWidget(self.lineEdit_ch7vHigh)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch7ScaleMinMax, 7, 2, 1, 1)
-
-        self.horizontalLayout_ch7Scale = QHBoxLayout()
-        self.horizontalLayout_ch7Scale.setSpacing(10)
-        self.horizontalLayout_ch7Scale.setObjectName(u"horizontalLayout_ch7Scale")
-        self.comboBox_ch7scale = QComboBox(self.setting)
-        self.comboBox_ch7scale.addItem("")
-        self.comboBox_ch7scale.addItem("")
-        self.comboBox_ch7scale.addItem("")
-        self.comboBox_ch7scale.setObjectName(u"comboBox_ch7scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch7scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch7scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch7Scale.addWidget(self.comboBox_ch7scale)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch7Scale, 7, 3, 1, 1)
-
         self.label_ch8Setting = QLabel(self.setting)
         self.label_ch8Setting.setObjectName(u"label_ch8Setting")
 
         self.gridLayout_setting.addWidget(self.label_ch8Setting, 8, 1, 1, 1, Qt.AlignRight)
-
-        self.horizontalLayout_ch8ScaleMinMax = QHBoxLayout()
-        self.horizontalLayout_ch8ScaleMinMax.setSpacing(10)
-        self.horizontalLayout_ch8ScaleMinMax.setObjectName(u"horizontalLayout_ch8ScaleMinMax")
-        self.lineEdit_ch8vLow = QLineEdit(self.setting)
-        self.lineEdit_ch8vLow.setObjectName(u"lineEdit_ch8vLow")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch8vLow.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch8vLow.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch8ScaleMinMax.addWidget(self.lineEdit_ch8vLow)
-
-        self.label_ch8vScaleDash = QLabel(self.setting)
-        self.label_ch8vScaleDash.setObjectName(u"label_ch8vScaleDash")
-
-        self.horizontalLayout_ch8ScaleMinMax.addWidget(self.label_ch8vScaleDash)
-
-        self.lineEdit_ch8vHigh = QLineEdit(self.setting)
-        self.lineEdit_ch8vHigh.setObjectName(u"lineEdit_ch8vHigh")
-        sizePolicy7.setHeightForWidth(self.lineEdit_ch8vHigh.sizePolicy().hasHeightForWidth())
-        self.lineEdit_ch8vHigh.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch8ScaleMinMax.addWidget(self.lineEdit_ch8vHigh)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch8ScaleMinMax, 8, 2, 1, 1)
-
-        self.horizontalLayout_ch8Scale = QHBoxLayout()
-        self.horizontalLayout_ch8Scale.setSpacing(10)
-        self.horizontalLayout_ch8Scale.setObjectName(u"horizontalLayout_ch8Scale")
-        self.comboBox_ch8scale = QComboBox(self.setting)
-        self.comboBox_ch8scale.addItem("")
-        self.comboBox_ch8scale.addItem("")
-        self.comboBox_ch8scale.addItem("")
-        self.comboBox_ch8scale.setObjectName(u"comboBox_ch8scale")
-        sizePolicy7.setHeightForWidth(self.comboBox_ch8scale.sizePolicy().hasHeightForWidth())
-        self.comboBox_ch8scale.setSizePolicy(sizePolicy7)
-
-        self.horizontalLayout_ch8Scale.addWidget(self.comboBox_ch8scale)
-
-
-        self.gridLayout_setting.addLayout(self.horizontalLayout_ch8Scale, 8, 3, 1, 1)
-
-        self.label_deviceModelSetting = QLabel(self.setting)
-        self.label_deviceModelSetting.setObjectName(u"label_deviceModelSetting")
-
-        self.gridLayout_setting.addWidget(self.label_deviceModelSetting, 0, 0, 1, 2, Qt.AlignHCenter)
 
         self.gridLayout_setting.setColumnStretch(0, 3)
         self.gridLayout_setting.setColumnStretch(1, 1)
@@ -2085,61 +2081,83 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch1calibration.setObjectName(u"horizontalLayout_ch1calibration")
         self.label_ch1calibration = QLabel(self.groupBox_calibration)
         self.label_ch1calibration.setObjectName(u"label_ch1calibration")
+        sizePolicy6.setHeightForWidth(self.label_ch1calibration.sizePolicy().hasHeightForWidth())
+        self.label_ch1calibration.setSizePolicy(sizePolicy6)
 
         self.horizontalLayout_ch1calibration.addWidget(self.label_ch1calibration)
 
         self.lineEdit_ch1point1 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch1point1.setObjectName(u"lineEdit_ch1point1")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch1point1.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch1point1.setSizePolicy(sizePolicy3)
         self.lineEdit_ch1point1.setMaxLength(5)
 
         self.horizontalLayout_ch1calibration.addWidget(self.lineEdit_ch1point1)
 
         self.pushButton_ch1point1 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch1point1.setObjectName(u"pushButton_ch1point1")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch1point1.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch1point1.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch1calibration.addWidget(self.pushButton_ch1point1)
 
         self.lineEdit_ch1point2 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch1point2.setObjectName(u"lineEdit_ch1point2")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch1point2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch1point2.setSizePolicy(sizePolicy3)
         self.lineEdit_ch1point2.setMaxLength(5)
 
         self.horizontalLayout_ch1calibration.addWidget(self.lineEdit_ch1point2)
 
         self.pushButton_ch1point2 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch1point2.setObjectName(u"pushButton_ch1point2")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch1point2.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch1point2.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch1calibration.addWidget(self.pushButton_ch1point2)
 
         self.lineEdit_ch1point3 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch1point3.setObjectName(u"lineEdit_ch1point3")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch1point3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch1point3.setSizePolicy(sizePolicy3)
         self.lineEdit_ch1point3.setMaxLength(5)
 
         self.horizontalLayout_ch1calibration.addWidget(self.lineEdit_ch1point3)
 
         self.pushButton_ch1point3 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch1point3.setObjectName(u"pushButton_ch1point3")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch1point3.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch1point3.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch1calibration.addWidget(self.pushButton_ch1point3)
 
         self.lineEdit_ch1point4 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch1point4.setObjectName(u"lineEdit_ch1point4")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch1point4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch1point4.setSizePolicy(sizePolicy3)
         self.lineEdit_ch1point4.setMaxLength(5)
 
         self.horizontalLayout_ch1calibration.addWidget(self.lineEdit_ch1point4)
 
         self.pushButton_ch1point4 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch1point4.setObjectName(u"pushButton_ch1point4")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch1point4.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch1point4.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch1calibration.addWidget(self.pushButton_ch1point4)
 
         self.lineEdit_ch1point5 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch1point5.setObjectName(u"lineEdit_ch1point5")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch1point5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch1point5.setSizePolicy(sizePolicy3)
         self.lineEdit_ch1point5.setMaxLength(5)
 
         self.horizontalLayout_ch1calibration.addWidget(self.lineEdit_ch1point5)
 
         self.pushButton_ch1point5 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch1point5.setObjectName(u"pushButton_ch1point5")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch1point5.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch1point5.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch1calibration.addWidget(self.pushButton_ch1point5)
 
@@ -2172,61 +2190,83 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch3calibration.setObjectName(u"horizontalLayout_ch3calibration")
         self.label_ch3calibration = QLabel(self.groupBox_calibration)
         self.label_ch3calibration.setObjectName(u"label_ch3calibration")
+        sizePolicy6.setHeightForWidth(self.label_ch3calibration.sizePolicy().hasHeightForWidth())
+        self.label_ch3calibration.setSizePolicy(sizePolicy6)
 
         self.horizontalLayout_ch3calibration.addWidget(self.label_ch3calibration)
 
         self.lineEdit_ch3point1 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch3point1.setObjectName(u"lineEdit_ch3point1")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch3point1.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3point1.setSizePolicy(sizePolicy3)
         self.lineEdit_ch3point1.setMaxLength(5)
 
         self.horizontalLayout_ch3calibration.addWidget(self.lineEdit_ch3point1)
 
         self.pushButton_ch3point1 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch3point1.setObjectName(u"pushButton_ch3point1")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch3point1.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch3point1.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch3calibration.addWidget(self.pushButton_ch3point1)
 
         self.lineEdit_ch3point2 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch3point2.setObjectName(u"lineEdit_ch3point2")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch3point2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3point2.setSizePolicy(sizePolicy3)
         self.lineEdit_ch3point2.setMaxLength(5)
 
         self.horizontalLayout_ch3calibration.addWidget(self.lineEdit_ch3point2)
 
         self.pushButton_ch3point2 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch3point2.setObjectName(u"pushButton_ch3point2")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch3point2.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch3point2.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch3calibration.addWidget(self.pushButton_ch3point2)
 
         self.lineEdit_ch3point3 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch3point3.setObjectName(u"lineEdit_ch3point3")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch3point3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3point3.setSizePolicy(sizePolicy3)
         self.lineEdit_ch3point3.setMaxLength(5)
 
         self.horizontalLayout_ch3calibration.addWidget(self.lineEdit_ch3point3)
 
         self.pushButton_ch3point3 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch3point3.setObjectName(u"pushButton_ch3point3")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch3point3.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch3point3.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch3calibration.addWidget(self.pushButton_ch3point3)
 
         self.lineEdit_ch3point4 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch3point4.setObjectName(u"lineEdit_ch3point4")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch3point4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3point4.setSizePolicy(sizePolicy3)
         self.lineEdit_ch3point4.setMaxLength(5)
 
         self.horizontalLayout_ch3calibration.addWidget(self.lineEdit_ch3point4)
 
         self.pushButton_ch3point4 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch3point4.setObjectName(u"pushButton_ch3point4")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch3point4.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch3point4.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch3calibration.addWidget(self.pushButton_ch3point4)
 
         self.lineEdit_ch3point5 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch3point5.setObjectName(u"lineEdit_ch3point5")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch3point5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch3point5.setSizePolicy(sizePolicy3)
         self.lineEdit_ch3point5.setMaxLength(5)
 
         self.horizontalLayout_ch3calibration.addWidget(self.lineEdit_ch3point5)
 
         self.pushButton_ch3point5 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch3point5.setObjectName(u"pushButton_ch3point5")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch3point5.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch3point5.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch3calibration.addWidget(self.pushButton_ch3point5)
 
@@ -2256,61 +2296,83 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch8calibration.setObjectName(u"horizontalLayout_ch8calibration")
         self.label_ch8calibration = QLabel(self.groupBox_calibration)
         self.label_ch8calibration.setObjectName(u"label_ch8calibration")
+        sizePolicy6.setHeightForWidth(self.label_ch8calibration.sizePolicy().hasHeightForWidth())
+        self.label_ch8calibration.setSizePolicy(sizePolicy6)
 
         self.horizontalLayout_ch8calibration.addWidget(self.label_ch8calibration)
 
         self.lineEdit_ch8point1 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch8point1.setObjectName(u"lineEdit_ch8point1")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch8point1.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8point1.setSizePolicy(sizePolicy3)
         self.lineEdit_ch8point1.setMaxLength(5)
 
         self.horizontalLayout_ch8calibration.addWidget(self.lineEdit_ch8point1)
 
         self.pushButton_ch8point1 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch8point1.setObjectName(u"pushButton_ch8point1")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch8point1.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch8point1.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch8calibration.addWidget(self.pushButton_ch8point1)
 
         self.lineEdit_ch8point2 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch8point2.setObjectName(u"lineEdit_ch8point2")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch8point2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8point2.setSizePolicy(sizePolicy3)
         self.lineEdit_ch8point2.setMaxLength(5)
 
         self.horizontalLayout_ch8calibration.addWidget(self.lineEdit_ch8point2)
 
         self.pushButton_ch8point2 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch8point2.setObjectName(u"pushButton_ch8point2")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch8point2.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch8point2.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch8calibration.addWidget(self.pushButton_ch8point2)
 
         self.lineEdit_ch8point3 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch8point3.setObjectName(u"lineEdit_ch8point3")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch8point3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8point3.setSizePolicy(sizePolicy3)
         self.lineEdit_ch8point3.setMaxLength(5)
 
         self.horizontalLayout_ch8calibration.addWidget(self.lineEdit_ch8point3)
 
         self.pushButton_ch8point3 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch8point3.setObjectName(u"pushButton_ch8point3")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch8point3.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch8point3.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch8calibration.addWidget(self.pushButton_ch8point3)
 
         self.lineEdit_ch8point4 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch8point4.setObjectName(u"lineEdit_ch8point4")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch8point4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8point4.setSizePolicy(sizePolicy3)
         self.lineEdit_ch8point4.setMaxLength(5)
 
         self.horizontalLayout_ch8calibration.addWidget(self.lineEdit_ch8point4)
 
         self.pushButton_ch8point4 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch8point4.setObjectName(u"pushButton_ch8point4")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch8point4.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch8point4.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch8calibration.addWidget(self.pushButton_ch8point4)
 
         self.lineEdit_ch8point5 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch8point5.setObjectName(u"lineEdit_ch8point5")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch8point5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch8point5.setSizePolicy(sizePolicy3)
         self.lineEdit_ch8point5.setMaxLength(5)
 
         self.horizontalLayout_ch8calibration.addWidget(self.lineEdit_ch8point5)
 
         self.pushButton_ch8point5 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch8point5.setObjectName(u"pushButton_ch8point5")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch8point5.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch8point5.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch8calibration.addWidget(self.pushButton_ch8point5)
 
@@ -2340,61 +2402,83 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch7calibration.setObjectName(u"horizontalLayout_ch7calibration")
         self.label_ch7calibration = QLabel(self.groupBox_calibration)
         self.label_ch7calibration.setObjectName(u"label_ch7calibration")
+        sizePolicy6.setHeightForWidth(self.label_ch7calibration.sizePolicy().hasHeightForWidth())
+        self.label_ch7calibration.setSizePolicy(sizePolicy6)
 
         self.horizontalLayout_ch7calibration.addWidget(self.label_ch7calibration)
 
         self.lineEdit_ch7point1 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch7point1.setObjectName(u"lineEdit_ch7point1")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch7point1.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7point1.setSizePolicy(sizePolicy3)
         self.lineEdit_ch7point1.setMaxLength(5)
 
         self.horizontalLayout_ch7calibration.addWidget(self.lineEdit_ch7point1)
 
         self.pushButton_ch7point1 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch7point1.setObjectName(u"pushButton_ch7point1")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch7point1.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch7point1.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch7calibration.addWidget(self.pushButton_ch7point1)
 
         self.lineEdit_ch7point2 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch7point2.setObjectName(u"lineEdit_ch7point2")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch7point2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7point2.setSizePolicy(sizePolicy3)
         self.lineEdit_ch7point2.setMaxLength(5)
 
         self.horizontalLayout_ch7calibration.addWidget(self.lineEdit_ch7point2)
 
         self.pushButton_ch7point2 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch7point2.setObjectName(u"pushButton_ch7point2")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch7point2.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch7point2.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch7calibration.addWidget(self.pushButton_ch7point2)
 
         self.lineEdit_ch7point3 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch7point3.setObjectName(u"lineEdit_ch7point3")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch7point3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7point3.setSizePolicy(sizePolicy3)
         self.lineEdit_ch7point3.setMaxLength(5)
 
         self.horizontalLayout_ch7calibration.addWidget(self.lineEdit_ch7point3)
 
         self.pushButton_ch7point3 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch7point3.setObjectName(u"pushButton_ch7point3")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch7point3.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch7point3.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch7calibration.addWidget(self.pushButton_ch7point3)
 
         self.lineEdit_ch7point4 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch7point4.setObjectName(u"lineEdit_ch7point4")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch7point4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7point4.setSizePolicy(sizePolicy3)
         self.lineEdit_ch7point4.setMaxLength(5)
 
         self.horizontalLayout_ch7calibration.addWidget(self.lineEdit_ch7point4)
 
         self.pushButton_ch7point4 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch7point4.setObjectName(u"pushButton_ch7point4")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch7point4.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch7point4.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch7calibration.addWidget(self.pushButton_ch7point4)
 
         self.lineEdit_ch7point5 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch7point5.setObjectName(u"lineEdit_ch7point5")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch7point5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch7point5.setSizePolicy(sizePolicy3)
         self.lineEdit_ch7point5.setMaxLength(5)
 
         self.horizontalLayout_ch7calibration.addWidget(self.lineEdit_ch7point5)
 
         self.pushButton_ch7point5 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch7point5.setObjectName(u"pushButton_ch7point5")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch7point5.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch7point5.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch7calibration.addWidget(self.pushButton_ch7point5)
 
@@ -2424,61 +2508,83 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch2calibration.setObjectName(u"horizontalLayout_ch2calibration")
         self.label_ch2calibration = QLabel(self.groupBox_calibration)
         self.label_ch2calibration.setObjectName(u"label_ch2calibration")
+        sizePolicy6.setHeightForWidth(self.label_ch2calibration.sizePolicy().hasHeightForWidth())
+        self.label_ch2calibration.setSizePolicy(sizePolicy6)
 
         self.horizontalLayout_ch2calibration.addWidget(self.label_ch2calibration)
 
         self.lineEdit_ch2point1 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch2point1.setObjectName(u"lineEdit_ch2point1")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch2point1.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2point1.setSizePolicy(sizePolicy3)
         self.lineEdit_ch2point1.setMaxLength(5)
 
         self.horizontalLayout_ch2calibration.addWidget(self.lineEdit_ch2point1)
 
         self.pushButton_ch2point1 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch2point1.setObjectName(u"pushButton_ch2point1")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch2point1.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch2point1.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch2calibration.addWidget(self.pushButton_ch2point1)
 
         self.lineEdit_ch2point2 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch2point2.setObjectName(u"lineEdit_ch2point2")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch2point2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2point2.setSizePolicy(sizePolicy3)
         self.lineEdit_ch2point2.setMaxLength(5)
 
         self.horizontalLayout_ch2calibration.addWidget(self.lineEdit_ch2point2)
 
         self.pushButton_ch2point2 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch2point2.setObjectName(u"pushButton_ch2point2")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch2point2.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch2point2.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch2calibration.addWidget(self.pushButton_ch2point2)
 
         self.lineEdit_ch2point3 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch2point3.setObjectName(u"lineEdit_ch2point3")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch2point3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2point3.setSizePolicy(sizePolicy3)
         self.lineEdit_ch2point3.setMaxLength(5)
 
         self.horizontalLayout_ch2calibration.addWidget(self.lineEdit_ch2point3)
 
         self.pushButton_ch2point3 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch2point3.setObjectName(u"pushButton_ch2point3")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch2point3.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch2point3.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch2calibration.addWidget(self.pushButton_ch2point3)
 
         self.lineEdit_ch2point4 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch2point4.setObjectName(u"lineEdit_ch2point4")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch2point4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2point4.setSizePolicy(sizePolicy3)
         self.lineEdit_ch2point4.setMaxLength(5)
 
         self.horizontalLayout_ch2calibration.addWidget(self.lineEdit_ch2point4)
 
         self.pushButton_ch2point4 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch2point4.setObjectName(u"pushButton_ch2point4")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch2point4.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch2point4.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch2calibration.addWidget(self.pushButton_ch2point4)
 
         self.lineEdit_ch2point5 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch2point5.setObjectName(u"lineEdit_ch2point5")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch2point5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch2point5.setSizePolicy(sizePolicy3)
         self.lineEdit_ch2point5.setMaxLength(5)
 
         self.horizontalLayout_ch2calibration.addWidget(self.lineEdit_ch2point5)
 
         self.pushButton_ch2point5 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch2point5.setObjectName(u"pushButton_ch2point5")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch2point5.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch2point5.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch2calibration.addWidget(self.pushButton_ch2point5)
 
@@ -2508,61 +2614,83 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch4calibration.setObjectName(u"horizontalLayout_ch4calibration")
         self.label_ch4calibration = QLabel(self.groupBox_calibration)
         self.label_ch4calibration.setObjectName(u"label_ch4calibration")
+        sizePolicy6.setHeightForWidth(self.label_ch4calibration.sizePolicy().hasHeightForWidth())
+        self.label_ch4calibration.setSizePolicy(sizePolicy6)
 
         self.horizontalLayout_ch4calibration.addWidget(self.label_ch4calibration)
 
         self.lineEdit_ch4point1 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch4point1.setObjectName(u"lineEdit_ch4point1")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch4point1.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4point1.setSizePolicy(sizePolicy3)
         self.lineEdit_ch4point1.setMaxLength(5)
 
         self.horizontalLayout_ch4calibration.addWidget(self.lineEdit_ch4point1)
 
         self.pushButton_ch4point1 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch4point1.setObjectName(u"pushButton_ch4point1")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch4point1.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch4point1.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch4calibration.addWidget(self.pushButton_ch4point1)
 
         self.lineEdit_ch4point2 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch4point2.setObjectName(u"lineEdit_ch4point2")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch4point2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4point2.setSizePolicy(sizePolicy3)
         self.lineEdit_ch4point2.setMaxLength(5)
 
         self.horizontalLayout_ch4calibration.addWidget(self.lineEdit_ch4point2)
 
         self.pushButton_ch4point2 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch4point2.setObjectName(u"pushButton_ch4point2")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch4point2.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch4point2.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch4calibration.addWidget(self.pushButton_ch4point2)
 
         self.lineEdit_ch4point3 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch4point3.setObjectName(u"lineEdit_ch4point3")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch4point3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4point3.setSizePolicy(sizePolicy3)
         self.lineEdit_ch4point3.setMaxLength(5)
 
         self.horizontalLayout_ch4calibration.addWidget(self.lineEdit_ch4point3)
 
         self.pushButton_ch4point3 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch4point3.setObjectName(u"pushButton_ch4point3")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch4point3.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch4point3.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch4calibration.addWidget(self.pushButton_ch4point3)
 
         self.lineEdit_ch4point4 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch4point4.setObjectName(u"lineEdit_ch4point4")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch4point4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4point4.setSizePolicy(sizePolicy3)
         self.lineEdit_ch4point4.setMaxLength(5)
 
         self.horizontalLayout_ch4calibration.addWidget(self.lineEdit_ch4point4)
 
         self.pushButton_ch4point4 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch4point4.setObjectName(u"pushButton_ch4point4")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch4point4.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch4point4.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch4calibration.addWidget(self.pushButton_ch4point4)
 
         self.lineEdit_ch4point5 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch4point5.setObjectName(u"lineEdit_ch4point5")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch4point5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch4point5.setSizePolicy(sizePolicy3)
         self.lineEdit_ch4point5.setMaxLength(5)
 
         self.horizontalLayout_ch4calibration.addWidget(self.lineEdit_ch4point5)
 
         self.pushButton_ch4point5 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch4point5.setObjectName(u"pushButton_ch4point5")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch4point5.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch4point5.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch4calibration.addWidget(self.pushButton_ch4point5)
 
@@ -2592,61 +2720,83 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch5calibration.setObjectName(u"horizontalLayout_ch5calibration")
         self.label_ch5calibration = QLabel(self.groupBox_calibration)
         self.label_ch5calibration.setObjectName(u"label_ch5calibration")
+        sizePolicy6.setHeightForWidth(self.label_ch5calibration.sizePolicy().hasHeightForWidth())
+        self.label_ch5calibration.setSizePolicy(sizePolicy6)
 
         self.horizontalLayout_ch5calibration.addWidget(self.label_ch5calibration)
 
         self.lineEdit_ch5point1 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch5point1.setObjectName(u"lineEdit_ch5point1")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch5point1.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5point1.setSizePolicy(sizePolicy3)
         self.lineEdit_ch5point1.setMaxLength(5)
 
         self.horizontalLayout_ch5calibration.addWidget(self.lineEdit_ch5point1)
 
         self.pushButton_ch5point1 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch5point1.setObjectName(u"pushButton_ch5point1")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch5point1.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch5point1.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch5calibration.addWidget(self.pushButton_ch5point1)
 
         self.lineEdit_ch5point2 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch5point2.setObjectName(u"lineEdit_ch5point2")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch5point2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5point2.setSizePolicy(sizePolicy3)
         self.lineEdit_ch5point2.setMaxLength(5)
 
         self.horizontalLayout_ch5calibration.addWidget(self.lineEdit_ch5point2)
 
         self.pushButton_ch5point2 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch5point2.setObjectName(u"pushButton_ch5point2")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch5point2.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch5point2.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch5calibration.addWidget(self.pushButton_ch5point2)
 
         self.lineEdit_ch5point3 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch5point3.setObjectName(u"lineEdit_ch5point3")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch5point3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5point3.setSizePolicy(sizePolicy3)
         self.lineEdit_ch5point3.setMaxLength(5)
 
         self.horizontalLayout_ch5calibration.addWidget(self.lineEdit_ch5point3)
 
         self.pushButton_ch5point3 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch5point3.setObjectName(u"pushButton_ch5point3")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch5point3.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch5point3.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch5calibration.addWidget(self.pushButton_ch5point3)
 
         self.lineEdit_ch5point4 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch5point4.setObjectName(u"lineEdit_ch5point4")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch5point4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5point4.setSizePolicy(sizePolicy3)
         self.lineEdit_ch5point4.setMaxLength(5)
 
         self.horizontalLayout_ch5calibration.addWidget(self.lineEdit_ch5point4)
 
         self.pushButton_ch5point4 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch5point4.setObjectName(u"pushButton_ch5point4")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch5point4.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch5point4.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch5calibration.addWidget(self.pushButton_ch5point4)
 
         self.lineEdit_ch5point5 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch5point5.setObjectName(u"lineEdit_ch5point5")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch5point5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch5point5.setSizePolicy(sizePolicy3)
         self.lineEdit_ch5point5.setMaxLength(5)
 
         self.horizontalLayout_ch5calibration.addWidget(self.lineEdit_ch5point5)
 
         self.pushButton_ch5point5 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch5point5.setObjectName(u"pushButton_ch5point5")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch5point5.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch5point5.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch5calibration.addWidget(self.pushButton_ch5point5)
 
@@ -2676,61 +2826,83 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch6calibration.setObjectName(u"horizontalLayout_ch6calibration")
         self.label_ch6calibration = QLabel(self.groupBox_calibration)
         self.label_ch6calibration.setObjectName(u"label_ch6calibration")
+        sizePolicy6.setHeightForWidth(self.label_ch6calibration.sizePolicy().hasHeightForWidth())
+        self.label_ch6calibration.setSizePolicy(sizePolicy6)
 
         self.horizontalLayout_ch6calibration.addWidget(self.label_ch6calibration)
 
         self.lineEdit_ch6point1 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch6point1.setObjectName(u"lineEdit_ch6point1")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch6point1.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch6point1.setSizePolicy(sizePolicy3)
         self.lineEdit_ch6point1.setMaxLength(5)
 
         self.horizontalLayout_ch6calibration.addWidget(self.lineEdit_ch6point1)
 
         self.pushButton_ch6point1 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch6point1.setObjectName(u"pushButton_ch6point1")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch6point1.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch6point1.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch6calibration.addWidget(self.pushButton_ch6point1)
 
         self.lineEdit_ch6point2 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch6point2.setObjectName(u"lineEdit_ch6point2")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch6point2.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch6point2.setSizePolicy(sizePolicy3)
         self.lineEdit_ch6point2.setMaxLength(5)
 
         self.horizontalLayout_ch6calibration.addWidget(self.lineEdit_ch6point2)
 
         self.pushButton_ch6point2 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch6point2.setObjectName(u"pushButton_ch6point2")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch6point2.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch6point2.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch6calibration.addWidget(self.pushButton_ch6point2)
 
         self.lineEdit_ch6point3 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch6point3.setObjectName(u"lineEdit_ch6point3")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch6point3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch6point3.setSizePolicy(sizePolicy3)
         self.lineEdit_ch6point3.setMaxLength(5)
 
         self.horizontalLayout_ch6calibration.addWidget(self.lineEdit_ch6point3)
 
         self.pushButton_ch6point3 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch6point3.setObjectName(u"pushButton_ch6point3")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch6point3.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch6point3.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch6calibration.addWidget(self.pushButton_ch6point3)
 
         self.lineEdit_ch6point4 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch6point4.setObjectName(u"lineEdit_ch6point4")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch6point4.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch6point4.setSizePolicy(sizePolicy3)
         self.lineEdit_ch6point4.setMaxLength(5)
 
         self.horizontalLayout_ch6calibration.addWidget(self.lineEdit_ch6point4)
 
         self.pushButton_ch6point4 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch6point4.setObjectName(u"pushButton_ch6point4")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch6point4.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch6point4.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch6calibration.addWidget(self.pushButton_ch6point4)
 
         self.lineEdit_ch6point5 = QLineEdit(self.groupBox_calibration)
         self.lineEdit_ch6point5.setObjectName(u"lineEdit_ch6point5")
+        sizePolicy3.setHeightForWidth(self.lineEdit_ch6point5.sizePolicy().hasHeightForWidth())
+        self.lineEdit_ch6point5.setSizePolicy(sizePolicy3)
         self.lineEdit_ch6point5.setMaxLength(5)
 
         self.horizontalLayout_ch6calibration.addWidget(self.lineEdit_ch6point5)
 
         self.pushButton_ch6point5 = QPushButton(self.groupBox_calibration)
         self.pushButton_ch6point5.setObjectName(u"pushButton_ch6point5")
+        sizePolicy5.setHeightForWidth(self.pushButton_ch6point5.sizePolicy().hasHeightForWidth())
+        self.pushButton_ch6point5.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_ch6calibration.addWidget(self.pushButton_ch6point5)
 
@@ -2758,62 +2930,102 @@ class Ui_MainWindow(object):
         self.horizontalLayout_Points = QHBoxLayout()
         self.horizontalLayout_Points.setSpacing(10)
         self.horizontalLayout_Points.setObjectName(u"horizontalLayout_Points")
-        self.horizontalSpacer_points = QSpacerItem(74, 0, QSizePolicy.Minimum, QSizePolicy.Minimum)
+        self.label_3 = QLabel(self.groupBox_calibration)
+        self.label_3.setObjectName(u"label_3")
+        sizePolicy6.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
+        self.label_3.setSizePolicy(sizePolicy6)
 
-        self.horizontalLayout_Points.addItem(self.horizontalSpacer_points)
+        self.horizontalLayout_Points.addWidget(self.label_3)
 
         self.label_point1 = QLabel(self.groupBox_calibration)
         self.label_point1.setObjectName(u"label_point1")
-        sizePolicy6.setHeightForWidth(self.label_point1.sizePolicy().hasHeightForWidth())
-        self.label_point1.setSizePolicy(sizePolicy6)
+        sizePolicy3.setHeightForWidth(self.label_point1.sizePolicy().hasHeightForWidth())
+        self.label_point1.setSizePolicy(sizePolicy3)
 
         self.horizontalLayout_Points.addWidget(self.label_point1, 0, Qt.AlignHCenter)
 
+        self.label_4 = QLabel(self.groupBox_calibration)
+        self.label_4.setObjectName(u"label_4")
+        sizePolicy6.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
+        self.label_4.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_Points.addWidget(self.label_4)
+
         self.label_point2 = QLabel(self.groupBox_calibration)
         self.label_point2.setObjectName(u"label_point2")
-        sizePolicy6.setHeightForWidth(self.label_point2.sizePolicy().hasHeightForWidth())
-        self.label_point2.setSizePolicy(sizePolicy6)
+        sizePolicy3.setHeightForWidth(self.label_point2.sizePolicy().hasHeightForWidth())
+        self.label_point2.setSizePolicy(sizePolicy3)
 
         self.horizontalLayout_Points.addWidget(self.label_point2, 0, Qt.AlignHCenter)
 
+        self.label_5 = QLabel(self.groupBox_calibration)
+        self.label_5.setObjectName(u"label_5")
+        sizePolicy6.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
+        self.label_5.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_Points.addWidget(self.label_5)
+
         self.label_point3 = QLabel(self.groupBox_calibration)
         self.label_point3.setObjectName(u"label_point3")
-        sizePolicy6.setHeightForWidth(self.label_point3.sizePolicy().hasHeightForWidth())
-        self.label_point3.setSizePolicy(sizePolicy6)
+        sizePolicy3.setHeightForWidth(self.label_point3.sizePolicy().hasHeightForWidth())
+        self.label_point3.setSizePolicy(sizePolicy3)
 
         self.horizontalLayout_Points.addWidget(self.label_point3, 0, Qt.AlignHCenter)
 
+        self.label_6 = QLabel(self.groupBox_calibration)
+        self.label_6.setObjectName(u"label_6")
+        sizePolicy6.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
+        self.label_6.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_Points.addWidget(self.label_6)
+
         self.label_point4 = QLabel(self.groupBox_calibration)
         self.label_point4.setObjectName(u"label_point4")
-        sizePolicy6.setHeightForWidth(self.label_point4.sizePolicy().hasHeightForWidth())
-        self.label_point4.setSizePolicy(sizePolicy6)
+        sizePolicy3.setHeightForWidth(self.label_point4.sizePolicy().hasHeightForWidth())
+        self.label_point4.setSizePolicy(sizePolicy3)
 
         self.horizontalLayout_Points.addWidget(self.label_point4, 0, Qt.AlignHCenter)
 
+        self.label_7 = QLabel(self.groupBox_calibration)
+        self.label_7.setObjectName(u"label_7")
+        sizePolicy6.setHeightForWidth(self.label_7.sizePolicy().hasHeightForWidth())
+        self.label_7.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_Points.addWidget(self.label_7)
+
         self.label_point5 = QLabel(self.groupBox_calibration)
         self.label_point5.setObjectName(u"label_point5")
-        sizePolicy6.setHeightForWidth(self.label_point5.sizePolicy().hasHeightForWidth())
-        self.label_point5.setSizePolicy(sizePolicy6)
+        sizePolicy3.setHeightForWidth(self.label_point5.sizePolicy().hasHeightForWidth())
+        self.label_point5.setSizePolicy(sizePolicy3)
 
         self.horizontalLayout_Points.addWidget(self.label_point5, 0, Qt.AlignHCenter)
 
+        self.label_8 = QLabel(self.groupBox_calibration)
+        self.label_8.setObjectName(u"label_8")
+        sizePolicy6.setHeightForWidth(self.label_8.sizePolicy().hasHeightForWidth())
+        self.label_8.setSizePolicy(sizePolicy6)
+
+        self.horizontalLayout_Points.addWidget(self.label_8)
+
         self.label_PointsUnit = QLabel(self.groupBox_calibration)
         self.label_PointsUnit.setObjectName(u"label_PointsUnit")
-        sizePolicy8 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Maximum)
-        sizePolicy8.setHorizontalStretch(0)
-        sizePolicy8.setVerticalStretch(0)
-        sizePolicy8.setHeightForWidth(self.label_PointsUnit.sizePolicy().hasHeightForWidth())
-        self.label_PointsUnit.setSizePolicy(sizePolicy8)
+        sizePolicy7.setHeightForWidth(self.label_PointsUnit.sizePolicy().hasHeightForWidth())
+        self.label_PointsUnit.setSizePolicy(sizePolicy7)
 
         self.horizontalLayout_Points.addWidget(self.label_PointsUnit, 0, Qt.AlignHCenter)
 
-        self.horizontalLayout_Points.setStretch(0, 1)
-        self.horizontalLayout_Points.setStretch(1, 2)
+        self.horizontalLayout_Points.setStretch(0, 2)
+        self.horizontalLayout_Points.setStretch(1, 3)
         self.horizontalLayout_Points.setStretch(2, 2)
-        self.horizontalLayout_Points.setStretch(3, 2)
+        self.horizontalLayout_Points.setStretch(3, 3)
         self.horizontalLayout_Points.setStretch(4, 2)
-        self.horizontalLayout_Points.setStretch(5, 2)
-        self.horizontalLayout_Points.setStretch(6, 1)
+        self.horizontalLayout_Points.setStretch(5, 3)
+        self.horizontalLayout_Points.setStretch(6, 2)
+        self.horizontalLayout_Points.setStretch(7, 3)
+        self.horizontalLayout_Points.setStretch(8, 2)
+        self.horizontalLayout_Points.setStretch(9, 3)
+        self.horizontalLayout_Points.setStretch(10, 2)
+        self.horizontalLayout_Points.setStretch(11, 2)
 
         self.gridLayout_4.addLayout(self.horizontalLayout_Points, 0, 0, 1, 1)
 
@@ -2851,6 +3063,7 @@ class Ui_MainWindow(object):
         self.tableWidget_log.setObjectName(u"tableWidget_log")
         self.tableWidget_log.setFrameShape(QFrame.StyledPanel)
         self.tableWidget_log.setFrameShadow(QFrame.Plain)
+        self.tableWidget_log.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.tableWidget_log.setShowGrid(True)
         self.tableWidget_log.setGridStyle(Qt.SolidLine)
         self.tableWidget_log.setWordWrap(True)
@@ -3008,7 +3221,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 274, 218))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 218, 218))
         self.scrollAreaWidgetContents.setStyleSheet(u" QScrollBar:vertical {\n"
 "	border: none;\n"
 "    background: rgb(52, 59, 72);\n"
@@ -3140,11 +3353,11 @@ class Ui_MainWindow(object):
         __qtablewidgetitem29 = QTableWidgetItem()
         self.tableWidget.setItem(0, 3, __qtablewidgetitem29)
         self.tableWidget.setObjectName(u"tableWidget")
-        sizePolicy9 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy9.setHorizontalStretch(0)
-        sizePolicy9.setVerticalStretch(0)
-        sizePolicy9.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
-        self.tableWidget.setSizePolicy(sizePolicy9)
+        sizePolicy8 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy8.setHorizontalStretch(0)
+        sizePolicy8.setVerticalStretch(0)
+        sizePolicy8.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
+        self.tableWidget.setSizePolicy(sizePolicy8)
         palette = QPalette()
         brush = QBrush(QColor(221, 221, 221, 255))
         brush.setStyle(Qt.SolidPattern)
@@ -3298,7 +3511,7 @@ class Ui_MainWindow(object):
 
         self.bottomBar = QFrame(self.contentBottom)
         self.bottomBar.setObjectName(u"bottomBar")
-        self.bottomBar.setMinimumSize(QSize(0, 22))
+        self.bottomBar.setMinimumSize(QSize(0, 35))
         self.bottomBar.setMaximumSize(QSize(16777215, 22))
         self.bottomBar.setFrameShape(QFrame.NoFrame)
         self.bottomBar.setFrameShadow(QFrame.Raised)
@@ -3514,8 +3727,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"PyDracula", None))
-        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Modern GUI / Flat Style", None))
+        self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"Ayra", None))
+        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"GUI for Adam (By PyDracula)", None))
+        self.topLogo.setText("")
         self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"Hide", None))
         self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.btn_setting.setText(QCoreApplication.translate("MainWindow", u"Setting", None))
@@ -3546,7 +3760,7 @@ class Ui_MainWindow(object):
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#ff79c6;\">Convert QRC</span></p>\n"
 "<p align=\"center\" "
                         "style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-rcc resources.qrc -o resources_rc.py</span></p></body></html>", None))
-        self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"Adam Connection Setup (Based on ModBus)", None))
+        self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"Connection Setup (Based on ModBus)", None))
 #if QT_CONFIG(tooltip)
         self.settingsTopBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Settings", None))
 #endif // QT_CONFIG(tooltip)
@@ -3602,27 +3816,44 @@ class Ui_MainWindow(object):
         self.label_deviceModel.setText(QCoreApplication.translate("MainWindow", u"Model", None))
         self.label_vol.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
         self.label_cur.setText(QCoreApplication.translate("MainWindow", u"Current", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Min", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Max", None))
+        self.comboBox_ch6scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch6scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch6scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+
+        self.label_minScale.setText(QCoreApplication.translate("MainWindow", u"Min", None))
+        self.label_maxScale.setText(QCoreApplication.translate("MainWindow", u"Max", None))
         self.label_vScale.setText(QCoreApplication.translate("MainWindow", u"Scales", None))
+        self.comboBox_ch8scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch8scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch8scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+
+        self.label_ch8vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_timeout.setText(QCoreApplication.translate("MainWindow", u"Timeout:", None))
         self.label_ch1Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 1:", None))
-        self.label_ch1vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ch4vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.comboBox_ch7scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch7scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch7scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+
+        self.label_ch3Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 3:", None))
+        self.label_unitID.setText(QCoreApplication.translate("MainWindow", u"Unit ID:", None))
+        self.label_ch5vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.comboBox_ch1scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
         self.comboBox_ch1scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
         self.comboBox_ch1scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
-        self.label_ch2Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 2:", None))
-        self.label_ch2vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.comboBox_ch2scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch2scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch2scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.label_ch7vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_deviceModelSetting.setText(QCoreApplication.translate("MainWindow", u"Model", None))
+        self.label_ch1vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_ResRate.setText(QCoreApplication.translate("MainWindow", u"Response Rate:", None))
+        self.label_ch6Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 6:", None))
+        self.comboBox_ch4scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch4scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch4scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
-        self.label_unitID.setText(QCoreApplication.translate("MainWindow", u"Unit ID:", None))
-        self.label_ch3Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 3:", None))
-        self.label_ch3vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.comboBox_ch3scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch3scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch3scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.comboBox_ch5scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch5scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch5scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.label_baudRate.setText(QCoreApplication.translate("MainWindow", u"Baud Rate:", None))
         self.comboBox_baudRate.setItemText(0, QCoreApplication.translate("MainWindow", u"300", None))
@@ -3644,39 +3875,22 @@ class Ui_MainWindow(object):
         self.comboBox_baudRate.setItemText(16, QCoreApplication.translate("MainWindow", u"460800", None))
         self.comboBox_baudRate.setItemText(17, QCoreApplication.translate("MainWindow", u"921600", None))
 
-        self.label_ch4Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 4:", None))
-        self.label_ch4vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.comboBox_ch4scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch4scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch4scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
-
-        self.label_timeout.setText(QCoreApplication.translate("MainWindow", u"Timeout:", None))
-        self.label_ch5Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 5:", None))
-        self.label_ch5vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.comboBox_ch5scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch5scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch5scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
-
-        self.label_ResRate.setText(QCoreApplication.translate("MainWindow", u"Response Rate:", None))
-        self.label_ch6Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 6:", None))
-        self.label_ch6vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.comboBox_ch6scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch6scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch6scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.label_ch2vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.comboBox_ch3scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch3scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch3scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.label_ch7Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 7:", None))
-        self.label_ch7vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.comboBox_ch7scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch7scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch7scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.label_ch3vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.comboBox_ch2scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
+        self.comboBox_ch2scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
+        self.comboBox_ch2scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
 
+        self.label_ch2Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 2:", None))
+        self.label_ch4Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 4:", None))
+        self.label_ch5Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 5:", None))
+        self.label_ch6vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.label_ch8Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 8:", None))
-        self.label_ch8vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.comboBox_ch8scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch8scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch8scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
-
-        self.label_deviceModelSetting.setText(QCoreApplication.translate("MainWindow", u"Model", None))
         self.groupBox_calibration.setTitle(QCoreApplication.translate("MainWindow", u"Calibration Values", None))
         self.label_ch1calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 1:", None))
         self.pushButton_ch1point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
@@ -3750,11 +3964,17 @@ class Ui_MainWindow(object):
         self.comboBox_ch6CalScale.setItemText(0, QCoreApplication.translate("MainWindow", u"v", None))
         self.comboBox_ch6CalScale.setItemText(1, QCoreApplication.translate("MainWindow", u"i", None))
 
+        self.label_3.setText("")
         self.label_point1.setText(QCoreApplication.translate("MainWindow", u"Point 1", None))
+        self.label_4.setText("")
         self.label_point2.setText(QCoreApplication.translate("MainWindow", u"Point 2", None))
+        self.label_5.setText("")
         self.label_point3.setText(QCoreApplication.translate("MainWindow", u"Point 3", None))
+        self.label_6.setText("")
         self.label_point4.setText(QCoreApplication.translate("MainWindow", u"Point 4", None))
+        self.label_7.setText("")
         self.label_point5.setText(QCoreApplication.translate("MainWindow", u"Point 5", None))
+        self.label_8.setText("")
         self.label_PointsUnit.setText(QCoreApplication.translate("MainWindow", u"Unit", None))
         ___qtablewidgetitem = self.tableWidget_log.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Date", None));
