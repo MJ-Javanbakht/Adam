@@ -33,7 +33,7 @@ class Ui_Setup(object):
 "	background-position: left center;\n"
 "    background-repeat: no-repeat;\n"
 "	border: none;\n"
-"	border-left: 2px solid rgb(255, 121, 198);\n"
+"	border-left: 2px solid rgb(189, 147, 249);\n"
 "	text-align: left;\n"
 "	padding-left: 8px;\n"
 "	margin: 0px;\n"
@@ -51,7 +51,7 @@ class Ui_Setup(object):
 "	border: 2px solid rgb(20, 20, 20);\n"
 "	padding-left: 10px;\n"
 "	selection-color: rgb(255, 255, 255);\n"
-"	selection-background-color: rgb(255, 121, 198);\n"
+"	selection-background-color: rgb(189, 147, 249);\n"
 "}\n"
 "QSpinBox:hover {\n"
 "	border: 2px solid rgb(64, 71, 88);\n"
@@ -73,7 +73,7 @@ class Ui_Setup(object):
 "	border: 2px solid rgb(20, 20, 20);\n"
 "	padding-left: 10px;\n"
 "	selection-color: rgb(255, 255, 255);\n"
-"	selection-background-color: rgb(255, 121, 198);\n"
+"	selection-background-color: rgb(189, 147, 249);\n"
 "}\n"
 "QLineEdit:hover {\n"
 "	border: 2px solid rgb(64, 71, 88);\n"
@@ -692,7 +692,7 @@ class Ui_Setup(object):
 
         self.groupBox_Remote = QGroupBox(Setup)
         self.groupBox_Remote.setObjectName(u"groupBox_Remote")
-        self.groupBox_Remote.setEnabled(False)
+        self.groupBox_Remote.setEnabled(True)
         sizePolicy.setHeightForWidth(self.groupBox_Remote.sizePolicy().hasHeightForWidth())
         self.groupBox_Remote.setSizePolicy(sizePolicy)
         self.groupBox_Remote.setStyleSheet(u"background-color: transparent;")
@@ -700,7 +700,7 @@ class Ui_Setup(object):
         self.gridLayout_remote.setObjectName(u"gridLayout_remote")
         self.radioButton_IPv4 = QRadioButton(self.groupBox_Remote)
         self.radioButton_IPv4.setObjectName(u"radioButton_IPv4")
-        self.radioButton_IPv4.setEnabled(False)
+        self.radioButton_IPv4.setEnabled(True)
         sizePolicy4.setHeightForWidth(self.radioButton_IPv4.sizePolicy().hasHeightForWidth())
         self.radioButton_IPv4.setSizePolicy(sizePolicy4)
         self.radioButton_IPv4.setSizeIncrement(QSize(0, 0))
@@ -716,22 +716,16 @@ class Ui_Setup(object):
 
         self.radioButton_IPv6 = QRadioButton(self.groupBox_Remote)
         self.radioButton_IPv6.setObjectName(u"radioButton_IPv6")
-        self.radioButton_IPv6.setEnabled(False)
+        self.radioButton_IPv6.setEnabled(True)
         sizePolicy4.setHeightForWidth(self.radioButton_IPv6.sizePolicy().hasHeightForWidth())
         self.radioButton_IPv6.setSizePolicy(sizePolicy4)
         self.radioButton_IPv6.setFont(font)
 
         self.gridLayout_remote.addWidget(self.radioButton_IPv6, 4, 4, 1, 1)
 
-        self.label_IP = QLabel(self.groupBox_Remote)
-        self.label_IP.setObjectName(u"label_IP")
-        self.label_IP.setEnabled(False)
-
-        self.gridLayout_remote.addWidget(self.label_IP, 0, 0, 1, 1)
-
         self.lineEdit_ConnectTout = QLineEdit(self.groupBox_Remote)
         self.lineEdit_ConnectTout.setObjectName(u"lineEdit_ConnectTout")
-        self.lineEdit_ConnectTout.setEnabled(False)
+        self.lineEdit_ConnectTout.setEnabled(True)
         sizePolicy.setHeightForWidth(self.lineEdit_ConnectTout.sizePolicy().hasHeightForWidth())
         self.lineEdit_ConnectTout.setSizePolicy(sizePolicy)
 
@@ -739,34 +733,41 @@ class Ui_Setup(object):
 
         self.label_ConnectToutMS = QLabel(self.groupBox_Remote)
         self.label_ConnectToutMS.setObjectName(u"label_ConnectToutMS")
-        self.label_ConnectToutMS.setEnabled(False)
+        self.label_ConnectToutMS.setEnabled(True)
+        sizePolicy.setHeightForWidth(self.label_ConnectToutMS.sizePolicy().hasHeightForWidth())
+        self.label_ConnectToutMS.setSizePolicy(sizePolicy)
 
         self.gridLayout_remote.addWidget(self.label_ConnectToutMS, 2, 2, 1, 1)
 
         self.comboBox_IP = QComboBox(self.groupBox_Remote)
         self.comboBox_IP.addItem("")
         self.comboBox_IP.setObjectName(u"comboBox_IP")
-        self.comboBox_IP.setEnabled(False)
+        self.comboBox_IP.setEnabled(True)
         sizePolicy.setHeightForWidth(self.comboBox_IP.sizePolicy().hasHeightForWidth())
         self.comboBox_IP.setSizePolicy(sizePolicy)
+        self.comboBox_IP.setMinimumSize(QSize(0, 30))
 
         self.gridLayout_remote.addWidget(self.comboBox_IP, 1, 0, 1, 5)
 
         self.label_ConnectTout = QLabel(self.groupBox_Remote)
         self.label_ConnectTout.setObjectName(u"label_ConnectTout")
-        self.label_ConnectTout.setEnabled(False)
+        self.label_ConnectTout.setEnabled(True)
+        sizePolicy.setHeightForWidth(self.label_ConnectTout.sizePolicy().hasHeightForWidth())
+        self.label_ConnectTout.setSizePolicy(sizePolicy)
 
         self.gridLayout_remote.addWidget(self.label_ConnectTout, 3, 3, 2, 1)
 
         self.label_ServePort = QLabel(self.groupBox_Remote)
         self.label_ServePort.setObjectName(u"label_ServePort")
-        self.label_ServePort.setEnabled(False)
+        self.label_ServePort.setEnabled(True)
+        sizePolicy.setHeightForWidth(self.label_ServePort.sizePolicy().hasHeightForWidth())
+        self.label_ServePort.setSizePolicy(sizePolicy)
 
         self.gridLayout_remote.addWidget(self.label_ServePort, 2, 0, 1, 1)
 
         self.lineEdit_ServerPort = QLineEdit(self.groupBox_Remote)
         self.lineEdit_ServerPort.setObjectName(u"lineEdit_ServerPort")
-        self.lineEdit_ServerPort.setEnabled(False)
+        self.lineEdit_ServerPort.setEnabled(True)
         sizePolicy.setHeightForWidth(self.lineEdit_ServerPort.sizePolicy().hasHeightForWidth())
         self.lineEdit_ServerPort.setSizePolicy(sizePolicy)
 
@@ -775,6 +776,14 @@ class Ui_Setup(object):
         self.horizontalSpacer_Remote = QSpacerItem(40, 20, QSizePolicy.Preferred, QSizePolicy.Minimum)
 
         self.gridLayout_remote.addItem(self.horizontalSpacer_Remote, 2, 1, 3, 1)
+
+        self.label_IP = QLabel(self.groupBox_Remote)
+        self.label_IP.setObjectName(u"label_IP")
+        self.label_IP.setEnabled(True)
+        sizePolicy.setHeightForWidth(self.label_IP.sizePolicy().hasHeightForWidth())
+        self.label_IP.setSizePolicy(sizePolicy)
+
+        self.gridLayout_remote.addWidget(self.label_IP, 0, 0, 1, 5)
 
 
         self.gridLayout_setup.addWidget(self.groupBox_Remote, 4, 0, 1, 2)
@@ -807,6 +816,7 @@ class Ui_Setup(object):
 
         self.gridLayout_setup.addWidget(self.groupBox_Mode, 1, 1, 1, 1)
 
+        self.gridLayout_setup.setRowMinimumHeight(5, 20)
         QWidget.setTabOrder(self.comboBox_Connection, self.comboBox_COM)
         QWidget.setTabOrder(self.comboBox_COM, self.comboBox_BaudRate)
         QWidget.setTabOrder(self.comboBox_BaudRate, self.comboBox_DataBits)
@@ -1140,7 +1150,6 @@ class Ui_Setup(object):
         self.groupBox_Remote.setTitle(QCoreApplication.translate("Setup", u"Remote ModBus Server", None))
         self.radioButton_IPv4.setText(QCoreApplication.translate("Setup", u"IPv4", None))
         self.radioButton_IPv6.setText(QCoreApplication.translate("Setup", u"IPv6", None))
-        self.label_IP.setText(QCoreApplication.translate("Setup", u"IP Address or Node Name", None))
         self.lineEdit_ConnectTout.setText(QCoreApplication.translate("Setup", u"3000", None))
         self.label_ConnectToutMS.setText(QCoreApplication.translate("Setup", u"Connection Timeout", None))
         self.comboBox_IP.setItemText(0, QCoreApplication.translate("Setup", u"127.0.0.1", None))
@@ -1148,6 +1157,7 @@ class Ui_Setup(object):
         self.label_ConnectTout.setText(QCoreApplication.translate("Setup", u"[ms]", None))
         self.label_ServePort.setText(QCoreApplication.translate("Setup", u"Server Port", None))
         self.lineEdit_ServerPort.setText(QCoreApplication.translate("Setup", u"502", None))
+        self.label_IP.setText(QCoreApplication.translate("Setup", u"IP Address or Node Name", None))
         self.groupBox_Mode.setTitle(QCoreApplication.translate("Setup", u"Mode", None))
         self.radioButton_RTU.setText(QCoreApplication.translate("Setup", u"RTU", None))
         self.radioButton_ASCII.setText(QCoreApplication.translate("Setup", u"ASCII", None))

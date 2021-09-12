@@ -23,9 +23,8 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         global widgets
         widgets = self.ui
-        # pix = QPixmap('Adam\design\images\images\AYRA_LOGO.png')
-        # QPixmap.convertFromImage(self= pix,img=':/images/images/images/Ayra.png',flags= [0])
-        # widgets.topLogo.setPixmap(pix)
+        icon = QPixmap('Adam\design\images\images\AYRALOGO.png')
+        self.setWindowIcon(icon)
         widgets.stateLabel.setStyleSheet('font: 13pt; color: rgb(100,189,100);')
 
         # MAKE THE LINE EDITS ACCEPT ONLY DIGITS
@@ -193,8 +192,7 @@ class SetupDialog(QDialog):
         self.ui.setupUi(self)
         title = "Setup"
         self.setWindowTitle(title)
-        icon = QIcon()
-        icon.addPixmap("Adam\design\images\icons\AYRA_LOGO.ico")
+        icon = QIcon("Adam\design\images\icons\AYRALOGO.png")
         self.setWindowIcon(icon)
         self.ui.status = QStatusBar()
         self.ui.verticalLayout_statusBar.addWidget(self.ui.status)

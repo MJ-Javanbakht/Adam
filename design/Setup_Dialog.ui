@@ -33,7 +33,7 @@ QToolTip {
 	background-position: left center;
     background-repeat: no-repeat;
 	border: none;
-	border-left: 2px solid rgb(255, 121, 198);
+	border-left: 2px solid rgb(189, 147, 249);
 	text-align: left;
 	padding-left: 8px;
 	margin: 0px;
@@ -51,7 +51,7 @@ QSpinBox {
 	border: 2px solid rgb(20, 20, 20);
 	padding-left: 10px;
 	selection-color: rgb(255, 255, 255);
-	selection-background-color: rgb(255, 121, 198);
+	selection-background-color: rgb(189, 147, 249);
 }
 QSpinBox:hover {
 	border: 2px solid rgb(64, 71, 88);
@@ -72,7 +72,7 @@ QLineEdit {
 	border: 2px solid rgb(20, 20, 20);
 	padding-left: 10px;
 	selection-color: rgb(255, 255, 255);
-	selection-background-color: rgb(255, 121, 198);
+	selection-background-color: rgb(189, 147, 249);
 }
 QLineEdit:hover {
 	border: 2px solid rgb(64, 71, 88);
@@ -221,7 +221,7 @@ QLabel:disabled {
 	color: rgb(100,100,100);
 }</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_setup" rowstretch="0,0,0,0,0,0">
+  <layout class="QGridLayout" name="gridLayout_setup" rowstretch="0,0,0,0,0,0" rowminimumheight="0,0,0,0,0,20">
    <item row="3" column="1">
     <widget class="QGroupBox" name="groupBox_ResTout">
      <property name="sizePolicy">
@@ -1921,7 +1921,7 @@ QLabel:disabled {
    <item row="4" column="0" colspan="2">
     <widget class="QGroupBox" name="groupBox_Remote">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
@@ -1939,7 +1939,7 @@ QLabel:disabled {
       <item row="2" column="4" rowspan="2">
        <widget class="QRadioButton" name="radioButton_IPv4">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
@@ -1977,7 +1977,7 @@ QLabel:disabled {
       <item row="4" column="4">
        <widget class="QRadioButton" name="radioButton_IPv6">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
@@ -1997,20 +1997,10 @@ QLabel:disabled {
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_IP">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>IP Address or Node Name</string>
-        </property>
-       </widget>
-      </item>
       <item row="3" column="2" rowspan="2">
        <widget class="QLineEdit" name="lineEdit_ConnectTout">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
@@ -2026,7 +2016,13 @@ QLabel:disabled {
       <item row="2" column="2">
        <widget class="QLabel" name="label_ConnectToutMS">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="text">
          <string>Connection Timeout</string>
@@ -2036,13 +2032,19 @@ QLabel:disabled {
       <item row="1" column="0" colspan="5">
        <widget class="QComboBox" name="comboBox_IP">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
         </property>
         <item>
          <property name="text">
@@ -2054,7 +2056,13 @@ QLabel:disabled {
       <item row="3" column="3" rowspan="2">
        <widget class="QLabel" name="label_ConnectTout">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="text">
          <string>[ms]</string>
@@ -2064,7 +2072,13 @@ QLabel:disabled {
       <item row="2" column="0">
        <widget class="QLabel" name="label_ServePort">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="text">
          <string>Server Port</string>
@@ -2074,7 +2088,7 @@ QLabel:disabled {
       <item row="3" column="0" rowspan="2">
        <widget class="QLineEdit" name="lineEdit_ServerPort">
         <property name="enabled">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
@@ -2105,6 +2119,22 @@ QLabel:disabled {
          </size>
         </property>
        </spacer>
+      </item>
+      <item row="0" column="0" colspan="5">
+       <widget class="QLabel" name="label_IP">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>IP Address or Node Name</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
