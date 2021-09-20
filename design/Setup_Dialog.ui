@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>550</height>
+    <height>560</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>500</width>
-    <height>550</height>
+    <height>560</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
   <property name="styleSheet">
    <string notr="true">QWidget{
 	color: rgb(221, 221, 221);
-	font: 12pt &quot;Segoe UI&quot;;
+	font: 13pt &quot;Segoe UI&quot;;
 }
 
 QToolTip {
@@ -1606,21 +1606,11 @@ QLabel:disabled {
          </sizepolicy>
         </property>
         <property name="currentIndex">
-         <number>11</number>
+         <number>7</number>
         </property>
         <property name="maxVisibleItems">
          <number>20</number>
         </property>
-        <item>
-         <property name="text">
-          <string>300</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>600</string>
-         </property>
-        </item>
         <item>
          <property name="text">
           <string>1200</string>
@@ -1643,11 +1633,6 @@ QLabel:disabled {
         </item>
         <item>
          <property name="text">
-          <string>14400</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
           <string>19200</string>
          </property>
         </item>
@@ -1658,47 +1643,12 @@ QLabel:disabled {
         </item>
         <item>
          <property name="text">
-          <string>56000</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
           <string>57600</string>
          </property>
         </item>
         <item>
          <property name="text">
           <string>115200</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>128000</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>153600</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>230400</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>256000</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>460800</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>921600</string>
          </property>
         </item>
        </widget>
@@ -1961,7 +1911,7 @@ QLabel:disabled {
         </property>
         <property name="font">
          <font>
-          <pointsize>12</pointsize>
+          <pointsize>13</pointsize>
           <italic>false</italic>
           <bold>false</bold>
          </font>
@@ -1987,7 +1937,7 @@ QLabel:disabled {
         </property>
         <property name="font">
          <font>
-          <pointsize>12</pointsize>
+          <pointsize>13</pointsize>
           <italic>false</italic>
           <bold>false</bold>
          </font>

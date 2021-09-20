@@ -18,11 +18,11 @@ class Ui_Setup(object):
     def setupUi(self, Setup):
         if not Setup.objectName():
             Setup.setObjectName(u"Setup")
-        Setup.resize(500, 550)
-        Setup.setMinimumSize(QSize(500, 550))
+        Setup.resize(500, 560)
+        Setup.setMinimumSize(QSize(500, 560))
         Setup.setStyleSheet(u"QWidget{\n"
 "	color: rgb(221, 221, 221);\n"
-"	font: 12pt \"Segoe UI\";\n"
+"	font: 13pt \"Segoe UI\";\n"
 "}\n"
 "\n"
 "QToolTip {\n"
@@ -553,16 +553,6 @@ class Ui_Setup(object):
         self.comboBox_BaudRate.addItem("")
         self.comboBox_BaudRate.addItem("")
         self.comboBox_BaudRate.addItem("")
-        self.comboBox_BaudRate.addItem("")
-        self.comboBox_BaudRate.addItem("")
-        self.comboBox_BaudRate.addItem("")
-        self.comboBox_BaudRate.addItem("")
-        self.comboBox_BaudRate.addItem("")
-        self.comboBox_BaudRate.addItem("")
-        self.comboBox_BaudRate.addItem("")
-        self.comboBox_BaudRate.addItem("")
-        self.comboBox_BaudRate.addItem("")
-        self.comboBox_BaudRate.addItem("")
         self.comboBox_BaudRate.setObjectName(u"comboBox_BaudRate")
         sizePolicy1.setHeightForWidth(self.comboBox_BaudRate.sizePolicy().hasHeightForWidth())
         self.comboBox_BaudRate.setSizePolicy(sizePolicy1)
@@ -706,7 +696,7 @@ class Ui_Setup(object):
         self.radioButton_IPv4.setSizeIncrement(QSize(0, 0))
         self.radioButton_IPv4.setBaseSize(QSize(0, 0))
         font = QFont()
-        font.setPointSize(12)
+        font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         self.radioButton_IPv4.setFont(font)
@@ -836,7 +826,7 @@ class Ui_Setup(object):
 
         self.retranslateUi(Setup)
 
-        self.comboBox_BaudRate.setCurrentIndex(11)
+        self.comboBox_BaudRate.setCurrentIndex(7)
         self.comboBox_DataBits.setCurrentIndex(1)
 
 
@@ -1108,24 +1098,14 @@ class Ui_Setup(object):
         self.comboBox_COM.setItemText(255, QCoreApplication.translate("Setup", u"COM256", None))
 
         self.label_BaudRate.setText(QCoreApplication.translate("Setup", u"Baude Rate:", None))
-        self.comboBox_BaudRate.setItemText(0, QCoreApplication.translate("Setup", u"300", None))
-        self.comboBox_BaudRate.setItemText(1, QCoreApplication.translate("Setup", u"600", None))
-        self.comboBox_BaudRate.setItemText(2, QCoreApplication.translate("Setup", u"1200", None))
-        self.comboBox_BaudRate.setItemText(3, QCoreApplication.translate("Setup", u"2400", None))
-        self.comboBox_BaudRate.setItemText(4, QCoreApplication.translate("Setup", u"4800", None))
-        self.comboBox_BaudRate.setItemText(5, QCoreApplication.translate("Setup", u"9600", None))
-        self.comboBox_BaudRate.setItemText(6, QCoreApplication.translate("Setup", u"14400", None))
-        self.comboBox_BaudRate.setItemText(7, QCoreApplication.translate("Setup", u"19200", None))
-        self.comboBox_BaudRate.setItemText(8, QCoreApplication.translate("Setup", u"38400", None))
-        self.comboBox_BaudRate.setItemText(9, QCoreApplication.translate("Setup", u"56000", None))
-        self.comboBox_BaudRate.setItemText(10, QCoreApplication.translate("Setup", u"57600", None))
-        self.comboBox_BaudRate.setItemText(11, QCoreApplication.translate("Setup", u"115200", None))
-        self.comboBox_BaudRate.setItemText(12, QCoreApplication.translate("Setup", u"128000", None))
-        self.comboBox_BaudRate.setItemText(13, QCoreApplication.translate("Setup", u"153600", None))
-        self.comboBox_BaudRate.setItemText(14, QCoreApplication.translate("Setup", u"230400", None))
-        self.comboBox_BaudRate.setItemText(15, QCoreApplication.translate("Setup", u"256000", None))
-        self.comboBox_BaudRate.setItemText(16, QCoreApplication.translate("Setup", u"460800", None))
-        self.comboBox_BaudRate.setItemText(17, QCoreApplication.translate("Setup", u"921600", None))
+        self.comboBox_BaudRate.setItemText(0, QCoreApplication.translate("Setup", u"1200", None))
+        self.comboBox_BaudRate.setItemText(1, QCoreApplication.translate("Setup", u"2400", None))
+        self.comboBox_BaudRate.setItemText(2, QCoreApplication.translate("Setup", u"4800", None))
+        self.comboBox_BaudRate.setItemText(3, QCoreApplication.translate("Setup", u"9600", None))
+        self.comboBox_BaudRate.setItemText(4, QCoreApplication.translate("Setup", u"19200", None))
+        self.comboBox_BaudRate.setItemText(5, QCoreApplication.translate("Setup", u"38400", None))
+        self.comboBox_BaudRate.setItemText(6, QCoreApplication.translate("Setup", u"57600", None))
+        self.comboBox_BaudRate.setItemText(7, QCoreApplication.translate("Setup", u"115200", None))
 
         self.label_DataBits.setText(QCoreApplication.translate("Setup", u"Data Bits:", None))
         self.comboBox_DataBits.setItemText(0, QCoreApplication.translate("Setup", u"7", None))

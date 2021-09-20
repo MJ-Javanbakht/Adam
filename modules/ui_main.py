@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
         font1 = QFont()
-        font1.setPointSize(12)
+        font1.setPointSize(14)
         font1.setBold(False)
         font1.setItalic(False)
         self.styleSheet.setFont(font1)
@@ -39,7 +39,7 @@ class Ui_MainWindow(object):
 "\n"
 "QWidget{\n"
 "	color: rgb(221, 221, 221);\n"
-"	font: 12pt \"Segoe UI\";\n"
+"	font: 14pt \"Segoe UI\";\n"
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
@@ -210,7 +210,7 @@ class Ui_MainWindow(object):
 "\n"
 "/* Bottom Bar */\n"
 "#bottomBar { background-color: rgb(44, 49, 58); }\n"
-"#bottomBar QLabel { font-size: 16px; color: rgb(221, 221, 221); padding-left: 10px; padding-right: 10px; padding-bottom: 2px; }\n"
+"#bottomBar QLabel { font-size: 14pt; color: rgb(221, 221, 221); padding-left: 10px; padding-right: 10px; padding-bottom: 2px; }\n"
 "\n"
 "/* CONTENT SETTINGS */\n"
 "/* MENUS */\n"
@@ -582,17 +582,21 @@ class Ui_MainWindow(object):
         self.titleLeftApp = QLabel(self.topLogoInfo)
         self.titleLeftApp.setObjectName(u"titleLeftApp")
         self.titleLeftApp.setGeometry(QRect(70, 8, 160, 20))
-        self.titleLeftApp.setFont(font1)
+        font2 = QFont()
+        font2.setPointSize(12)
+        font2.setBold(False)
+        font2.setItalic(False)
+        self.titleLeftApp.setFont(font2)
         self.titleLeftApp.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.titleLeftDescription = QLabel(self.topLogoInfo)
         self.titleLeftDescription.setObjectName(u"titleLeftDescription")
         self.titleLeftDescription.setGeometry(QRect(70, 27, 160, 16))
         self.titleLeftDescription.setMaximumSize(QSize(16777215, 16))
-        font2 = QFont()
-        font2.setPointSize(8)
-        font2.setBold(False)
-        font2.setItalic(False)
-        self.titleLeftDescription.setFont(font2)
+        font3 = QFont()
+        font3.setPointSize(8)
+        font3.setBold(False)
+        font3.setItalic(False)
+        self.titleLeftDescription.setFont(font3)
         self.titleLeftDescription.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.topLogo = QLabel(self.topLogoInfo)
         self.topLogo.setObjectName(u"topLogo")
@@ -976,12 +980,12 @@ class Ui_MainWindow(object):
         self.maximizeRestoreAppBtn.setObjectName(u"maximizeRestoreAppBtn")
         self.maximizeRestoreAppBtn.setMinimumSize(QSize(28, 28))
         self.maximizeRestoreAppBtn.setMaximumSize(QSize(28, 28))
-        font3 = QFont()
-        font3.setPointSize(12)
-        font3.setBold(False)
-        font3.setItalic(False)
-        font3.setStyleStrategy(QFont.PreferDefault)
-        self.maximizeRestoreAppBtn.setFont(font3)
+        font4 = QFont()
+        font4.setPointSize(14)
+        font4.setBold(False)
+        font4.setItalic(False)
+        font4.setStyleStrategy(QFont.PreferDefault)
+        self.maximizeRestoreAppBtn.setFont(font4)
         self.maximizeRestoreAppBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon3 = QIcon()
         icon3.addFile(u":/icons/images/icons/icon_maximize.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -1504,10 +1508,10 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_vi.addWidget(self.label_model, 0, Qt.AlignLeft)
 
-        self.label_deviceModel = QLabel(self.home)
-        self.label_deviceModel.setObjectName(u"label_deviceModel")
+        self.label_deviceName = QLabel(self.home)
+        self.label_deviceName.setObjectName(u"label_deviceName")
 
-        self.horizontalLayout_vi.addWidget(self.label_deviceModel, 0, Qt.AlignHCenter)
+        self.horizontalLayout_vi.addWidget(self.label_deviceName, 0, Qt.AlignHCenter)
 
         self.label_vol = QLabel(self.home)
         self.label_vol.setObjectName(u"label_vol")
@@ -1565,7 +1569,6 @@ class Ui_MainWindow(object):
         self.comboBox_ch6scale = QComboBox(self.setting)
         self.comboBox_ch6scale.addItem("")
         self.comboBox_ch6scale.addItem("")
-        self.comboBox_ch6scale.addItem("")
         self.comboBox_ch6scale.setObjectName(u"comboBox_ch6scale")
         sizePolicy7 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
         sizePolicy7.setHorizontalStretch(0)
@@ -1598,12 +1601,12 @@ class Ui_MainWindow(object):
         self.label_vScale.setObjectName(u"label_vScale")
         sizePolicy6.setHeightForWidth(self.label_vScale.sizePolicy().hasHeightForWidth())
         self.label_vScale.setSizePolicy(sizePolicy6)
-        font4 = QFont()
-        font4.setPointSize(12)
-        font4.setBold(False)
-        font4.setItalic(False)
-        font4.setUnderline(False)
-        self.label_vScale.setFont(font4)
+        font5 = QFont()
+        font5.setPointSize(14)
+        font5.setBold(False)
+        font5.setItalic(False)
+        font5.setUnderline(False)
+        self.label_vScale.setFont(font5)
 
         self.gridLayout_scalesMinMax.addWidget(self.label_vScale, 0, 0, 1, 2, Qt.AlignHCenter)
 
@@ -1614,7 +1617,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch8Scale.setSpacing(10)
         self.horizontalLayout_ch8Scale.setObjectName(u"horizontalLayout_ch8Scale")
         self.comboBox_ch8scale = QComboBox(self.setting)
-        self.comboBox_ch8scale.addItem("")
         self.comboBox_ch8scale.addItem("")
         self.comboBox_ch8scale.addItem("")
         self.comboBox_ch8scale.setObjectName(u"comboBox_ch8scale")
@@ -1706,7 +1708,6 @@ class Ui_MainWindow(object):
         self.comboBox_ch7scale = QComboBox(self.setting)
         self.comboBox_ch7scale.addItem("")
         self.comboBox_ch7scale.addItem("")
-        self.comboBox_ch7scale.addItem("")
         self.comboBox_ch7scale.setObjectName(u"comboBox_ch7scale")
         sizePolicy7.setHeightForWidth(self.comboBox_ch7scale.sizePolicy().hasHeightForWidth())
         self.comboBox_ch7scale.setSizePolicy(sizePolicy7)
@@ -1771,7 +1772,6 @@ class Ui_MainWindow(object):
         self.comboBox_ch1scale = QComboBox(self.setting)
         self.comboBox_ch1scale.addItem("")
         self.comboBox_ch1scale.addItem("")
-        self.comboBox_ch1scale.addItem("")
         self.comboBox_ch1scale.setObjectName(u"comboBox_ch1scale")
         sizePolicy7.setHeightForWidth(self.comboBox_ch1scale.sizePolicy().hasHeightForWidth())
         self.comboBox_ch1scale.setSizePolicy(sizePolicy7)
@@ -1806,10 +1806,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_setting.addLayout(self.horizontalLayout_ch7ScaleMinMax, 7, 2, 1, 1)
 
-        self.label_deviceModelSetting = QLabel(self.setting)
-        self.label_deviceModelSetting.setObjectName(u"label_deviceModelSetting")
+        self.label_deviceNameSetting = QLabel(self.setting)
+        self.label_deviceNameSetting.setObjectName(u"label_deviceNameSetting")
 
-        self.gridLayout_setting.addWidget(self.label_deviceModelSetting, 0, 0, 1, 2, Qt.AlignHCenter)
+        self.gridLayout_setting.addWidget(self.label_deviceNameSetting, 0, 0, 1, 2, Qt.AlignHCenter)
 
         self.horizontalLayout_ch1ScaleMinMax = QHBoxLayout()
         self.horizontalLayout_ch1ScaleMinMax.setSpacing(10)
@@ -1867,7 +1867,6 @@ class Ui_MainWindow(object):
         self.comboBox_ch4scale = QComboBox(self.setting)
         self.comboBox_ch4scale.addItem("")
         self.comboBox_ch4scale.addItem("")
-        self.comboBox_ch4scale.addItem("")
         self.comboBox_ch4scale.setObjectName(u"comboBox_ch4scale")
         sizePolicy7.setHeightForWidth(self.comboBox_ch4scale.sizePolicy().hasHeightForWidth())
         self.comboBox_ch4scale.setSizePolicy(sizePolicy7)
@@ -1881,7 +1880,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch5Scale.setSpacing(10)
         self.horizontalLayout_ch5Scale.setObjectName(u"horizontalLayout_ch5Scale")
         self.comboBox_ch5scale = QComboBox(self.setting)
-        self.comboBox_ch5scale.addItem("")
         self.comboBox_ch5scale.addItem("")
         self.comboBox_ch5scale.addItem("")
         self.comboBox_ch5scale.setObjectName(u"comboBox_ch5scale")
@@ -1901,16 +1899,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_baudRate.addWidget(self.label_baudRate)
 
         self.comboBox_baudRate = QComboBox(self.setting)
-        self.comboBox_baudRate.addItem("")
-        self.comboBox_baudRate.addItem("")
-        self.comboBox_baudRate.addItem("")
-        self.comboBox_baudRate.addItem("")
-        self.comboBox_baudRate.addItem("")
-        self.comboBox_baudRate.addItem("")
-        self.comboBox_baudRate.addItem("")
-        self.comboBox_baudRate.addItem("")
-        self.comboBox_baudRate.addItem("")
-        self.comboBox_baudRate.addItem("")
         self.comboBox_baudRate.addItem("")
         self.comboBox_baudRate.addItem("")
         self.comboBox_baudRate.addItem("")
@@ -1962,7 +1950,6 @@ class Ui_MainWindow(object):
         self.comboBox_ch3scale = QComboBox(self.setting)
         self.comboBox_ch3scale.addItem("")
         self.comboBox_ch3scale.addItem("")
-        self.comboBox_ch3scale.addItem("")
         self.comboBox_ch3scale.setObjectName(u"comboBox_ch3scale")
         sizePolicy7.setHeightForWidth(self.comboBox_ch3scale.sizePolicy().hasHeightForWidth())
         self.comboBox_ch3scale.setSizePolicy(sizePolicy7)
@@ -2006,7 +1993,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_ch2Scale.setSpacing(10)
         self.horizontalLayout_ch2Scale.setObjectName(u"horizontalLayout_ch2Scale")
         self.comboBox_ch2scale = QComboBox(self.setting)
-        self.comboBox_ch2scale.addItem("")
         self.comboBox_ch2scale.addItem("")
         self.comboBox_ch2scale.addItem("")
         self.comboBox_ch2scale.setObjectName(u"comboBox_ch2scale")
@@ -2062,6 +2048,17 @@ class Ui_MainWindow(object):
         self.label_ch8Setting.setObjectName(u"label_ch8Setting")
 
         self.gridLayout_setting.addWidget(self.label_ch8Setting, 8, 1, 1, 1, Qt.AlignRight)
+
+        self.pushButton_saveSetting = QPushButton(self.setting)
+        self.pushButton_saveSetting.setObjectName(u"pushButton_saveSetting")
+        sizePolicy8 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Preferred)
+        sizePolicy8.setHorizontalStretch(0)
+        sizePolicy8.setVerticalStretch(0)
+        sizePolicy8.setHeightForWidth(self.pushButton_saveSetting.sizePolicy().hasHeightForWidth())
+        self.pushButton_saveSetting.setSizePolicy(sizePolicy8)
+        self.pushButton_saveSetting.setMinimumSize(QSize(150, 0))
+
+        self.gridLayout_setting.addWidget(self.pushButton_saveSetting, 8, 0, 1, 1, Qt.AlignHCenter)
 
         self.gridLayout_setting.setColumnStretch(0, 3)
         self.gridLayout_setting.setColumnStretch(1, 1)
@@ -2946,8 +2943,8 @@ class Ui_MainWindow(object):
 
         self.label_4 = QLabel(self.groupBox_calibration)
         self.label_4.setObjectName(u"label_4")
-        sizePolicy6.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
-        self.label_4.setSizePolicy(sizePolicy6)
+        sizePolicy5.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
+        self.label_4.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_Points.addWidget(self.label_4)
 
@@ -2960,8 +2957,8 @@ class Ui_MainWindow(object):
 
         self.label_5 = QLabel(self.groupBox_calibration)
         self.label_5.setObjectName(u"label_5")
-        sizePolicy6.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
-        self.label_5.setSizePolicy(sizePolicy6)
+        sizePolicy5.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
+        self.label_5.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_Points.addWidget(self.label_5)
 
@@ -2974,8 +2971,8 @@ class Ui_MainWindow(object):
 
         self.label_6 = QLabel(self.groupBox_calibration)
         self.label_6.setObjectName(u"label_6")
-        sizePolicy6.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
-        self.label_6.setSizePolicy(sizePolicy6)
+        sizePolicy5.setHeightForWidth(self.label_6.sizePolicy().hasHeightForWidth())
+        self.label_6.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_Points.addWidget(self.label_6)
 
@@ -2988,8 +2985,8 @@ class Ui_MainWindow(object):
 
         self.label_7 = QLabel(self.groupBox_calibration)
         self.label_7.setObjectName(u"label_7")
-        sizePolicy6.setHeightForWidth(self.label_7.sizePolicy().hasHeightForWidth())
-        self.label_7.setSizePolicy(sizePolicy6)
+        sizePolicy5.setHeightForWidth(self.label_7.sizePolicy().hasHeightForWidth())
+        self.label_7.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_Points.addWidget(self.label_7)
 
@@ -3002,8 +2999,8 @@ class Ui_MainWindow(object):
 
         self.label_8 = QLabel(self.groupBox_calibration)
         self.label_8.setObjectName(u"label_8")
-        sizePolicy6.setHeightForWidth(self.label_8.sizePolicy().hasHeightForWidth())
-        self.label_8.setSizePolicy(sizePolicy6)
+        sizePolicy5.setHeightForWidth(self.label_8.sizePolicy().hasHeightForWidth())
+        self.label_8.setSizePolicy(sizePolicy5)
 
         self.horizontalLayout_Points.addWidget(self.label_8)
 
@@ -3014,7 +3011,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_Points.addWidget(self.label_PointsUnit, 0, Qt.AlignHCenter)
 
-        self.horizontalLayout_Points.setStretch(0, 2)
+        self.horizontalLayout_Points.setStretch(0, 3)
         self.horizontalLayout_Points.setStretch(1, 3)
         self.horizontalLayout_Points.setStretch(2, 2)
         self.horizontalLayout_Points.setStretch(3, 3)
@@ -3310,9 +3307,9 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem9)
         if (self.tableWidget.rowCount() < 16):
             self.tableWidget.setRowCount(16)
-        font5 = QFont()
+        font6 = QFont()
         __qtablewidgetitem10 = QTableWidgetItem()
-        __qtablewidgetitem10.setFont(font5);
+        __qtablewidgetitem10.setFont(font6);
         self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem11)
@@ -3353,11 +3350,11 @@ class Ui_MainWindow(object):
         __qtablewidgetitem29 = QTableWidgetItem()
         self.tableWidget.setItem(0, 3, __qtablewidgetitem29)
         self.tableWidget.setObjectName(u"tableWidget")
-        sizePolicy8 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy8.setHorizontalStretch(0)
-        sizePolicy8.setVerticalStretch(0)
-        sizePolicy8.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
-        self.tableWidget.setSizePolicy(sizePolicy8)
+        sizePolicy9 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy9.setHorizontalStretch(0)
+        sizePolicy9.setVerticalStretch(0)
+        sizePolicy9.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
+        self.tableWidget.setSizePolicy(sizePolicy9)
         palette = QPalette()
         brush = QBrush(QColor(221, 221, 221, 255))
         brush.setStyle(Qt.SolidPattern)
@@ -3511,8 +3508,8 @@ class Ui_MainWindow(object):
 
         self.bottomBar = QFrame(self.contentBottom)
         self.bottomBar.setObjectName(u"bottomBar")
-        self.bottomBar.setMinimumSize(QSize(0, 35))
-        self.bottomBar.setMaximumSize(QSize(16777215, 22))
+        self.bottomBar.setMinimumSize(QSize(0, 40))
+        self.bottomBar.setMaximumSize(QSize(16777215, 40))
         self.bottomBar.setFrameShape(QFrame.NoFrame)
         self.bottomBar.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_5 = QHBoxLayout(self.bottomBar)
@@ -3522,10 +3519,7 @@ class Ui_MainWindow(object):
         self.stateLabel = QLabel(self.bottomBar)
         self.stateLabel.setObjectName(u"stateLabel")
         self.stateLabel.setMaximumSize(QSize(16777215, 16))
-        font6 = QFont()
-        font6.setBold(False)
-        font6.setItalic(False)
-        self.stateLabel.setFont(font6)
+        self.stateLabel.setFont(font1)
         self.stateLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_5.addWidget(self.stateLabel)
@@ -3718,8 +3712,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
-        self.comboBox_baudRate.setCurrentIndex(11)
+        self.stackedWidget.setCurrentIndex(1)
+        self.comboBox_baudRate.setCurrentIndex(7)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -3728,7 +3722,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"Ayra", None))
-        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"GUI for Adam (By PyDracula)", None))
+        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"GUI for A/D/U cards", None))
         self.topLogo.setText("")
         self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"Hide", None))
         self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
@@ -3749,18 +3743,18 @@ class Ui_MainWindow(object):
         self.textEdit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#ff79c6;\">PyDracula</span></p>\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">PyDracula</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#ffffff;\">An interface created using Python and PySide (support for PyQt), and with colors based on the Dracula theme created by Zeno Rocha.</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-inde"
-                        "nt:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#ffffff;\">MIT License</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px"
+                        "; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#ffffff;\">MIT License</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#bd93f9;\">Created by: Wanderson M. Pimenta</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#ff79c6;\">Convert UI</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">Convert UI</span></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-uic main.ui &gt; ui_main.py</span></p>\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#ff79c6;\">Convert QRC</span></p>\n"
-"<p align=\"center\" "
-                        "style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-rcc resources.qrc -o resources_rc.py</span></p></body></html>", None))
-        self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"Connection Setup (Based on ModBus)", None))
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\""
+                        ">Convert QRC</span></p>\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-rcc resources.qrc -o resources_rc.py</span></p></body></html>", None))
+        self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"Ayra cards GUI", None))
 #if QT_CONFIG(tooltip)
         self.settingsTopBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Settings", None))
 #endif // QT_CONFIG(tooltip)
@@ -3813,84 +3807,67 @@ class Ui_MainWindow(object):
         self.pushButton_disconnect.setText(QCoreApplication.translate("MainWindow", u"Disconnect", None))
         self.checkBox_65535.setText(QCoreApplication.translate("MainWindow", u"0-65535 scale", None))
         self.label_model.setText(QCoreApplication.translate("MainWindow", u"Model:", None))
-        self.label_deviceModel.setText(QCoreApplication.translate("MainWindow", u"Model", None))
+        self.label_deviceName.setText(QCoreApplication.translate("MainWindow", u"Model", None))
         self.label_vol.setText(QCoreApplication.translate("MainWindow", u"Voltage", None))
         self.label_cur.setText(QCoreApplication.translate("MainWindow", u"Current", None))
         self.comboBox_ch6scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch6scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch6scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.comboBox_ch6scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.label_minScale.setText(QCoreApplication.translate("MainWindow", u"Min", None))
         self.label_maxScale.setText(QCoreApplication.translate("MainWindow", u"Max", None))
         self.label_vScale.setText(QCoreApplication.translate("MainWindow", u"Scales", None))
         self.comboBox_ch8scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch8scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch8scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.comboBox_ch8scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.label_ch8vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.label_timeout.setText(QCoreApplication.translate("MainWindow", u"Timeout:", None))
         self.label_ch1Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 1:", None))
         self.label_ch4vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.comboBox_ch7scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch7scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch7scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.comboBox_ch7scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.label_ch3Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 3:", None))
         self.label_unitID.setText(QCoreApplication.translate("MainWindow", u"Unit ID:", None))
         self.label_ch5vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.comboBox_ch1scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch1scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch1scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.comboBox_ch1scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.label_ch7vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
-        self.label_deviceModelSetting.setText(QCoreApplication.translate("MainWindow", u"Model", None))
+        self.label_deviceNameSetting.setText(QCoreApplication.translate("MainWindow", u"Model", None))
         self.label_ch1vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.label_ResRate.setText(QCoreApplication.translate("MainWindow", u"Response Rate:", None))
         self.label_ch6Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 6:", None))
         self.comboBox_ch4scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch4scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch4scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.comboBox_ch4scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.comboBox_ch5scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch5scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch5scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.comboBox_ch5scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.label_baudRate.setText(QCoreApplication.translate("MainWindow", u"Baud Rate:", None))
-        self.comboBox_baudRate.setItemText(0, QCoreApplication.translate("MainWindow", u"300", None))
-        self.comboBox_baudRate.setItemText(1, QCoreApplication.translate("MainWindow", u"600", None))
-        self.comboBox_baudRate.setItemText(2, QCoreApplication.translate("MainWindow", u"1200", None))
-        self.comboBox_baudRate.setItemText(3, QCoreApplication.translate("MainWindow", u"2400", None))
-        self.comboBox_baudRate.setItemText(4, QCoreApplication.translate("MainWindow", u"4800", None))
-        self.comboBox_baudRate.setItemText(5, QCoreApplication.translate("MainWindow", u"9600", None))
-        self.comboBox_baudRate.setItemText(6, QCoreApplication.translate("MainWindow", u"14400", None))
-        self.comboBox_baudRate.setItemText(7, QCoreApplication.translate("MainWindow", u"19200", None))
-        self.comboBox_baudRate.setItemText(8, QCoreApplication.translate("MainWindow", u"38400", None))
-        self.comboBox_baudRate.setItemText(9, QCoreApplication.translate("MainWindow", u"56000", None))
-        self.comboBox_baudRate.setItemText(10, QCoreApplication.translate("MainWindow", u"57600", None))
-        self.comboBox_baudRate.setItemText(11, QCoreApplication.translate("MainWindow", u"115200", None))
-        self.comboBox_baudRate.setItemText(12, QCoreApplication.translate("MainWindow", u"128000", None))
-        self.comboBox_baudRate.setItemText(13, QCoreApplication.translate("MainWindow", u"153600", None))
-        self.comboBox_baudRate.setItemText(14, QCoreApplication.translate("MainWindow", u"230400", None))
-        self.comboBox_baudRate.setItemText(15, QCoreApplication.translate("MainWindow", u"256000", None))
-        self.comboBox_baudRate.setItemText(16, QCoreApplication.translate("MainWindow", u"460800", None))
-        self.comboBox_baudRate.setItemText(17, QCoreApplication.translate("MainWindow", u"921600", None))
+        self.comboBox_baudRate.setItemText(0, QCoreApplication.translate("MainWindow", u"1200", None))
+        self.comboBox_baudRate.setItemText(1, QCoreApplication.translate("MainWindow", u"2400", None))
+        self.comboBox_baudRate.setItemText(2, QCoreApplication.translate("MainWindow", u"4800", None))
+        self.comboBox_baudRate.setItemText(3, QCoreApplication.translate("MainWindow", u"9600", None))
+        self.comboBox_baudRate.setItemText(4, QCoreApplication.translate("MainWindow", u"19200", None))
+        self.comboBox_baudRate.setItemText(5, QCoreApplication.translate("MainWindow", u"38400", None))
+        self.comboBox_baudRate.setItemText(6, QCoreApplication.translate("MainWindow", u"57600", None))
+        self.comboBox_baudRate.setItemText(7, QCoreApplication.translate("MainWindow", u"115200", None))
 
         self.label_ch2vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.comboBox_ch3scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch3scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch3scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.comboBox_ch3scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.label_ch7Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 7:", None))
         self.label_ch3vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.comboBox_ch2scale.setItemText(0, QCoreApplication.translate("MainWindow", u"V", None))
-        self.comboBox_ch2scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mV", None))
-        self.comboBox_ch2scale.setItemText(2, QCoreApplication.translate("MainWindow", u"mA", None))
+        self.comboBox_ch2scale.setItemText(1, QCoreApplication.translate("MainWindow", u"mA", None))
 
         self.label_ch2Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 2:", None))
         self.label_ch4Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 4:", None))
         self.label_ch5Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 5:", None))
         self.label_ch6vScaleDash.setText(QCoreApplication.translate("MainWindow", u"-", None))
         self.label_ch8Setting.setText(QCoreApplication.translate("MainWindow", u"Channel 8:", None))
+        self.pushButton_saveSetting.setText(QCoreApplication.translate("MainWindow", u"Save", None))
         self.groupBox_calibration.setTitle(QCoreApplication.translate("MainWindow", u"Calibration Values", None))
         self.label_ch1calibration.setText(QCoreApplication.translate("MainWindow", u"Channel 1:", None))
         self.pushButton_ch1point1.setText(QCoreApplication.translate("MainWindow", u"Set", None))
