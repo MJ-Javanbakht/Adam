@@ -100,6 +100,11 @@ class MainWindow(QMainWindow):
         # Save settings
         widgets.pushButton_saveSetting.clicked.connect(self.changeSetup)
 
+        # Set buttons clicked
+        pushButtons = widgets.calibration.findChildren(QPushButton)
+        for p in pushButtons:
+           p.clicked.connect(self.calibrateDevice)
+
         # Setup client
         # ///////////////////////////////////////////////////////////////
         # Set initial values
@@ -151,9 +156,14 @@ class MainWindow(QMainWindow):
             widgets.stackedWidget.setCurrentWidget(widgets.home)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
-            self.timer = QTimer() 
-            self.timer.timeout.connect(self.readRegisters)
-            self.timer.start(1000)
+
+            self.client.write_registers(29, 0,unit= self.client.unitID)
+
+            self.timerRead = QTimer() 
+            self.timerRead.timeout.connect(self.readRegisters)
+            self.timerRead.timeout.emit()
+            resRate = int(widgets.lineEdit_ResRate.text())
+            self.timerRead.start(resRate)
 
         # SHOW WIDGETS PAGE
         elif btnName == "btn_setting":
@@ -161,45 +171,31 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
+            self.client.write_registers(29, 0,unit= self.client.unitID)
+
         # SHOW NEW PAGE
         elif btnName == "btn_calibration":
             widgets.stackedWidget.setCurrentWidget(widgets.calibration) # SET PAGE
             UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
+            self.calibration()
 
         elif btnName == "btn_log":
             widgets.stackedWidget.setCurrentWidget(widgets.log)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
+            self.client.write_registers(29, 0,unit= self.client.unitID)
+
         elif btnName == "btn_trend":
             widgets.stackedWidget.setCurrentWidget(widgets.widgets)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
+            self.client.write_registers(29, 0,unit= self.client.unitID)
+
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
-
-    # If radioButton is checked
-    # ///////////////////////////////////////////////////////////////
-    def radioChanged(self):
-        radioButton = self.sender()
-        device = self.device
-        device.radioChanged(radioButton= radioButton)
-
-    # If scale 65535 is checked
-    # ///////////////////////////////////////////////////////////////
-    def scaleTo65535(self):
-        device = self.device
-        device.scaleTo65535()
-
-    # If combobox is changed
-    # ///////////////////////////////////////////////////////////////
-    def comboBoxChanged(self):
-        comboBox = self.sender()
-        device = self.device
-        device.comboBoxChanged(comboBox= comboBox)
-        
 
     # RESIZE EVENTS
     # ///////////////////////////////////////////////////////////////
@@ -247,6 +243,25 @@ class MainWindow(QMainWindow):
         device = self.device
         device.readRegisters()
         
+    # If radioButton is checked
+    # ///////////////////////////////////////////////////////////////
+    def radioChanged(self):
+        radioButton = self.sender()
+        device = self.device
+        device.radioChanged(radioButton= radioButton)
+
+    # If scale 65535 is checked
+    # ///////////////////////////////////////////////////////////////
+    def scaleTo65535(self):
+        device = self.device
+        device.scaleTo65535()
+
+    # If combobox is changed
+    # ///////////////////////////////////////////////////////////////
+    def comboBoxChanged(self):
+        comboBox = self.sender()
+        device = self.device
+        device.comboBoxChanged(comboBox= comboBox)
 
     # Change and send settings
     # ///////////////////////////////////////////////////////////////
@@ -254,11 +269,18 @@ class MainWindow(QMainWindow):
         device = self.device
         device.changeSetup()
 
+    # Set values for calibration page
+    # ///////////////////////////////////////////////////////////////
+    def calibration(self):
+        device = self.device
+        device.readCalibrationValues()
 
     # Calibrate device
     # ///////////////////////////////////////////////////////////////
-    def calibration(self):
-        pass
+    def calibrateDevice(self):
+        button = self.sender()
+        device = self.device
+        device.calibrateDevice(button= button)
 
     # Handle errors and log
     # ///////////////////////////////////////////////////////////////
@@ -311,8 +333,15 @@ class SetupDialog(QDialog):
             self.client = self.connectionCheck()
             
         elif btnName == 'pushButton_close':
-            MessageBox()            
-            sys.exit()
+            exitMessage = MessageBox(
+                icon = QMessageBox.Question,
+                title= 'Exit',
+                text= 'Do you want to exit?',
+                buttons= QMessageBox.StandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
+            )
+            exitMessage.exec()
+            if exitMessage.value == True:
+                sys.exit()
 
     # CLOSE EVENT
     # ///////////////////////////////////////////////////////////////
@@ -399,14 +428,15 @@ class MessageBox(QMessageBox):
         
         self.accepted.connect(self.acceptValue)
         self.rejected.connect(self.rejectValue)
-        
-        self.exec()
 
     def acceptValue(self):
         self.value= True
 
     def rejectValue(self):
         self.value= False
+    
+    def closeEvent(self, event: QCloseEvent):
+        return super().closeEvent(event)
 
 # Color and Text for widgets
 # ///////////////////////////////////////////////////////////////
@@ -443,12 +473,12 @@ class A_8017():
         widgets.lineEdit_timeout.setText(ui.lineEdit_ResTout.text())
         widgets.lineEdit_ResRate.setText('1000')
         
-        for i in range(1,9):
-            combo = widgets.setting.findChild(QComboBox, f'comboBox_ch{i}scale')
-            lineLow = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{i}vLow')
-            lineHigh = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{i}vHigh')
-            lineLow.setText(str(self.scales[f"{combo.currentText()}l"][i-1]))
-            lineHigh.setText(str(self.scales[f"{combo.currentText()}h"][i-1]))
+        for i in range(8):
+            combo = widgets.setting.findChild(QComboBox, f'comboBox_ch{i+1}scale')
+            lineLow = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{i+1}vLow')
+            lineHigh = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{i+1}vHigh')
+            lineLow.setText(str(self.scales[f"{combo.currentText()}l"][i]))
+            lineHigh.setText(str(self.scales[f"{combo.currentText()}h"][i]))
 
     # Read registers from A_8017 device
     # ///////////////////////////////////////////////////////////////
@@ -459,26 +489,8 @@ class A_8017():
         vi = self.client.read_holding_registers(10,8,unit= self.client.unitID)
         self.vi = vi.getRegister(slice(0,8))
 
-        # for i in range(8):
-        #     if comboBox.objectName() == f'comboBox_ch{r}scale':
-        #         widgets.home.findChild(QLabel, f"label_ch{r}scale").setText("mV")
-        #         lineLow = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{r}vLow')
-        #         lineHigh = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{r}vHigh')
-        #         lineLow.setText(str(self.device.scales[f"{comboBox.currentText()}l"][r-1]))
-        #         lineHigh.setText(str(self.device.scales[f"{comboBox.currentText()}h"][r-1]))
-        #     value = 
-        #     widgets.home.findChild(QLineEdit, f'lineEdit_ch{i+1}').setText(str(registers[i]))
-
         for i in range(8):
-            if self.vi[i]:
-                widgets.home.findChild(QRadioButton, f'radioButton_ch{i+1}i').setChecked(True)
-                widgets.home.findChild(QLabel, f'label_ch{i+1}scale').setText('mA')
-                if self.flag65535 == True:
-                    value = self.registers[i]
-                else:
-                    value = self.scales['mAl'][i] + (self.registers[i] * self.gains['i'][i])
-                widgets.home.findChild(QLineEdit, f'lineEdit_ch{i+1}').setText(str(value))
-            else:
+            if self.vi[i] == 1:
                 widgets.home.findChild(QRadioButton, f'radioButton_ch{i+1}v').setChecked(True)
                 widgets.home.findChild(QLabel, f'label_ch{i+1}scale').setText('V')
                 if self.flag65535 == True:
@@ -486,10 +498,18 @@ class A_8017():
                 else:
                     value = self.scales['Vl'][i] + (self.registers[i] * self.gains['v'][i])
                 widgets.home.findChild(QLineEdit, f'lineEdit_ch{i+1}').setText(str(value))
+            else:
+                widgets.home.findChild(QRadioButton, f'radioButton_ch{i+1}i').setChecked(True)
+                widgets.home.findChild(QLabel, f'label_ch{i+1}scale').setText('mA')
+                if self.flag65535 == True:
+                    value = self.registers[i]
+                else:
+                    value = self.scales['mAl'][i] + (self.registers[i] * self.gains['i'][i])
+                widgets.home.findChild(QLineEdit, f'lineEdit_ch{i+1}').setText(str(value))
 
     def radioChanged(self, radioButton):
         for i in range(8):
-            if radioButton.objectName() == f'radioButton_ch{i+1}i':
+            if radioButton.objectName() == f'radioButton_ch{i+1}i' or radioButton.objectName() == f'radioButton_ch{i+1}v':
                 if widgets.home.findChild(QRadioButton, f'radioButton_ch{i+1}v').isChecked():
                     widgets.home.findChild(QLabel, f"label_ch{i+1}scale").setText("V")
                     lineEdit = widgets.home.findChild(QLineEdit, f"lineEdit_ch{i+1}")
@@ -498,7 +518,7 @@ class A_8017():
                     else:
                         value = self.scales['Vl'][i] + (self.registers[i] * self.gains['v'][i])
                     lineEdit.setText(str(value))
-                    self.client.write_registers(10+i, 0, unit= self.client.unitID)
+                    self.client.write_registers(10+i, 1, unit= self.client.unitID)
                 elif widgets.home.findChild(QRadioButton, f'radioButton_ch{i+1}i').isChecked():
                     widgets.home.findChild(QLabel, f"label_ch{i+1}scale").setText("mA")
                     lineEdit = widgets.home.findChild(QLineEdit, f"lineEdit_ch{i+1}")
@@ -507,7 +527,7 @@ class A_8017():
                     else:
                         value = self.scales['mAl'][i] + (self.registers[i] * self.gains['i'][i])
                     lineEdit.setText(str(value))
-                    self.client.write_registers(10+i, 1, unit= self.client.unitID)
+                    self.client.write_registers(10+i, 0, unit= self.client.unitID)
                     
     def scaleTo65535(self):
         if widgets.checkBox_65535.isChecked():
@@ -516,12 +536,24 @@ class A_8017():
             self.flag65535 = False
 
     def comboBoxChanged(self, comboBox):
-        for i in range(8):
-            if comboBox.objectName() == f'comboBox_ch{i+1}scale':
-                lineLow = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{i+1}vLow')
-                lineHigh = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{i+1}vHigh')
-                lineLow.setText(str(self.scales[f"{comboBox.currentText()}l"][i]))
-                lineHigh.setText(str(self.scales[f"{comboBox.currentText()}h"][i]))
+        if comboBox.parentWidget() == widgets.calibration:
+            for i in range(8):
+                if comboBox.objectName() == f'comboBox_ch{i+1}CalScale':
+                    if comboBox.currentText() == 'v':
+                        for j in range(5):
+                            lineEdit = widgets.calibration.findChild(QLineEdit, f"lineEdit_ch{i+1}point{j+1}")
+                            lineEdit.setText(str(self.vCalVal[i*5 + j]))
+                    else:
+                        for j in range(5):
+                            lineEdit = widgets.calibration.findChild(QLineEdit, f"lineEdit_ch{i+1}point{j+1}")
+                            lineEdit.setText(str(self.iCalVal[i*5 + j]))
+        elif comboBox.parentWidget() == widgets.setting:
+            for i in range(8):
+                if comboBox.objectName() == f'comboBox_ch{i+1}scale':
+                    lineLow = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{i+1}vLow')
+                    lineHigh = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{i+1}vHigh')
+                    lineLow.setText(str(self.scales[f"{comboBox.currentText()}l"][i]))
+                    lineHigh.setText(str(self.scales[f"{comboBox.currentText()}h"][i]))
 
     def changeSetup(self):
         msgBox = MessageBox(
@@ -531,21 +563,90 @@ class A_8017():
             "and you may need to reconnect. Continue?",
             buttons= QMessageBox.StandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
         )
+        msgBox.exec()
         if msgBox.value:
-            for i in range(1,9):
+            for i in range(8):
                 widgets.comboBox_ch1scale
-                combo = widgets.setting.findChild(QComboBox, f"comboBox_ch{i}scale")
-                low = widgets.setting.findChild(QLineEdit, f"lineEdit_ch{i}vLow")
-                high = widgets.setting.findChild(QLineEdit, f"lineEdit_ch{i}vLow")
-                self.scales[f"{combo.currentText()}l"][i-1] = int(low.text())
-                self.scales[f"{combo.currentText()}h"][i-1] = int(high.text())
+                combo = widgets.setting.findChild(QComboBox, f"comboBox_ch{i+1}scale")
+                low = widgets.setting.findChild(QLineEdit, f"lineEdit_ch{i+1}vLow")
+                high = widgets.setting.findChild(QLineEdit, f"lineEdit_ch{i+1}vLow")
+                self.scales[f"{combo.currentText()}l"][i] = int(low.text())
+                self.scales[f"{combo.currentText()}h"][i] = int(high.text())
             
             self.client.timeout = int(widgets.lineEdit_timeout.text()) / 1000
             unit = int(widgets.lineEdit_unitID.text())
             baudrate = int(widgets.comboBox_baudRate.currentText())
             self.client.write_registers(25, [unit, baudrate],unit= self.client.unitID)
 
+    def readCalibrationValues(self):
+        vCalibrateValues = self.client.read_holding_registers(30,80, unit= self.client.unitID)
+        self.vCalVal = vCalibrateValues.getRegister(slice(1,80,2))
+        self.vCalSet = vCalibrateValues.getRegister(slice(0,79,2))
+        # print(self.vCalSet, self.vCalVal)
+        iCalibrateValues = self.client.read_holding_registers(110,80, unit= self.client.unitID)
+        self.iCalVal = iCalibrateValues.getRegister(slice(1,80,2))
+        self.iCalSet = iCalibrateValues.getRegister(slice(0,79,2))
+        for i in range(8):
+            comboBox = widgets.calibration.findChild(QComboBox, f"comboBox_ch{i+1}CalScale")
+            if comboBox.currentText() == 'v':
+                for j in range(5):
+                    lineEdit = widgets.calibration.findChild(QLineEdit, f"lineEdit_ch{i+1}point{j+1}")
+                    lineEdit.setText(str(self.vCalVal[i*5 + j]))
+            else:
+                for j in range(5):
+                    lineEdit = widgets.calibration.findChild(QLineEdit, f"lineEdit_ch{i+1}point{j+1}")
+                    lineEdit.setText(str(self.iCalVal[i*5 + j]))
+            
+        self.client.write_registers(29, 1,unit= self.client.unitID)
 
+    def calibrateDevice(self, button):
+        self.calSetFlag = True
+        name = button.objectName()
+        # button.objectName() = pushButton_ch1point1
+        self.point = int(name[-1]) - 1
+        self.channel = int(name[-7]) - 1
+        print(self.channel, self.point)
+
+        lineEdit = widgets.calibration.findChild(QLineEdit, f"lineEdit_ch{self.channel+1}point{self.point+1}")
+        self.value = int(lineEdit.text())
+        self.comboBox = lineEdit = widgets.calibration.findChild(QComboBox, f"comboBox_ch{self.channel+1}CalScale")
+        if self.comboBox.currentText() == 'v':
+            self.address = 30 + self.channel*10 + self.point*2
+        else:
+            self.address = 110 + self.channel*10 + self.point*2
+
+        self.client.write_registers(self.address+1,self.value, unit= self.client.unitID)
+        self.client.write_registers(self.address,1, unit= self.client.unitID)
+
+        self.msgBox = MessageBox(
+            icon= QMessageBox.Information,
+            title= "Calibrating",
+            text= "Please wait while device is calibrating the point...",
+            buttons= QMessageBox.NoButton
+        )
+        self.msgBox.show()
+        self.timerSetVal = QTimer()
+        self.timerSetVal.timeout.connect(self.readSetVal)
+        self.timerSetVal.timeout.emit()
+        self.timerSetVal.start(500)
+
+    def readSetVal(self):
+        setReg = self.client.read_holding_registers(self.address,1,unit= self.client.unitID)
+        setVal = setReg.getRegister(0)
+        print(setVal)
+        if setVal == 0:
+            self.calSetFlag = False
+            print('calibrated')
+            if self.comboBox.currentText() == 'v':
+                self.vCalVal[self.channel*5 + self.point] = self.value
+            else:
+                self.iCalVal[self.channel*5 + self.point] = self.value
+
+            self.msgBox.setInformativeText("<font color= 'green'> Calibrated! </font>")
+            self.msgBox.hide()
+            SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='green',message='Calibrated Successfully!')
+            self.timerSetVal.stop()
+        
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
