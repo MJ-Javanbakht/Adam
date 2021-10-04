@@ -826,7 +826,7 @@ class Ui_Setup(object):
 
         self.retranslateUi(Setup)
 
-        self.comboBox_BaudRate.setCurrentIndex(7)
+        self.comboBox_BaudRate.setCurrentIndex(3)
         self.comboBox_DataBits.setCurrentIndex(1)
 
 

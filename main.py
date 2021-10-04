@@ -2,6 +2,7 @@ import sys
 import os
 import time
 from serial.tools import list_ports
+from threading import Event
 
 from pymodbus.client.sync import ModbusSerialClient as ModbusClient
 from pymodbus.register_read_message import ReadHoldingRegistersResponse
@@ -18,6 +19,8 @@ os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
 # SET AS GLOBAL WIDGETS
 # ///////////////////////////////////////////////////////////////
 widgets = None
+global modbusConnectionFlag
+modbusConnectionFlag = bool()
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -32,20 +35,21 @@ class MainWindow(QMainWindow):
         icon = QPixmap('Adam\design\images\images\AYRALOGO.png')
         self.setWindowIcon(icon)
 
-        # MAKE THE LINE EDITS ACCEPT ONLY DIGITS
+        # Setup client
         # ///////////////////////////////////////////////////////////////
-        lineEdits = widgets.home.findChildren(QLineEdit)
-        for l in lineEdits:
-            l.setValidator(QRegularExpressionValidator(QRegularExpression('[0-9]+\.?[0-9]{,4}')))
-
-        lineEdits = widgets.setting.findChildren(QLineEdit)
-        for l in lineEdits:
-            l.setValidator(QRegularExpressionValidator(QRegularExpression('[0-9]+\.?[0-9]+')))
+        # Set initial values
+        self.deviceName = 'None'
+        self.calibrationFlag = bool()
+        self.timer = QTimer()
         
-        lineEdits = widgets.calibration.findChildren(QLineEdit)
-        for l in lineEdits:
-            l.setValidator(QRegularExpressionValidator(QRegularExpression('[0-9]+')))
-
+        # Get device information
+        self.client = self.setupClient()
+    
+        # Show device name and connection state
+        # SetStyleSheet(widgets.stateLabel,font='14pt Bold',color='green',message='Connected')
+        SetStyleSheet(self.ui.label_deviceName,'16pt','lightgreen',f"A_{self.deviceName}")
+        SetStyleSheet(self.ui.label_deviceNameSetting,'16pt','lightgreen',f"A_{self.deviceName}")
+        
         # USE CUSTOM TITLE BAR | USE AS "False" FOR MAC OR LINUX
         # ///////////////////////////////////////////////////////////////
         Settings.ENABLE_CUSTOM_TITLE_BAR = True
@@ -71,6 +75,21 @@ class MainWindow(QMainWindow):
         # ///////////////////////////////////////////////////////////////
         widgets.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
+        # MAKE THE LINE EDITS ACCEPT ONLY DIGITS
+        # ///////////////////////////////////////////////////////////////
+        lineEdits = widgets.home.findChildren(QLineEdit)
+        for l in lineEdits:
+            l.setValidator(QRegularExpressionValidator(QRegularExpression('[0-9]+\.?[0-9]{,4}')))
+
+        lineEdits = widgets.setting.findChildren(QLineEdit)
+        for l in lineEdits:
+            l.setValidator(QRegularExpressionValidator(QRegularExpression('[0-9]+\.?[0-9]+')))
+        
+        lineEdits = widgets.calibration.findChildren(QLineEdit)
+        for l in lineEdits:
+            l.setValidator(QRegularExpressionValidator(QRegularExpression('[0-9]+')))
+
+        
         # BUTTONS CLICK
         # ///////////////////////////////////////////////////////////////
 
@@ -117,23 +136,13 @@ class MainWindow(QMainWindow):
         for p in pushButtons:
            p.clicked.connect(self.calibrateDevice)
 
-        # Setup client
-        # ///////////////////////////////////////////////////////////////
-        # Set initial values
-        self.deviceName = 'None'
-        
-        # Get device information
-        self.client = self.setupClient()
-        widgets.btn_home.click()
-        
-
-        # Show device name and connection state
-        SetStyleSheet(widgets.stateLabel,font='14pt Bold',color='green',message='Connected')
-        SetStyleSheet(self.ui.label_deviceName,'16pt','lightgreen',f"A_{self.deviceName}")
-        SetStyleSheet(self.ui.label_deviceNameSetting,'16pt','lightgreen',f"A_{self.deviceName}")
-        
+        # Connect/disconnect buttons clicked
+        widgets.pushButton_connect.clicked.connect(self.buttonClick)
+        widgets.pushButton_disconnect.clicked.connect(self.buttonClick)
+            
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
+        widgets.btn_home.click()
         self.show()
 
         # SET CUSTOM THEME
@@ -163,6 +172,8 @@ class MainWindow(QMainWindow):
         btn = self.sender()
         btnName = btn.objectName()
 
+        global modbusConnectionFlag
+
         # SHOW HOME PAGE
         if btnName == "btn_home":
             widgets.stackedWidget.setCurrentWidget(widgets.home)
@@ -171,11 +182,12 @@ class MainWindow(QMainWindow):
 
             self.endCalibration()
 
-            self.timerRead = QTimer() 
-            self.timerRead.timeout.connect(self.readRegisters)
-            self.timerRead.timeout.emit()
+            app.processEvents()
+            self.timer.disconnect(self.timer, SIGNAL("timeout()"), self.calibration)
+            self.timer.timeout.connect(self.readRegisters)
+            self.timer.timeout.emit()
             resRate = int(widgets.lineEdit_ResRate.text())
-            self.timerRead.start(resRate)
+            self.timer.start(resRate)
 
         # SHOW WIDGETS PAGE
         elif btnName == "btn_setting":
@@ -190,11 +202,13 @@ class MainWindow(QMainWindow):
             widgets.stackedWidget.setCurrentWidget(widgets.calibration) # SET PAGE
             UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
-            self.timerCal = QTimer() 
-            self.timerCal.timeout.connect(self.calibration)
-            self.timerCal.timeout.emit()
+            
+            app.processEvents()
+            self.timer.disconnect(self.timer, SIGNAL("timeout()"),self.readRegisters)
+            self.timer.timeout.connect(self.calibration)
+            self.timer.timeout.emit()
             resRate = int(widgets.lineEdit_ResRate.text())
-            self.timerCal.start(resRate)
+            self.timer.start(resRate)
 
         elif btnName == "btn_log":
             widgets.stackedWidget.setCurrentWidget(widgets.log)
@@ -207,8 +221,24 @@ class MainWindow(QMainWindow):
             widgets.stackedWidget.setCurrentWidget(widgets.widgets)
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
-
+            
             self.endCalibration()
+
+        elif btnName == "pushButton_connect":
+            if modbusConnectionFlag == False and self.client.is_socket_open() == True:
+                self.client.connect()
+                SetStyleSheet(widgets.stateLabel,font='14pt Bold',color='green',message='Connected')
+            elif not self.client.is_socket_open():
+                # self.client.close()
+                QCoreApplication.quit()
+                status = QProcess.startDetached(sys.executable, sys.argv)
+
+        elif btnName == "pushButton_disconnect":
+            modbusConnectionFlag = False
+            self.client.close()
+            # self.client.socket.close()
+            SetStyleSheet(widgets.stateLabel,font='14pt Bold',color='red',message='Disconnected')
+
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
@@ -234,6 +264,26 @@ class MainWindow(QMainWindow):
     # CLOSE EVENT
     # ///////////////////////////////////////////////////////////////
     def closeEvent(self, event: QCloseEvent) -> None:
+        endCalibration = self.device.read_write(
+            function="write_register",
+            address=29,
+            value=0
+        )
+        while endCalibration == False:
+            CalFailedMsg = MessageBox(
+                icon= QMessageBox.Warning,
+                title="Calibration",
+                text="Couldn't save calibration setting,\ntry again?",
+                buttons= QMessageBox.StandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
+            )
+            CalFailedMsg.exec()
+            if CalFailedMsg.value == False:
+                break
+            endCalibration = self.device.read_write(
+                function="write_register",
+                address=29,
+                value=0
+            )
         self.client.close()
         return super().closeEvent(event)
 
@@ -243,10 +293,9 @@ class MainWindow(QMainWindow):
         setup = SetupDialog()
         setup.exec()
         ui = setup.ui
-        
-        if setup.modbusConnectionFlag:
-            self.modbusConnectionFlag = setup.modbusConnectionFlag
 
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
             self.deviceName = format(setup.deviceName, 'x')
             if self.deviceName == "8017":
                 self.device = A_8017(setup.client, ui)
@@ -256,53 +305,73 @@ class MainWindow(QMainWindow):
     # Read registers from device
     # ///////////////////////////////////////////////////////////////
     def readRegisters(self):
-        device = self.device
-        device.readRegisters()
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
+            device = self.device
+            device.readRegisters()
         
     # If radioButton is checked
     # ///////////////////////////////////////////////////////////////
     def radioChanged(self):
-        radioButton = self.sender()
-        device = self.device
-        device.radioChanged(radioButton= radioButton)
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
+            radioButton = self.sender()
+            device = self.device
+            device.radioChanged(radioButton= radioButton)
 
     # If scale 65535 is checked
     # ///////////////////////////////////////////////////////////////
     def scaleTo65535(self):
-        device = self.device
-        device.scaleTo65535()
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
+            device = self.device
+            device.scaleTo65535()
 
     # If combobox is changed
     # ///////////////////////////////////////////////////////////////
     def comboBoxChanged(self):
-        comboBox = self.sender()
-        device = self.device
-        device.comboBoxChanged(comboBox= comboBox)
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
+            comboBox = self.sender()
+            device = self.device
+            device.comboBoxChanged(comboBox= comboBox)
 
     # Change and send settings
     # ///////////////////////////////////////////////////////////////
     def changeSetup(self):
-        device = self.device
-        device.changeSetup()
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
+            device = self.device
+            device.changeSetup()
 
     # Set values for calibration page
     # ///////////////////////////////////////////////////////////////
     def calibration(self):
-        device = self.device
-        device.readCalibrationValues()
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
+            device = self.device
+            self.calibrationFlag =  device.readCalibrationValues()
 
     # Calibrate device
     # ///////////////////////////////////////////////////////////////
     def calibrateDevice(self):
-        button = self.sender()
-        device = self.device
-        device.calibrateDevice(button= button)
+        self.timer.stop()
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
+            button = self.sender()
+            device = self.device
+            device.calibrateDevice(button= button)
+
+        self.timer.start()
 
     # Save calibration setting
     # ///////////////////////////////////////////////////////////////
     def endCalibration(self):
-        device = self.device
-        device.endCalibration()
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
+            if self.calibrationFlag == True:
+                device = self.device
+                self.calibrationFlag = device.endCalibration()
         
     # Handle errors and log
     # ///////////////////////////////////////////////////////////////
@@ -339,9 +408,9 @@ class SetupDialog(QDialog):
 
         # Value to check if device is connected
         # ///////////////////////////////////////////////////////////////
-        self.modbusConnectionFlag = False
         self.connection = False
 
+        app.processEvents()
         self.timerCom = QTimer()
         self.timerCom.timeout.connect(self.readCom)
         self.timerCom.timeout.emit()
@@ -383,6 +452,8 @@ class SetupDialog(QDialog):
     # Check the connection
     # ///////////////////////////////////////////////////////////////
     def connectionCheck(self):
+        global modbusConnectionFlag
+
         method = self.ui.radioButton_RTU.text().lower()  
         port = f"COM{self.ui.comboBox_COM.currentIndex()+1}"
         bytesize = int(self.ui.comboBox_DataBits.currentText())
@@ -403,25 +474,25 @@ class SetupDialog(QDialog):
             mapregister = client.read_holding_registers(20,1,unit= client.unitID)
             if isinstance(mapregister, ReadHoldingRegistersResponse):
                 SetStyleSheet(self.ui.status,color='green',message='Connecting...')
-                time.sleep(0.5)
+                time.sleep(2)
                 self.deviceName = mapregister.getRegister(0)
-                self.modbusConnectionFlag = True
+                modbusConnectionFlag = True
                 self.close()
                 return client
             elif isinstance(mapregister, ModbusIOException):
-                self.modbusConnectionFlag = False
-                time.sleep(0.5)
+                modbusConnectionFlag = False
+                time.sleep(0.2)
                 SetStyleSheet(self.ui.status,color='red',message=mapregister.message)
             else:
-                self.modbusConnectionFlag = False
-                time.sleep(0.5)
+                modbusConnectionFlag = False
+                time.sleep(0.2)
                 try:
                     SetStyleSheet(self.ui.status,color='red',message=mapregister.message)
                 except:
                     SetStyleSheet(self.ui.status,color='red',message='ModBus is not responding!')
         else:
-            self.modbusConnectionFlag = False
-            time.sleep(0.5)
+            modbusConnectionFlag = False
+            time.sleep(0.2)
             SetStyleSheet(self.ui.status,color='red',message=f'Could not open port {self.ui.comboBox_COM.currentText()}')
 
     def readCom(self):
@@ -496,6 +567,7 @@ class A_8017():
 
         self.flag65535 = False
         self.startCalibrationFlag = False
+        self.errorCount = 0
         self.scales = {
             'Vl': [0,0,0,0,0,0,0,0],
             'Vh': [10,10,10,10,10,10,10,10],
@@ -539,13 +611,13 @@ class A_8017():
             address=0,
             count=8
         )
-        if register != False:
+        if register != False and register != None:
             vi = self.read_write(
                 function="read_holding_registers",
                 address=10,
                 count=8
             )
-            if vi != False:
+            if vi != False and vi != None:
                 self.registers = register.getRegister(slice(0,8))
                 self.vi = vi.getRegister(slice(0,8))
                 for i in range(8):
@@ -583,6 +655,7 @@ class A_8017():
                         address=10+i,
                         value=1
                     )
+                    widgets.calibration.findChild(QComboBox,f'comboBox_ch{i+1}CalScale').setCurrentIndex(0)
                     # if writeV == True:
                     #     widgets.home.findChild(QLabel, f"label_ch{i+1}scale").setText("V")
                     #     lineEdit = widgets.home.findChild(QLineEdit, f"lineEdit_ch{i+1}")
@@ -598,6 +671,7 @@ class A_8017():
                         address=10+i,
                         value=0
                     )
+                    widgets.calibration.findChild(QComboBox,f'comboBox_ch{i+1}CalScale').setCurrentIndex(1)
                     # if writeI == True:
                     #     widgets.home.findChild(QLabel, f"label_ch{i+1}scale").setText("mA")
                     #     lineEdit = widgets.home.findChild(QLineEdit, f"lineEdit_ch{i+1}")
@@ -661,7 +735,7 @@ class A_8017():
                 self.scales[f"{combo.currentText()}l"][i] = float(low.text())
                 self.scales[f"{combo.currentText()}h"][i] = float(high.text())
                 self.gains[combo.currentText()][i] = (self.scales[f"{combo.currentText()}h"][i] - self.scales[f"{combo.currentText()}l"][i])/65535
-            # print(self.gains)
+            
             self.client.timeout = int(widgets.lineEdit_timeout.text()) / 1000
             unit = int(widgets.lineEdit_unitID.text())
             baudrate = int(widgets.comboBox_baudRate.currentIndex())
@@ -685,11 +759,6 @@ class A_8017():
                     )
                     saveMsgBox.exec()
                     if saveMsgBox.value == True:
-                        # MainWindow.close(MainWindow)
-                        # app.closeAllWindows()
-                        # self.client.close()
-                        # sys.exit(app.exec())
-                        # os.execl(sys.executable, *sys.argv)
                         QCoreApplication.quit()
                         status = QProcess.startDetached(sys.executable, sys.argv)
                         # print(status)
@@ -740,14 +809,17 @@ class A_8017():
                         startCalFailed.exec()
                         if startCalFailed.value == False:
                             widgets.btn_home.click()
+                            break
                         else:
                             startCalibration = self.read_write(
                                 function='write_register',
                                 address=29,
                                 value=1
                             )
-                            if startCalibration != False:
-                                self.startCalibrationFlag = True
+                    else:
+                        self.startCalibrationFlag = True
+
+            return self.startCalibrationFlag
             
     def endCalibration(self):
         endCalibration = self.read_write(
@@ -770,8 +842,10 @@ class A_8017():
                 address=29,
                 value=0
             )
-        if endCalibration != False:
+        else:
             self.startCalibrationFlag = False
+
+        return self.startCalibrationFlag
     
     
     def calibrateDevice(self, button):
@@ -877,35 +951,51 @@ class A_8017():
                 self.timerSetVal.stop()
         
     def read_write(self, function, address, value= [], count= 1):
-        errorCount = 0
+        # app.processEvents()
+        response = False
         if function == 'read_holding_registers':
-            while errorCount < 3:
+            try:
                 response = self.client.read_holding_registers(address, count,unit=self.client.unitID)
+            except:
+                SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message="Error")
+            finally:
                 if isinstance(response, ReadHoldingRegistersResponse):
                     SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='green',message='Connected')
+                    self.errorCount = 0
                     return response
-                errorCount += 1
         elif function == 'write_registers':
-            while errorCount < 3:
+            try:
                 response = self.client.write_registers(address, value,unit=self.client.unitID)
+            except:
+                SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message="Error")
+            finally:
                 if isinstance(response, WriteMultipleRegistersResponse):
                     SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='green',message='Connected')
+                    self.errorCount = 0
                     return response
-                errorCount += 1
         elif function == 'write_register':
-            while errorCount < 3:
+            try:
                 response = self.client.write_register(address, value,unit=self.client.unitID)
+            except:
+                SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message="Error")
+            finally:
                 if isinstance(response, WriteSingleRegisterResponse):
                     SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='green',message='Connected')
+                    self.errorCount = 0
                     return response
-                errorCount += 1
-        if errorCount >= 3:
-            SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message='Error')
-            # time.sleep(0.1)
-            return False
+        
+        SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message='Error')
+        time.sleep(0.2)
+        self.errorCount += 1
+        if self.errorCount >= 3:
+            global modbusConnectionFlag
+            modbusConnectionFlag = False
+            SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message='Disconnected')
+        return False
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
+    app.processEvents()
     sys.exit(app.exec())
