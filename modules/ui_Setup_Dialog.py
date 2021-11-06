@@ -682,7 +682,7 @@ class Ui_Setup(object):
 
         self.groupBox_Remote = QGroupBox(Setup)
         self.groupBox_Remote.setObjectName(u"groupBox_Remote")
-        self.groupBox_Remote.setEnabled(True)
+        self.groupBox_Remote.setEnabled(False)
         sizePolicy.setHeightForWidth(self.groupBox_Remote.sizePolicy().hasHeightForWidth())
         self.groupBox_Remote.setSizePolicy(sizePolicy)
         self.groupBox_Remote.setStyleSheet(u"background-color: transparent;")
@@ -690,7 +690,7 @@ class Ui_Setup(object):
         self.gridLayout_remote.setObjectName(u"gridLayout_remote")
         self.radioButton_IPv4 = QRadioButton(self.groupBox_Remote)
         self.radioButton_IPv4.setObjectName(u"radioButton_IPv4")
-        self.radioButton_IPv4.setEnabled(True)
+        self.radioButton_IPv4.setEnabled(False)
         sizePolicy4.setHeightForWidth(self.radioButton_IPv4.sizePolicy().hasHeightForWidth())
         self.radioButton_IPv4.setSizePolicy(sizePolicy4)
         self.radioButton_IPv4.setSizeIncrement(QSize(0, 0))
@@ -706,7 +706,7 @@ class Ui_Setup(object):
 
         self.radioButton_IPv6 = QRadioButton(self.groupBox_Remote)
         self.radioButton_IPv6.setObjectName(u"radioButton_IPv6")
-        self.radioButton_IPv6.setEnabled(True)
+        self.radioButton_IPv6.setEnabled(False)
         sizePolicy4.setHeightForWidth(self.radioButton_IPv6.sizePolicy().hasHeightForWidth())
         self.radioButton_IPv6.setSizePolicy(sizePolicy4)
         self.radioButton_IPv6.setFont(font)
@@ -715,7 +715,7 @@ class Ui_Setup(object):
 
         self.lineEdit_ConnectTout = QLineEdit(self.groupBox_Remote)
         self.lineEdit_ConnectTout.setObjectName(u"lineEdit_ConnectTout")
-        self.lineEdit_ConnectTout.setEnabled(True)
+        self.lineEdit_ConnectTout.setEnabled(False)
         sizePolicy.setHeightForWidth(self.lineEdit_ConnectTout.sizePolicy().hasHeightForWidth())
         self.lineEdit_ConnectTout.setSizePolicy(sizePolicy)
 
@@ -723,7 +723,7 @@ class Ui_Setup(object):
 
         self.label_ConnectToutMS = QLabel(self.groupBox_Remote)
         self.label_ConnectToutMS.setObjectName(u"label_ConnectToutMS")
-        self.label_ConnectToutMS.setEnabled(True)
+        self.label_ConnectToutMS.setEnabled(False)
         sizePolicy.setHeightForWidth(self.label_ConnectToutMS.sizePolicy().hasHeightForWidth())
         self.label_ConnectToutMS.setSizePolicy(sizePolicy)
 
@@ -732,7 +732,7 @@ class Ui_Setup(object):
         self.comboBox_IP = QComboBox(self.groupBox_Remote)
         self.comboBox_IP.addItem("")
         self.comboBox_IP.setObjectName(u"comboBox_IP")
-        self.comboBox_IP.setEnabled(True)
+        self.comboBox_IP.setEnabled(False)
         sizePolicy.setHeightForWidth(self.comboBox_IP.sizePolicy().hasHeightForWidth())
         self.comboBox_IP.setSizePolicy(sizePolicy)
         self.comboBox_IP.setMinimumSize(QSize(0, 30))
@@ -741,7 +741,7 @@ class Ui_Setup(object):
 
         self.label_ConnectTout = QLabel(self.groupBox_Remote)
         self.label_ConnectTout.setObjectName(u"label_ConnectTout")
-        self.label_ConnectTout.setEnabled(True)
+        self.label_ConnectTout.setEnabled(False)
         sizePolicy.setHeightForWidth(self.label_ConnectTout.sizePolicy().hasHeightForWidth())
         self.label_ConnectTout.setSizePolicy(sizePolicy)
 
@@ -749,7 +749,7 @@ class Ui_Setup(object):
 
         self.label_ServePort = QLabel(self.groupBox_Remote)
         self.label_ServePort.setObjectName(u"label_ServePort")
-        self.label_ServePort.setEnabled(True)
+        self.label_ServePort.setEnabled(False)
         sizePolicy.setHeightForWidth(self.label_ServePort.sizePolicy().hasHeightForWidth())
         self.label_ServePort.setSizePolicy(sizePolicy)
 
@@ -757,7 +757,7 @@ class Ui_Setup(object):
 
         self.lineEdit_ServerPort = QLineEdit(self.groupBox_Remote)
         self.lineEdit_ServerPort.setObjectName(u"lineEdit_ServerPort")
-        self.lineEdit_ServerPort.setEnabled(True)
+        self.lineEdit_ServerPort.setEnabled(False)
         sizePolicy.setHeightForWidth(self.lineEdit_ServerPort.sizePolicy().hasHeightForWidth())
         self.lineEdit_ServerPort.setSizePolicy(sizePolicy)
 
@@ -769,7 +769,7 @@ class Ui_Setup(object):
 
         self.label_IP = QLabel(self.groupBox_Remote)
         self.label_IP.setObjectName(u"label_IP")
-        self.label_IP.setEnabled(True)
+        self.label_IP.setEnabled(False)
         sizePolicy.setHeightForWidth(self.label_IP.sizePolicy().hasHeightForWidth())
         self.label_IP.setSizePolicy(sizePolicy)
 

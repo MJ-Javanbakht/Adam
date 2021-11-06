@@ -2,7 +2,8 @@ import sys
 import os
 import time
 from serial.tools import list_ports
-from threading import Event
+import logging
+from datetime import datetime
 
 from pymodbus.client.sync import ModbusSerialClient as ModbusClient
 from pymodbus.register_read_message import ReadHoldingRegistersResponse
@@ -32,7 +33,7 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         global widgets
         widgets = self.ui
-        icon = QPixmap('Adam\design\images\images\AYRALOGO.png')
+        icon = QPixmap(':/images/images/images/AYRALOGO.png')
         self.setWindowIcon(icon)
 
         # Setup client
@@ -40,13 +41,14 @@ class MainWindow(QMainWindow):
         # Set initial values
         self.deviceName = 'None'
         self.calibrationFlag = bool()
+        self.reconnectFlag = False
         self.timer = QTimer()
+        self.timer.timeout.connect(self.logErrors)
         
         # Get device information
         self.client = self.setupClient()
     
         # Show device name and connection state
-        # SetStyleSheet(widgets.stateLabel,font='14pt Bold',color='green',message='Connected')
         SetStyleSheet(self.ui.label_deviceName,'16pt','lightgreen',f"A_{self.deviceName}")
         SetStyleSheet(self.ui.label_deviceNameSetting,'16pt','lightgreen',f"A_{self.deviceName}")
         
@@ -139,6 +141,9 @@ class MainWindow(QMainWindow):
         # Connect/disconnect buttons clicked
         widgets.pushButton_connect.clicked.connect(self.buttonClick)
         widgets.pushButton_disconnect.clicked.connect(self.buttonClick)
+
+        # Clear Log button clicked
+        widgets.pushButton_clearLog.clicked.connect(self.clearLog)
             
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
@@ -185,6 +190,7 @@ class MainWindow(QMainWindow):
             app.processEvents()
             self.timer.disconnect(self.timer, SIGNAL("timeout()"), self.calibration)
             self.timer.timeout.connect(self.readRegisters)
+            self.timer.timeout.connect(self.logErrors)
             self.timer.timeout.emit()
             resRate = int(widgets.lineEdit_ResRate.text())
             self.timer.start(resRate)
@@ -196,6 +202,7 @@ class MainWindow(QMainWindow):
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
             self.endCalibration()
+            self.loadSetup()
 
         # SHOW NEW PAGE
         elif btnName == "btn_calibration":
@@ -225,23 +232,22 @@ class MainWindow(QMainWindow):
             self.endCalibration()
 
         elif btnName == "pushButton_connect":
+            self.reconnectFlag = True
             if modbusConnectionFlag == False and self.client.is_socket_open() == True:
                 self.client.connect()
                 SetStyleSheet(widgets.stateLabel,font='14pt Bold',color='green',message='Connected')
             elif not self.client.is_socket_open():
-                # self.client.close()
                 QCoreApplication.quit()
                 status = QProcess.startDetached(sys.executable, sys.argv)
 
         elif btnName == "pushButton_disconnect":
             modbusConnectionFlag = False
             self.client.close()
-            # self.client.socket.close()
             SetStyleSheet(widgets.stateLabel,font='14pt Bold',color='red',message='Disconnected')
 
 
         # PRINT BTN NAME
-        print(f'Button "{btnName}" pressed!')
+        # print(f'Button "{btnName}" pressed!')
 
     # RESIZE EVENTS
     # ///////////////////////////////////////////////////////////////
@@ -249,49 +255,44 @@ class MainWindow(QMainWindow):
         # Update Size Grips
         UIFunctions.resize_grips(self)
 
-    # MOUSE CLICK EVENTS
-    # ///////////////////////////////////////////////////////////////
-    def mousePressEvent(self, event):
-        # SET DRAG POS WINDOW
-        self.dragPos = event.globalPos()
+    # # MOUSE CLICK EVENTS
+    # # ///////////////////////////////////////////////////////////////
+    # def mousePressEvent(self, event):
+    #     # SET DRAG POS WINDOW
+    #     self.dragPos = event.globalPos()
 
-        # PRINT MOUSE EVENTS
-        if event.buttons() == Qt.LeftButton:
-            print('Mouse click: LEFT CLICK')
-        if event.buttons() == Qt.RightButton:
-            print('Mouse click: RIGHT CLICK')
+    #     # PRINT MOUSE EVENTS
+    #     if event.buttons() == Qt.LeftButton:
+    #         print('Mouse click: LEFT CLICK')
+    #     if event.buttons() == Qt.RightButton:
+    #         print('Mouse click: RIGHT CLICK')
 
     # CLOSE EVENT
     # ///////////////////////////////////////////////////////////////
     def closeEvent(self, event: QCloseEvent) -> None:
-        endCalibration = self.device.read_write(
-            function="write_register",
-            address=29,
-            value=0
+        if self.reconnectFlag:
+            return super().closeEvent(event)
+
+        exitMessage = MessageBox(
+            icon = QMessageBox.Question,
+            title= 'Exit',
+            text= 'Do you want to exit?',
+            buttons= QMessageBox.StandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
         )
-        while endCalibration == False:
-            CalFailedMsg = MessageBox(
-                icon= QMessageBox.Warning,
-                title="Calibration",
-                text="Couldn't save calibration setting,\ntry again?",
-                buttons= QMessageBox.StandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
-            )
-            CalFailedMsg.exec()
-            if CalFailedMsg.value == False:
-                break
-            endCalibration = self.device.read_write(
-                function="write_register",
-                address=29,
-                value=0
-            )
-        self.client.close()
-        return super().closeEvent(event)
+        exitMessage.exec()
+        if exitMessage.value == True:
+            self.endCalibration()
+            self.client.close()
+            sys.exit()
+        else:
+            event.ignore()
 
     # Get data from SetupDialog and setup client
     # ///////////////////////////////////////////////////////////////
     def setupClient(self):
         setup = SetupDialog()
         setup.exec()
+        setup.setVisible(True)
         ui = setup.ui
 
         global modbusConnectionFlag
@@ -336,6 +337,14 @@ class MainWindow(QMainWindow):
             device = self.device
             device.comboBoxChanged(comboBox= comboBox)
 
+    # Load settings
+    # ///////////////////////////////////////////////////////////////
+    def loadSetup(self):
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
+            device = self.device
+            device.loadSetup()
+
     # Change and send settings
     # ///////////////////////////////////////////////////////////////
     def changeSetup(self):
@@ -373,11 +382,16 @@ class MainWindow(QMainWindow):
                 device = self.device
                 self.calibrationFlag = device.endCalibration()
         
-    # Handle errors and log
+    # Handle sysErrors and log
     # ///////////////////////////////////////////////////////////////
-    def errorHandler(self, function, address, value= [], count= 1):
-        device = self.device
-        device.read_write(function, address, value, count)
+    def logErrors(self):
+        global modbusConnectionFlag
+        if modbusConnectionFlag:
+            device = self.device
+            device.logErrors()
+
+    def clearLog(self):
+        widgets.tableWidget_log.setRowCount(0)
 
     # Save and export settings
     # ///////////////////////////////////////////////////////////////
@@ -396,7 +410,7 @@ class SetupDialog(QDialog):
         self.ui.setupUi(self)
         title = "Setup"
         self.setWindowTitle(title)
-        icon = QIcon("Adam\design\images\icons\AYRALOGO.png")
+        icon = QIcon(":/images/images/images/AYRALOGO.png")
         self.setWindowIcon(icon)
 
         self.ui.status = QStatusBar()
@@ -415,8 +429,6 @@ class SetupDialog(QDialog):
         self.timerCom.timeout.connect(self.readCom)
         self.timerCom.timeout.emit()
         self.timerCom.start(1000)
-
-        
 
         self.ui.pushButton_ok.clicked.connect(self.buttonClick)
         self.ui.pushButton_close.clicked.connect(self.buttonClick)
@@ -445,9 +457,21 @@ class SetupDialog(QDialog):
     # CLOSE EVENT
     # ///////////////////////////////////////////////////////////////
     def closeEvent(self, arg__1: QCloseEvent) -> None:
-        return super().closeEvent(arg__1)
-        MessageBox()
-        sys.exit()
+        # return super().closeEvent(arg__1)
+        if modbusConnectionFlag == True:
+            self.close()
+            return super().closeEvent(arg__1)
+        exitMessage = MessageBox(
+            icon = QMessageBox.Question,
+            title= 'Exit',
+            text= 'Do you want to exit?',
+            buttons= QMessageBox.StandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
+        )
+        exitMessage.exec()
+        if exitMessage.value == True:
+            sys.exit()
+        else:
+            arg__1.ignore()
         
     # Check the connection
     # ///////////////////////////////////////////////////////////////
@@ -535,7 +559,7 @@ class MessageBox(QMessageBox):
         self.setText(text)
         self.setStandardButtons(buttons)
 
-        winicon = QIcon("Adam\design\images\icons\AYRALOGO.png")
+        winicon = QIcon(":/images/images/images/AYRALOGO.png")
         self.setWindowIcon(winicon)        
         
         self.accepted.connect(self.acceptValue)
@@ -564,6 +588,42 @@ class SetStyleSheet():
 class A_8017():
     def __init__(self, client, ui):
         self.client = client
+        self.ui = ui
+        self.loadSetup()
+
+        # Create a custom logger
+        self.logger = logging.getLogger(name='A_8017')
+
+        # Create handlers
+        # c_handler = logging.StreamHandler()
+        try:
+            os.mkdir('Log')
+        finally:
+            f_handler = logging.FileHandler('Log\A_8017_log.log')
+            
+        # c_handler.setLevel(logging.INFO)
+        f_handler.setLevel(logging.WARNING)
+
+        # Create formatters and add it to handlers
+        # c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+        f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        # c_handler.setFormatter(c_format)
+        f_handler.setFormatter(f_format)
+
+        # Add handlers to the logger
+        # self.logger.addHandler(c_handler)
+        self.logger.addHandler(f_handler)
+
+        # Open binary file for error state
+        try:
+            self.stateFile = open('Log\A_8017_errorState.bin', 'rb+')
+        except FileNotFoundError as ex:
+            self.stateFile = open('Log\A_8017_errorState.bin', 'wb+')
+        self.stateFile.write(bytes([0]*96))
+        # self.stateFile.seek(0)
+        self.sysErrorState = [0]*16
+        # self.stateFile.seek(16)
+        self.gainOffsetErrorState = [0]*80
 
         self.flag65535 = False
         self.startCalibrationFlag = False
@@ -581,20 +641,6 @@ class A_8017():
         for i in range(8):
             self.gains['V'].append((self.scales['Vh'][i] - self.scales['Vl'][i])/65535)
             self.gains['mA'].append((self.scales['mAh'][i] - self.scales['mAl'][i])/65535)
-        # print(self.gains)
-
-        registers = self.read_write(
-            function='read_holding_registers',
-            address=25,
-            count=2
-        )
-        if registers != False:
-            unit = registers.getRegister(0)
-            baudrate = registers.getRegister(1)
-        widgets.lineEdit_unitID.setText(str(unit))
-        widgets.comboBox_baudRate.setCurrentIndex(baudrate)
-        widgets.lineEdit_timeout.setText(ui.lineEdit_ResTout.text())
-        widgets.lineEdit_ResRate.setText('1000')
         
         for i in range(8):
             combo = widgets.setting.findChild(QComboBox, f'comboBox_ch{i+1}scale')
@@ -603,6 +649,42 @@ class A_8017():
             lineLow.setText(str(self.scales[f"{combo.currentText()}l"][i]))
             lineHigh.setText(str(self.scales[f"{combo.currentText()}h"][i]))
 
+        
+        widgets.lineEdit_timeout.setText(self.ui.lineEdit_ResTout.text())
+        widgets.lineEdit_ResRate.setText('1000')
+        
+        self.sysErrors = [
+            'Channel 8 over range',
+            'Channel 7 over range',
+            'Channel 6 over range',
+            'Channel 5 over range',
+            'Channel 4 over range',
+            'Channel 3 over range',
+            'Channel 2 over range',
+            'Channel 1 over range',
+            'problem_power_adc',
+            'fail_set_reg_adc',
+            'Invalid IC ADC',
+            'Modbus failed',
+            'Device in initial mode (need calibration)',
+            'Stored data in eeprom is invalid',
+            'eeprom failed to write',
+            'eeprom failed to read'            
+        ]
+
+        self.gainOffsetErrors = [
+            'Problem in gain/offset V1',
+            'Problem in gain/offset V2',
+            'Problem in gain/offset V3',
+            'Problem in gain/offset V4',
+            'Problem in gain/offset V5',
+            'Problem in gain/offset I1',
+            'Problem in gain/offset I2',
+            'Problem in gain/offset I3',
+            'Problem in gain/offset I4',
+            'Problem in gain/offset I5'
+        ]
+        
     # Read registers from A_8017 device
     # ///////////////////////////////////////////////////////////////
     def readRegisters(self):
@@ -656,14 +738,6 @@ class A_8017():
                         value=1
                     )
                     widgets.calibration.findChild(QComboBox,f'comboBox_ch{i+1}CalScale').setCurrentIndex(0)
-                    # if writeV == True:
-                    #     widgets.home.findChild(QLabel, f"label_ch{i+1}scale").setText("V")
-                    #     lineEdit = widgets.home.findChild(QLineEdit, f"lineEdit_ch{i+1}")
-                    #     if self.flag65535 == True:
-                    #         value = self.registers[i]
-                    #     else:
-                    #         value = self.scales['Vl'][i] + (self.registers[i] * self.gains['V'][i])
-                    #     lineEdit.setText(str(value))
                     
                 elif widgets.home.findChild(QRadioButton, f'radioButton_ch{i+1}i').isChecked():
                     writeI = self.read_write(
@@ -672,14 +746,6 @@ class A_8017():
                         value=0
                     )
                     widgets.calibration.findChild(QComboBox,f'comboBox_ch{i+1}CalScale').setCurrentIndex(1)
-                    # if writeI == True:
-                    #     widgets.home.findChild(QLabel, f"label_ch{i+1}scale").setText("mA")
-                    #     lineEdit = widgets.home.findChild(QLineEdit, f"lineEdit_ch{i+1}")
-                    #     if self.flag65535 == True:
-                    #         value = self.registers[i]
-                    #     else:
-                    #         value = self.scales['mAl'][i] + (self.registers[i] * self.gains['mA'][i])
-                    #     lineEdit.setText(str(value))
                     
     def scaleTo65535(self):
         if widgets.checkBox_65535.isChecked():
@@ -697,18 +763,12 @@ class A_8017():
                             address=10+i,
                             value=1
                         )
-                        # for j in range(5):
-                        #     lineEdit = widgets.calibration.findChild(QLineEdit, f"lineEdit_ch{i+1}point{j+1}")
-                        #     lineEdit.setText(str(self.vCalVal[i*5 + j]))
                     else:
                         writeI = self.read_write(
                             function= "write_register",
                             address=10+i,
                             value=0
                         )
-                        # for j in range(5):
-                        #     lineEdit = widgets.calibration.findChild(QLineEdit, f"lineEdit_ch{i+1}point{j+1}")
-                        #     lineEdit.setText(str(self.iCalVal[i*5 + j]))
 
         elif comboBox.parentWidget() == widgets.setting:
             for i in range(8):
@@ -717,13 +777,25 @@ class A_8017():
                     lineHigh = widgets.setting.findChild(QLineEdit, f'lineEdit_ch{i+1}vHigh')
                     lineLow.setText(str(self.scales[f"{comboBox.currentText()}l"][i]))
                     lineHigh.setText(str(self.scales[f"{comboBox.currentText()}h"][i]))
+    
+    def loadSetup(self):
+        registers = self.read_write(
+            function='read_holding_registers',
+            address=25,
+            count=2
+        )
+        if registers != False:
+            unit = registers.getRegister(0)
+            baudrate = registers.getRegister(1)
+            widgets.lineEdit_unitID.setText(str(unit))
+            widgets.comboBox_baudRate.setCurrentIndex(baudrate)
 
     def changeSetup(self):
         msgBox = MessageBox(
             icon= QMessageBox.Warning,
-            title= "Save",
-            text= u"This would write Unit ID and Baudrate into device,\n"
-            "and you may need to reconnect. Continue?",
+            title= "Save setting",
+            text= u"This would update scales and write Unit ID and Baudrate into device,\n"
+            "if changed, you may need to reconnect. Continue?",
             buttons= QMessageBox.StandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
         )
         msgBox.exec()
@@ -752,17 +824,28 @@ class A_8017():
                 )
                 if writeUnit != False:
                     saveMsgBox = MessageBox(
-                        icon=QMessageBox.Question,
-                        title="Setting",
-                        text="Setting saved. Try to reconnect?",
-                        buttons=QMessageBox.StandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
+                        icon=QMessageBox.Information,
+                        title="Saved",
+                        text="Setting saved.",
+                        buttons=QMessageBox.StandardButtons(QMessageBox.Ok)
                     )
                     saveMsgBox.exec()
-                    if saveMsgBox.value == True:
-                        QCoreApplication.quit()
-                        status = QProcess.startDetached(sys.executable, sys.argv)
-                        # print(status)
-                    
+                else:
+                    saveMsgBox = MessageBox(
+                        icon=QMessageBox.Information,
+                        title="Failed",
+                        text="Failed to save UnitID.",
+                        buttons=QMessageBox.StandardButtons(QMessageBox.Ok)
+                    )
+                    saveMsgBox.exec()
+            else:
+                saveMsgBox = MessageBox(
+                    icon=QMessageBox.Information,
+                    title="Failed",
+                    text="Failed to save Baudrate and UnitID.",
+                    buttons=QMessageBox.StandardButtons(QMessageBox.Ok)
+                )
+                saveMsgBox.exec()                
 
     def readCalibrationValues(self):
         vCalibrateValues = self.read_write(
@@ -846,8 +929,7 @@ class A_8017():
             self.startCalibrationFlag = False
 
         return self.startCalibrationFlag
-    
-    
+        
     def calibrateDevice(self, button):
         self.calSetFlag = True
         name = button.objectName()
@@ -950,44 +1032,153 @@ class A_8017():
                 msgCalFailed.exec()
                 self.timerSetVal.stop()
         
-    def read_write(self, function, address, value= [], count= 1):
-        # app.processEvents()
-        response = False
-        if function == 'read_holding_registers':
-            try:
-                response = self.client.read_holding_registers(address, count,unit=self.client.unitID)
-            except:
-                SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message="Error")
-            finally:
-                if isinstance(response, ReadHoldingRegistersResponse):
-                    SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='green',message='Connected')
-                    self.errorCount = 0
-                    return response
-        elif function == 'write_registers':
-            try:
-                response = self.client.write_registers(address, value,unit=self.client.unitID)
-            except:
-                SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message="Error")
-            finally:
-                if isinstance(response, WriteMultipleRegistersResponse):
-                    SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='green',message='Connected')
-                    self.errorCount = 0
-                    return response
-        elif function == 'write_register':
-            try:
-                response = self.client.write_register(address, value,unit=self.client.unitID)
-            except:
-                SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message="Error")
-            finally:
-                if isinstance(response, WriteSingleRegisterResponse):
-                    SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='green',message='Connected')
-                    self.errorCount = 0
-                    return response
+    def logErrors(self):
+        sysErrors = self.read_write(
+            function='read_holding_registers',
+            address=28
+        )
+        if sysErrors != False:
+            sysErrors = sysErrors.getRegister(0)
+            sysErrors = format(sysErrors,'016b')
+            for i in range(16):
+                if sysErrors[i] == '1' and self.sysErrorState[i] == 0:
+                    self.sysErrorState[i] = 1
+                    message = self.sysErrors[i]
+                    if i in range(8):
+                        self.logger.warning(message)
+                        self.updateTable(
+                            level='Warning',
+                            state='Active',
+                            message=message
+                        )
+                    else:
+                        self.logger.error(message)
+                        self.updateTable(
+                            level='Error',
+                            state='Active',
+                            message=message
+                        )
+                elif sysErrors[i] == '0' and self.sysErrorState[i] == 1:
+                    self.sysErrorState[i] = 0
+                    message = self.sysErrors[i] + ' passed'
+                    if i in range(8):
+                        self.logger.warning(message)
+                        self.updateTable(
+                            level='Warning',
+                            state='Deactive',
+                            message=message
+                        )
+                    else:
+                        self.logger.error(message)
+                        self.updateTable(
+                            level='Error',
+                            state='Deactive',
+                            message=message
+                        )
+            self.stateFile.seek(0)
+            self.stateFile.write(bytes(self.sysErrorState))
         
-        SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message='Error')
+        gainErrors = self.read_write(
+            function='read_holding_registers',
+            address=190,
+            count=8
+        )
+        if gainErrors != False:
+            gainErrors = gainErrors.getRegister(slice(0,8))
+            gainErrors = [format(x, '010b') for x in gainErrors]
+            for e in range(len(gainErrors)):
+                for i in range(10):
+                    errNum = 10 * e + i
+                    if gainErrors[e][i] == 1 and self.gainOffsetErrorState[errNum] == 0:
+                        self.gainOffsetErrorState[errNum] = 1
+                        message = f'{self.gainOffsetErrors[errNum]} channel {e+1}'
+                        self.logger.error(message)
+                        self.updateTable(
+                            level='Error',
+                            state='Active',
+                            message=message
+                        )
+                    elif gainErrors[e][i] == 0 and self.gainOffsetErrorState[errNum] == 1:
+                        self.gainOffsetErrorState[errNum] = 0
+                        message = f'{self.gainOffsetErrors[errNum]} channel {e+1} passed'
+                        self.logger.error(message)
+                        self.updateTable(
+                            level='Error',
+                            state='Deactive',
+                            message=message
+                        )
+            
+            self.stateFile.seek(16)
+            self.stateFile.write(bytes(self.gainOffsetErrorState))
+
+    def updateTable(self, level, state, message):
+        table = widgets.tableWidget_log
+        row = table.rowCount()
+        table.insertRow(row)
+        item = QTableWidgetItem()
+        item.setText(datetime.now().strftime("%Y-%m-%d"))
+        item.setTextAlignment(Qt.AlignCenter)
+        table.setItem(row,0,item)
+        item = QTableWidgetItem()
+        item.setText(datetime.now().strftime("%H:%M:%S"))
+        item.setTextAlignment(Qt.AlignCenter)
+        table.setItem(row,1,item)
+        item = QTableWidgetItem()
+        item.setText(level)
+        item.setTextAlignment(Qt.AlignCenter)
+        table.setItem(row,2,item)
+        item = QTableWidgetItem()
+        item.setText(state)
+        item.setTextAlignment(Qt.AlignCenter)
+        table.setItem(row,3,item)
+        item = QTableWidgetItem()
+        item.setText(message)
+        item.setTextAlignment(Qt.AlignCenter)
+        table.setItem(row,4,item)
+
+    def read_write(self, function, address, value= [], count= 1):
+        response = False
+        error = 0
+        if function == 'read_holding_registers':
+            while error < 2:
+                try:
+                    response = self.client.read_holding_registers(address, count,unit=self.client.unitID)
+                except:
+                    SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message="Error")
+                finally:
+                    if isinstance(response, ReadHoldingRegistersResponse):
+                        SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='green',message='Connected')
+                        self.errorCount = 0
+                        return response
+                error += 1
+        elif function == 'write_registers':
+            while error < 2:
+                try:
+                    response = self.client.write_registers(address, value,unit=self.client.unitID)
+                except:
+                    SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message="Error")
+                finally:
+                    if isinstance(response, WriteMultipleRegistersResponse):
+                        SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='green',message='Connected')
+                        self.errorCount = 0
+                        return response
+                error += 1
+        elif function == 'write_register':
+            while error < 2:
+                try:
+                    response = self.client.write_register(address, value,unit=self.client.unitID)
+                except:
+                    SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message="Error")
+                finally:
+                    if isinstance(response, WriteSingleRegisterResponse):
+                        SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='green',message='Connected')
+                        self.errorCount = 0 
+                        return response
+                error += 1
+        if error>=2: SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message='Error')
         time.sleep(0.2)
         self.errorCount += 1
-        if self.errorCount >= 3:
+        if self.errorCount >= 4:
             global modbusConnectionFlag
             modbusConnectionFlag = False
             SetStyleSheet(widget= widgets.stateLabel,font= '14pt Bold',color='red',message='Disconnected')

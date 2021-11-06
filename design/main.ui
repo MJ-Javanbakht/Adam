@@ -936,6 +936,9 @@ Button */
                 </item>
                 <item>
                  <widget class="QPushButton" name="btn_log">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -971,6 +974,9 @@ Button */
                 </item>
                 <item>
                  <widget class="QPushButton" name="btn_trend">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1006,6 +1012,9 @@ Button */
                 </item>
                 <item>
                  <widget class="QPushButton" name="btn_save">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1068,6 +1077,9 @@ Button */
                 </property>
                 <item>
                  <widget class="QPushButton" name="toggleLeftBox">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1319,111 +1331,6 @@ Button */
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
-                <item>
-                 <widget class="QPushButton" name="btn_share">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>45</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>14</pointsize>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/cil-share-boxed.png);</string>
-                  </property>
-                  <property name="text">
-                   <string>Share</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="btn_adjustments">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>45</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>14</pointsize>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/cil-equalizer.png);</string>
-                  </property>
-                  <property name="text">
-                   <string>Adjustments</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="btn_more">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>45</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <pointsize>14</pointsize>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/cil-layers.png);</string>
-                  </property>
-                  <property name="text">
-                   <string>More</string>
-                  </property>
-                 </widget>
-                </item>
                </layout>
               </widget>
              </item>
@@ -1642,6 +1549,9 @@ p, li { white-space: pre-wrap; }
                 </property>
                 <item>
                  <widget class="QPushButton" name="settingsTopBtn">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
                   <property name="minimumSize">
                    <size>
                     <width>28</width>
@@ -1882,7 +1792,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>1</number>
+                      <number>0</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="styleSheet">
@@ -4821,11 +4731,6 @@ p, li { white-space: pre-wrap; }
                             <attribute name="verticalHeaderMinimumSectionSize">
                              <number>30</number>
                             </attribute>
-                            <row>
-                             <property name="text">
-                              <string>1</string>
-                             </property>
-                            </row>
                             <column>
                              <property name="text">
                               <string>Date</string>
@@ -4851,6 +4756,13 @@ p, li { white-space: pre-wrap; }
                               <string>Message</string>
                              </property>
                             </column>
+                           </widget>
+                          </item>
+                          <item row="1" column="0" alignment="Qt::AlignRight">
+                           <widget class="QPushButton" name="pushButton_clearLog">
+                            <property name="text">
+                             <string>Clear log</string>
+                            </property>
                            </widget>
                           </item>
                          </layout>
@@ -5977,7 +5889,7 @@ p, li { white-space: pre-wrap; }
                 <item>
                  <widget class="QLabel" name="version">
                   <property name="text">
-                   <string>v1.0</string>
+                   <string>Demo Version</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -6161,9 +6073,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>pushButton_ch8point5</tabstop>
   <tabstop>toggleLeftBox</tabstop>
   <tabstop>extraCloseColumnBtn</tabstop>
-  <tabstop>btn_adjustments</tabstop>
-  <tabstop>btn_more</tabstop>
-  <tabstop>btn_share</tabstop>
   <tabstop>tableWidget_log</tabstop>
   <tabstop>lineEdit</tabstop>
   <tabstop>pushButton</tabstop>

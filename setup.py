@@ -3,21 +3,22 @@ import os
 from cx_Freeze import setup, Executable
 
 # ADD FILES
-files = ['icon.ico','themes/']
+files = ['AyraIcon.ico']
 
 # TARGET
 target = Executable(
     script="main.py",
     base="Win32GUI",
-    icon="icon.ico"
+    icon="AyraIcon.ico",
+    target_name="AYRA"
 )
 
 # SETUP CX FREEZE
 setup(
-    name = "PyDracula",
+    name = "AYRA",
     version = "1.0",
-    description = "Modern GUI for Python applications",
-    author = "Wanderson M. Pimenta",
+    description = "GUI for Analog/Digital Cards",
+    author = "AYRA Electronics",
     options = {'build_exe' : {'include_files' : files}},
     executables = [target]
     
